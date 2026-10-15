@@ -1,7 +1,4 @@
 {
-    "configuration": "chip=avr64db32,clock=8crystal,bodvoltage=1v9,bodmode=disabled,eesave=enable,resetpin=reset,millis=tcb2,printf=default,attach=allenabled,mvio=enabled,startuptime=8,wiremode=mors,appspm=no,WDTtimeout=disabled,WDTwindow=disabled,flmap=lockdefault",
     "board": "DxCore:megaavr:avrdb",
-    "port": "COM6",
-    "sketch": "ManualAnalogControlV2.ino",
-    "programmer": "pickit4"
+    "port": "COM6"
 }
