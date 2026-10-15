@@ -1,0 +1,3431 @@
+
+C:\Users\ehinde\AppData\Local\arduino\sketches\61625A9407418346F7710D0CF6E7F377/ManualAnalogControl.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+../../../../crt1/gcrt1.S:61
+   0:	5d c0       	rjmp	.+186    	; 0xbc <__ctors_end>
+   2:	00 00       	nop
+../../../../crt1/gcrt1.S:67
+   4:	94 c0       	rjmp	.+296    	; 0x12e <__bad_interrupt>
+   6:	00 00       	nop
+../../../../crt1/gcrt1.S:68
+   8:	92 c0       	rjmp	.+292    	; 0x12e <__bad_interrupt>
+   a:	00 00       	nop
+../../../../crt1/gcrt1.S:69
+   c:	7f c3       	rjmp	.+1790   	; 0x70c <__vector_3>
+   e:	00 00       	nop
+../../../../crt1/gcrt1.S:70
+  10:	8e c0       	rjmp	.+284    	; 0x12e <__bad_interrupt>
+  12:	00 00       	nop
+../../../../crt1/gcrt1.S:71
+  14:	8c c0       	rjmp	.+280    	; 0x12e <__bad_interrupt>
+  16:	00 00       	nop
+../../../../crt1/gcrt1.S:72
+  18:	8a c0       	rjmp	.+276    	; 0x12e <__bad_interrupt>
+  1a:	00 00       	nop
+../../../../crt1/gcrt1.S:73
+  1c:	88 c0       	rjmp	.+272    	; 0x12e <__bad_interrupt>
+  1e:	00 00       	nop
+../../../../crt1/gcrt1.S:74
+  20:	86 c0       	rjmp	.+268    	; 0x12e <__bad_interrupt>
+  22:	00 00       	nop
+../../../../crt1/gcrt1.S:75
+  24:	84 c0       	rjmp	.+264    	; 0x12e <__bad_interrupt>
+  26:	00 00       	nop
+../../../../crt1/gcrt1.S:76
+  28:	82 c0       	rjmp	.+260    	; 0x12e <__bad_interrupt>
+  2a:	00 00       	nop
+../../../../crt1/gcrt1.S:77
+  2c:	80 c0       	rjmp	.+256    	; 0x12e <__bad_interrupt>
+  2e:	00 00       	nop
+../../../../crt1/gcrt1.S:78
+  30:	7e c0       	rjmp	.+252    	; 0x12e <__bad_interrupt>
+  32:	00 00       	nop
+../../../../crt1/gcrt1.S:79
+  34:	7c c0       	rjmp	.+248    	; 0x12e <__bad_interrupt>
+  36:	00 00       	nop
+../../../../crt1/gcrt1.S:80
+  38:	7a c0       	rjmp	.+244    	; 0x12e <__bad_interrupt>
+  3a:	00 00       	nop
+../../../../crt1/gcrt1.S:81
+  3c:	78 c0       	rjmp	.+240    	; 0x12e <__bad_interrupt>
+  3e:	00 00       	nop
+../../../../crt1/gcrt1.S:82
+  40:	76 c0       	rjmp	.+236    	; 0x12e <__bad_interrupt>
+  42:	00 00       	nop
+../../../../crt1/gcrt1.S:83
+  44:	74 c0       	rjmp	.+232    	; 0x12e <__bad_interrupt>
+  46:	00 00       	nop
+../../../../crt1/gcrt1.S:84
+  48:	33 c4       	rjmp	.+2150   	; 0x8b0 <__vector_18>
+  4a:	00 00       	nop
+../../../../crt1/gcrt1.S:85
+  4c:	70 c0       	rjmp	.+224    	; 0x12e <__bad_interrupt>
+  4e:	00 00       	nop
+../../../../crt1/gcrt1.S:86
+  50:	6e c0       	rjmp	.+220    	; 0x12e <__bad_interrupt>
+  52:	00 00       	nop
+../../../../crt1/gcrt1.S:87
+  54:	6c c0       	rjmp	.+216    	; 0x12e <__bad_interrupt>
+  56:	00 00       	nop
+../../../../crt1/gcrt1.S:88
+  58:	6a c0       	rjmp	.+212    	; 0x12e <__bad_interrupt>
+  5a:	00 00       	nop
+../../../../crt1/gcrt1.S:89
+  5c:	68 c0       	rjmp	.+208    	; 0x12e <__bad_interrupt>
+  5e:	00 00       	nop
+../../../../crt1/gcrt1.S:90
+  60:	66 c0       	rjmp	.+204    	; 0x12e <__bad_interrupt>
+  62:	00 00       	nop
+../../../../crt1/gcrt1.S:91
+  64:	64 c0       	rjmp	.+200    	; 0x12e <__bad_interrupt>
+  66:	00 00       	nop
+../../../../crt1/gcrt1.S:92
+  68:	62 c0       	rjmp	.+196    	; 0x12e <__bad_interrupt>
+  6a:	00 00       	nop
+../../../../crt1/gcrt1.S:93
+  6c:	60 c0       	rjmp	.+192    	; 0x12e <__bad_interrupt>
+  6e:	00 00       	nop
+../../../../crt1/gcrt1.S:94
+  70:	5e c0       	rjmp	.+188    	; 0x12e <__bad_interrupt>
+  72:	00 00       	nop
+../../../../crt1/gcrt1.S:95
+  74:	5c c0       	rjmp	.+184    	; 0x12e <__bad_interrupt>
+  76:	00 00       	nop
+../../../../crt1/gcrt1.S:96
+  78:	5a c0       	rjmp	.+180    	; 0x12e <__bad_interrupt>
+  7a:	00 00       	nop
+../../../../crt1/gcrt1.S:97
+  7c:	4e c3       	rjmp	.+1692   	; 0x71a <__vector_31>
+  7e:	00 00       	nop
+../../../../crt1/gcrt1.S:98
+  80:	56 c0       	rjmp	.+172    	; 0x12e <__bad_interrupt>
+  82:	00 00       	nop
+../../../../crt1/gcrt1.S:99
+  84:	54 c0       	rjmp	.+168    	; 0x12e <__bad_interrupt>
+  86:	00 00       	nop
+../../../../crt1/gcrt1.S:100
+  88:	52 c0       	rjmp	.+164    	; 0x12e <__bad_interrupt>
+  8a:	00 00       	nop
+../../../../crt1/gcrt1.S:101
+  8c:	50 c0       	rjmp	.+160    	; 0x12e <__bad_interrupt>
+  8e:	00 00       	nop
+../../../../crt1/gcrt1.S:102
+  90:	4e c0       	rjmp	.+156    	; 0x12e <__bad_interrupt>
+  92:	00 00       	nop
+../../../../crt1/gcrt1.S:103
+  94:	4c c0       	rjmp	.+152    	; 0x12e <__bad_interrupt>
+  96:	00 00       	nop
+../../../../crt1/gcrt1.S:104
+  98:	62 c3       	rjmp	.+1732   	; 0x75e <__vector_38>
+  9a:	00 00       	nop
+../../../../crt1/gcrt1.S:105
+  9c:	5a c3       	rjmp	.+1716   	; 0x752 <__vector_39>
+  9e:	00 00       	nop
+../../../../crt1/gcrt1.S:106
+  a0:	64 c3       	rjmp	.+1736   	; 0x76a <__vector_40>
+  a2:	00 00       	nop
+../../../../crt1/gcrt1.S:107
+  a4:	44 c0       	rjmp	.+136    	; 0x12e <__bad_interrupt>
+  a6:	00 00       	nop
+../../../../crt1/gcrt1.S:108
+  a8:	dc c3       	rjmp	.+1976   	; 0x862 <__vector_42>
+  aa:	00 00       	nop
+../../../../crt1/gcrt1.S:109
+  ac:	40 c0       	rjmp	.+128    	; 0x12e <__bad_interrupt>
+	...
+
+000000b0 <__trampolines_end>:
+__trampolines_start():
+  b0:	00 14       	cp	r0, r0
+  b2:	16 10       	cpse	r1, r6
+  b4:	18 ff       	.word	0xff18	; ????
+  b6:	30 00       	.word	0x0030	; ????
+  b8:	30 00       	.word	0x0030	; ????
+
+000000ba <__ctors_start>:
+__ctors_start():
+  ba:	7f 04       	cpc	r7, r15
+
+000000bc <__ctors_end>:
+__dtors_end():
+../../../../crt1/gcrt1.S:230
+  bc:	11 24       	eor	r1, r1
+../../../../crt1/gcrt1.S:231
+  be:	1f be       	out	0x3f, r1	; 63
+../../../../crt1/gcrt1.S:232
+  c0:	cf ef       	ldi	r28, 0xFF	; 255
+../../../../crt1/gcrt1.S:234
+  c2:	cd bf       	out	0x3d, r28	; 61
+../../../../crt1/gcrt1.S:236
+  c4:	df e7       	ldi	r29, 0x7F	; 127
+../../../../crt1/gcrt1.S:237
+  c6:	de bf       	out	0x3e, r29	; 62
+
+000000c8 <_initThreeStuff()>:
+init_reset_flags():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:145
+
+  /* Minimum: Reset if we wound up here through malfunction - this relies on user clearing the  *
+   * register on startup, which is rarely done in Arduino land.                                 */
+  void __attribute__((weak)) init_reset_flags() ;
+  void __attribute__((weak)) init_reset_flags() {
+    uint8_t flags = RSTCTRL.RSTFR;
+  c8:	80 91 40 00 	lds	r24, 0x0040	; 0x800040 <__TEXT_REGION_LENGTH__+0x7f0040>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:146
+    RSTCTRL.RSTFR = flags;
+  cc:	80 93 40 00 	sts	0x0040, r24	; 0x800040 <__TEXT_REGION_LENGTH__+0x7f0040>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:147
+    if (flags == 0) {
+  d0:	81 11       	cpse	r24, r1
+  d2:	05 c0       	rjmp	.+10     	; 0xde <_initThreeStuff()+0x16>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:148
+      _PROTECTED_WRITE(RSTCTRL.SWRR, 1);
+  d4:	98 ed       	ldi	r25, 0xD8	; 216
+  d6:	21 e0       	ldi	r18, 0x01	; 1
+  d8:	94 bf       	out	0x34, r25	; 52
+  da:	20 93 41 00 	sts	0x0041, r18	; 0x800041 <__TEXT_REGION_LENGTH__+0x7f0041>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:150
+    }
+    GPIOR0 = flags;
+  de:	8c bb       	out	0x1c, r24	; 28
+doFLMAP():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:73
+      #endif
+    #else
+      #warning "no FLMAP section defined, yet LOCK_FLMAP IS!"
+      temp = 0x30; // should always end up as the highest up to 3.
+    #endif
+    NVMCTRL.CTRLB = temp;
+  e0:	80 e3       	ldi	r24, 0x30	; 48
+  e2:	80 93 01 10 	sts	0x1001, r24	; 0x801001 <__TEXT_REGION_LENGTH__+0x7f1001>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:75
+    temp |= 0x80;
+    _PROTECTED_WRITE(NVMCTRL_CTRLB, temp);
+  e6:	88 ed       	ldi	r24, 0xD8	; 216
+  e8:	90 eb       	ldi	r25, 0xB0	; 176
+  ea:	84 bf       	out	0x34, r24	; 52
+  ec:	90 93 01 10 	sts	0x1001, r25	; 0x801001 <__TEXT_REGION_LENGTH__+0x7f1001>
+
+000000f0 <__do_copy_data>:
+__do_copy_data():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2409
+  f0:	10 e6       	ldi	r17, 0x60	; 96
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+  f2:	a0 e0       	ldi	r26, 0x00	; 0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+  f4:	b0 e6       	ldi	r27, 0x60	; 96
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+  f6:	e6 e2       	ldi	r30, 0x26	; 38
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+  f8:	fc e0       	ldi	r31, 0x0C	; 12
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+  fa:	02 c0       	rjmp	.+4      	; 0x100 <__do_copy_data+0x10>
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2417
+  fc:	05 90       	lpm	r0, Z+
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2422
+  fe:	0d 92       	st	X+, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2424
+ 100:	a0 39       	cpi	r26, 0x90	; 144
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+ 102:	b1 07       	cpc	r27, r17
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+ 104:	d9 f7       	brne	.-10     	; 0xfc <__do_copy_data+0xc>
+
+00000106 <__do_clear_bss>:
+__do_clear_bss():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+ 106:	21 e6       	ldi	r18, 0x61	; 97
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+ 108:	a0 e9       	ldi	r26, 0x90	; 144
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+ 10a:	b0 e6       	ldi	r27, 0x60	; 96
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+ 10c:	01 c0       	rjmp	.+2      	; 0x110 <.do_clear_bss_start>
+
+0000010e <.do_clear_bss_loop>:
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+ 10e:	1d 92       	st	X+, r1
+
+00000110 <.do_clear_bss_start>:
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+ 110:	a3 3c       	cpi	r26, 0xC3	; 195
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+ 112:	b2 07       	cpc	r27, r18
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+ 114:	e1 f7       	brne	.-8      	; 0x10e <.do_clear_bss_loop>
+
+00000116 <__do_global_ctors>:
+__do_global_ctors():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
+ 116:	10 e0       	ldi	r17, 0x00	; 0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2467
+ 118:	ce e5       	ldi	r28, 0x5E	; 94
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2468
+ 11a:	d0 e0       	ldi	r29, 0x00	; 0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2472
+ 11c:	03 c0       	rjmp	.+6      	; 0x124 <__do_global_ctors+0xe>
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2474
+ 11e:	21 97       	sbiw	r28, 0x01	; 1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2480
+ 120:	fe 01       	movw	r30, r28
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2481
+ 122:	6a d5       	rcall	.+2772   	; 0xbf8 <__tablejump2__>
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2483
+ 124:	cd 35       	cpi	r28, 0x5D	; 93
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2484
+ 126:	d1 07       	cpc	r29, r17
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2489
+ 128:	d1 f7       	brne	.-12     	; 0x11e <__do_global_ctors+0x8>
+../../../../crt1/gcrt1.S:314
+ 12a:	1a d4       	rcall	.+2100   	; 0x960 <main>
+../../../../crt1/gcrt1.S:315
+ 12c:	7a c5       	rjmp	.+2804   	; 0xc22 <_exit>
+
+0000012e <__bad_interrupt>:
+__vector_22():
+ 12e:	68 cf       	rjmp	.-304    	; 0x0 <__vectors>
+
+00000130 <_blinkCode>:
+openDrainFast():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:510
+  vport = (VPORT_t *)(port * 4);
+  PORT_t *portstr;
+  portstr = (PORT_t *)(0x400 + (0x20 * port));
+
+  if (val == LOW)
+    vport->DIR |= mask;
+ 130:	07 9a       	sbi	0x00, 7	; 0
+_asmDelay():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2402
+  // speed
+  // These two functions need only exist if not using internal clock source.
+  void _blinkCode(uint8_t blinkcount);
+  inline void _asmDelay(uint16_t us);
+  inline void _asmDelay(uint16_t us) {
+    __asm__ __volatile__ (
+ 132:	20 e5       	ldi	r18, 0x50	; 80
+ 134:	33 ec       	ldi	r19, 0xC3	; 195
+_blinkCode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2407
+      "1: sbiw %0, 1" "\n\t" // 2 cycles
+      "brne 1b" : "=w" (us) : "0" (us) // 2 cycles
+    );
+  }
+  void _blinkCode(uint8_t blinkcount) {
+ 136:	93 e0       	ldi	r25, 0x03	; 3
+digitalWriteFast():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:428
+    vport->IN = mask;
+*/
+  if (val == LOW)
+    vport->OUT &= ~mask;
+  else if (val == CHANGE)
+    vport->IN |= mask;
+ 138:	17 9a       	sbi	0x02, 7	; 2
+ 13a:	44 e1       	ldi	r20, 0x14	; 20
+_asmDelay():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2402
+  // speed
+  // These two functions need only exist if not using internal clock source.
+  void _blinkCode(uint8_t blinkcount);
+  inline void _asmDelay(uint16_t us);
+  inline void _asmDelay(uint16_t us) {
+    __asm__ __volatile__ (
+ 13c:	f9 01       	movw	r30, r18
+ 13e:	31 97       	sbiw	r30, 0x01	; 1
+ 140:	f1 f7       	brne	.-4      	; 0x13e <_blinkCode+0xe>
+ 142:	41 50       	subi	r20, 0x01	; 1
+_blinkCode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2412
+  void _blinkCode(uint8_t blinkcount) {
+    openDrainFast(LED_BUILTIN, LOW);
+    while(1) {
+      for (byte i = 3; i != 0; i--){
+        digitalWriteFast(LED_BUILTIN, CHANGE);
+        for (byte j = 20; j != 0; j--) {
+ 144:	d9 f7       	brne	.-10     	; 0x13c <_blinkCode+0xc>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2415
+          _asmDelay(50000);
+        }
+        for (byte i = blinkcount; i != 0; i--){
+ 146:	48 2f       	mov	r20, r24
+digitalWriteFast():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:428
+ 148:	17 9a       	sbi	0x02, 7	; 2
+_asmDelay():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2402
+  // speed
+  // These two functions need only exist if not using internal clock source.
+  void _blinkCode(uint8_t blinkcount);
+  inline void _asmDelay(uint16_t us);
+  inline void _asmDelay(uint16_t us) {
+    __asm__ __volatile__ (
+ 14a:	f9 01       	movw	r30, r18
+ 14c:	31 97       	sbiw	r30, 0x01	; 1
+ 14e:	f1 f7       	brne	.-4      	; 0x14c <_blinkCode+0x1c>
+digitalWriteFast():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:428
+ 150:	17 9a       	sbi	0x02, 7	; 2
+ 152:	59 e0       	ldi	r21, 0x09	; 9
+_asmDelay():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2402
+ 154:	f9 01       	movw	r30, r18
+ 156:	31 97       	sbiw	r30, 0x01	; 1
+ 158:	f1 f7       	brne	.-4      	; 0x156 <_blinkCode+0x26>
+ 15a:	51 50       	subi	r21, 0x01	; 1
+_blinkCode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2419
+        }
+        for (byte i = blinkcount; i != 0; i--){
+          digitalWriteFast(LED_BUILTIN, CHANGE);
+          _asmDelay(50000);
+          digitalWriteFast(LED_BUILTIN, CHANGE);
+          for (byte j = 9; j != 0; j--) {
+ 15c:	d9 f7       	brne	.-10     	; 0x154 <_blinkCode+0x24>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2415
+      for (byte i = 3; i != 0; i--){
+        digitalWriteFast(LED_BUILTIN, CHANGE);
+        for (byte j = 20; j != 0; j--) {
+          _asmDelay(50000);
+        }
+        for (byte i = blinkcount; i != 0; i--){
+ 15e:	41 50       	subi	r20, 0x01	; 1
+ 160:	99 f7       	brne	.-26     	; 0x148 <_blinkCode+0x18>
+ 162:	91 50       	subi	r25, 0x01	; 1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2410
+    );
+  }
+  void _blinkCode(uint8_t blinkcount) {
+    openDrainFast(LED_BUILTIN, LOW);
+    while(1) {
+      for (byte i = 3; i != 0; i--){
+ 164:	49 f7       	brne	.-46     	; 0x138 <_blinkCode+0x8>
+ 166:	e7 cf       	rjmp	.-50     	; 0x136 <_blinkCode+0x6>
+
+00000168 <micros>:
+micros():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:449
+      #else /* TCA */
+        uint8_t ticks;
+      #endif
+      uint8_t flags;
+      /* Save current state and disable interrupts */
+      uint8_t oldSREG = SREG;
+ 168:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:450
+      cli(); /* INTERRUPTS OFF */
+ 16a:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:466
+        while (!(TCD0.STATUS & TCD_CMDRDY_bm)); // wait for sync - should be only one iteration of this loop
+        flags = TCD0.INTFLAGS;
+        ticks = TCD0.CAPTUREA;
+        */
+      #else /* = defined(MILLIS_USE_TCB) */
+        ticks = _timer->CNT;
+ 16c:	e0 91 2a 0b 	lds	r30, 0x0B2A	; 0x800b2a <__TEXT_REGION_LENGTH__+0x7f0b2a>
+ 170:	f0 91 2b 0b 	lds	r31, 0x0B2B	; 0x800b2b <__TEXT_REGION_LENGTH__+0x7f0b2b>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:467
+        flags = _timer->INTFLAGS;
+ 174:	80 91 26 0b 	lds	r24, 0x0B26	; 0x800b26 <__TEXT_REGION_LENGTH__+0x7f0b26>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:475
+       * ISR has not fired. If we already read a high value of ticks, either we read it just before the overflow,
+       * so we shouldn't increment overflows, or interrupts are disabled and micros isn't expected to work so it
+       * doesn't matter.
+       * Get current number of overflows and timer count */
+      #if defined(MILLIS_USE_TCB)
+        overflows = timingStruct.timer_millis;
+ 178:	20 91 91 60 	lds	r18, 0x6091	; 0x806091 <timingStruct>
+ 17c:	30 91 92 60 	lds	r19, 0x6092	; 0x806092 <timingStruct+0x1>
+ 180:	40 91 93 60 	lds	r20, 0x6093	; 0x806093 <timingStruct+0x2>
+ 184:	50 91 94 60 	lds	r21, 0x6094	; 0x806094 <timingStruct+0x3>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:480
+      #else
+        overflows = timingStruct.timer_overflow_count;
+      #endif
+      /* Turn interrupts back on, assuming they were on when micros was called. */
+      SREG = oldSREG; /* INTERRUPTS ON */
+ 188:	9f bf       	out	0x3f, r25	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:490
+      */
+      #if defined(MILLIS_USE_TCA)
+        ticks = (TIME_TRACKING_TIMER_PERIOD) - ticks;
+        if ((flags & TCA_SPLIT_HUNF_bm) && (ticks < 0x03)) {
+      #else /* = defined(MILLIS_USE_TCB) */
+        if ((flags & TCB_CAPT_bm) && !(ticks & 0xFF00)) {
+ 18a:	80 ff       	sbrs	r24, 0
+ 18c:	08 c0       	rjmp	.+16     	; 0x19e <micros+0x36>
+ 18e:	cf 01       	movw	r24, r30
+ 190:	88 27       	eor	r24, r24
+ 192:	89 2b       	or	r24, r25
+ 194:	21 f4       	brne	.+8      	; 0x19e <micros+0x36>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:495
+      #endif
+      #if (defined(MILLIS_USE_TCB) && (F_CPU <= 2000000UL))
+        overflows += 2;
+      #else
+        overflows++;
+ 196:	2f 5f       	subi	r18, 0xFF	; 255
+ 198:	3f 4f       	sbci	r19, 0xFF	; 255
+ 19a:	4f 4f       	sbci	r20, 0xFF	; 255
+ 19c:	5f 4f       	sbci	r21, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:969
+        #elif (F_CPU  == 32000000UL || F_CPU > 24000000UL)
+          microseconds = overflows * 1000 + (ticks >> 4);
+        #elif (F_CPU  == 16000000UL || F_CPU > 12000000UL)
+          microseconds = overflows * 1000 + (ticks >> 3);
+        #elif (F_CPU  ==  8000000UL || F_CPU >  6000000UL)
+          microseconds = overflows * 1000 + (ticks >> 2);
+ 19e:	a8 ee       	ldi	r26, 0xE8	; 232
+ 1a0:	b3 e0       	ldi	r27, 0x03	; 3
+ 1a2:	20 d5       	rcall	.+2624   	; 0xbe4 <__muluhisi3>
+ 1a4:	f6 95       	lsr	r31
+ 1a6:	e7 95       	ror	r30
+ 1a8:	f6 95       	lsr	r31
+ 1aa:	e7 95       	ror	r30
+ 1ac:	6e 0f       	add	r22, r30
+ 1ae:	7f 1f       	adc	r23, r31
+ 1b0:	81 1d       	adc	r24, r1
+ 1b2:	91 1d       	adc	r25, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1039
+          microseconds = ((overflows * millisClockCyclesToMicroseconds(TIME_TRACKING_CYCLES_PER_OVF))
+                        + (ticks * (millisClockCyclesToMicroseconds(TIME_TRACKING_CYCLES_PER_OVF) / TIME_TRACKING_TIMER_PERIOD)));
+        #endif
+      #endif // end of timer-specific part of micros calculations
+      return microseconds;
+    }
+ 1b4:	08 95       	ret
+
+000001b6 <delay.constprop.9>:
+delay():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1100
+
+
+#if (!(defined(MILLIS_USE_TIMERNONE) || defined(MILLIS_USE_TIMERRTC) || (F_CPU == 7000000L || F_CPU == 14000000)))
+  // delay implementation when we do have micros() - we know it won't work at 7 or 14, and those can be generated
+  // from internal, and switch logic is in even though micros isn't.
+  void delay(unsigned long ms)
+ 1b6:	cf 92       	push	r12
+ 1b8:	df 92       	push	r13
+ 1ba:	ef 92       	push	r14
+ 1bc:	ff 92       	push	r15
+ 1be:	cf 93       	push	r28
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1102
+  {
+    uint16_t start = (uint16_t)micros();
+ 1c0:	df 93       	push	r29
+ 1c2:	d2 df       	rcall	.-92     	; 0x168 <micros>
+ 1c4:	eb 01       	movw	r28, r22
+ 1c6:	88 ee       	ldi	r24, 0xE8	; 232
+ 1c8:	c8 2e       	mov	r12, r24
+ 1ca:	83 e0       	ldi	r24, 0x03	; 3
+ 1cc:	d8 2e       	mov	r13, r24
+ 1ce:	e1 2c       	mov	r14, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1106
+    while (true) {
+      if (ms == 0) break;
+      yield();
+      uint16_t us_passed = (uint16_t)micros() - start;
+ 1d0:	f1 2c       	mov	r15, r1
+ 1d2:	ca df       	rcall	.-108    	; 0x168 <micros>
+ 1d4:	6c 1b       	sub	r22, r28
+ 1d6:	7d 0b       	sbc	r23, r29
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1107
+      if (us_passed >= 1000) {
+ 1d8:	68 3e       	cpi	r22, 0xE8	; 232
+ 1da:	73 40       	sbci	r23, 0x03	; 3
+ 1dc:	d0 f3       	brcs	.-12     	; 0x1d2 <delay.constprop.9+0x1c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1108
+        ms--;
+ 1de:	81 e0       	ldi	r24, 0x01	; 1
+ 1e0:	c8 1a       	sub	r12, r24
+ 1e2:	d1 08       	sbc	r13, r1
+ 1e4:	e1 08       	sbc	r14, r1
+ 1e6:	f1 08       	sbc	r15, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1109
+        start += 1000;
+ 1e8:	c8 51       	subi	r28, 0x18	; 24
+ 1ea:	dc 4f       	sbci	r29, 0xFC	; 252
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1104
+  // from internal, and switch logic is in even though micros isn't.
+  void delay(unsigned long ms)
+  {
+    uint16_t start = (uint16_t)micros();
+    while (true) {
+      if (ms == 0) break;
+ 1ec:	c1 14       	cp	r12, r1
+ 1ee:	d1 04       	cpc	r13, r1
+ 1f0:	e1 04       	cpc	r14, r1
+ 1f2:	f1 04       	cpc	r15, r1
+ 1f4:	71 f7       	brne	.-36     	; 0x1d2 <delay.constprop.9+0x1c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1112
+      if (us_passed >= 1000) {
+        ms--;
+        start += 1000;
+      }
+    }
+  }
+ 1f6:	df 91       	pop	r29
+ 1f8:	cf 91       	pop	r28
+ 1fa:	ff 90       	pop	r15
+ 1fc:	ef 90       	pop	r14
+ 1fe:	df 90       	pop	r13
+ 200:	cf 90       	pop	r12
+ 202:	08 95       	ret
+
+00000204 <Print::write(unsigned char const*, unsigned int)>:
+write():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore\api/Print.cpp:29
+#include "Print.h"
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+/* default implementation: may be overridden */
+size_t Print::write(const uint8_t *buffer, size_t size) {
+ 204:	af 92       	push	r10
+ 206:	bf 92       	push	r11
+ 208:	cf 92       	push	r12
+ 20a:	df 92       	push	r13
+ 20c:	ef 92       	push	r14
+ 20e:	ff 92       	push	r15
+ 210:	0f 93       	push	r16
+ 212:	1f 93       	push	r17
+ 214:	cf 93       	push	r28
+ 216:	df 93       	push	r29
+ 218:	6c 01       	movw	r12, r24
+ 21a:	7b 01       	movw	r14, r22
+ 21c:	8b 01       	movw	r16, r22
+ 21e:	04 0f       	add	r16, r20
+ 220:	15 1f       	adc	r17, r21
+ 222:	eb 01       	movw	r28, r22
+ 224:	5e 01       	movw	r10, r28
+ 226:	ae 18       	sub	r10, r14
+ 228:	bf 08       	sbc	r11, r15
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore\api/Print.cpp:31
+  size_t n = 0;
+  while (size--) {
+ 22a:	c0 17       	cp	r28, r16
+ 22c:	d1 07       	cpc	r29, r17
+ 22e:	59 f0       	breq	.+22     	; 0x246 <Print::write(unsigned char const*, unsigned int)+0x42>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore\api/Print.cpp:32
+    if (write(*buffer++)) {
+ 230:	69 91       	ld	r22, Y+
+ 232:	d6 01       	movw	r26, r12
+ 234:	ed 91       	ld	r30, X+
+ 236:	fc 91       	ld	r31, X
+ 238:	01 90       	ld	r0, Z+
+ 23a:	f0 81       	ld	r31, Z
+ 23c:	e0 2d       	mov	r30, r0
+ 23e:	c6 01       	movw	r24, r12
+ 240:	09 95       	icall
+ 242:	89 2b       	or	r24, r25
+ 244:	79 f7       	brne	.-34     	; 0x224 <Print::write(unsigned char const*, unsigned int)+0x20>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore\api/Print.cpp:39
+    } else {
+      break;
+    }
+  }
+  return n;
+}
+ 246:	c5 01       	movw	r24, r10
+ 248:	df 91       	pop	r29
+ 24a:	cf 91       	pop	r28
+ 24c:	1f 91       	pop	r17
+ 24e:	0f 91       	pop	r16
+ 250:	ff 90       	pop	r15
+ 252:	ef 90       	pop	r14
+ 254:	df 90       	pop	r13
+ 256:	cf 90       	pop	r12
+ 258:	bf 90       	pop	r11
+ 25a:	af 90       	pop	r10
+ 25c:	08 95       	ret
+
+0000025e <HardwareSerial::availableForWrite()>:
+availableForWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:733
+      int HardwareSerial::availableForWrite(void) {
+        tx_buffer_index_t head;
+        tx_buffer_index_t tail;
+
+        TX_BUFFER_ATOMIC {
+          head = _tx_buffer_head;
+ 25e:	fc 01       	movw	r30, r24
+ 260:	51 89       	ldd	r21, Z+17	; 0x11
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:734
+          tail = _tx_buffer_tail;
+ 262:	42 89       	ldd	r20, Z+18	; 0x12
+ 264:	25 2f       	mov	r18, r21
+ 266:	30 e0       	ldi	r19, 0x00	; 0
+ 268:	84 2f       	mov	r24, r20
+ 26a:	90 e0       	ldi	r25, 0x00	; 0
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:737
+        }
+        if (head >= tail) {
+          return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+ 26c:	82 1b       	sub	r24, r18
+ 26e:	93 0b       	sbc	r25, r19
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:736
+
+        TX_BUFFER_ATOMIC {
+          head = _tx_buffer_head;
+          tail = _tx_buffer_tail;
+        }
+        if (head >= tail) {
+ 270:	54 17       	cp	r21, r20
+ 272:	10 f0       	brcs	.+4      	; 0x278 <HardwareSerial::availableForWrite()+0x1a>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:737
+          return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+ 274:	cf 96       	adiw	r24, 0x3f	; 63
+ 276:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:739
+        }
+        return tail - head - 1;
+ 278:	01 97       	sbiw	r24, 0x01	; 1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:740
+      }
+ 27a:	08 95       	ret
+
+0000027c <HardwareSerial::read()>:
+read():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:717
+      } else {
+        return _rx_buffer[_rx_buffer_tail];
+      }
+    }
+
+    int HardwareSerial::read(void) {
+ 27c:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:719
+      // if the head isn't ahead of the tail, we don't have any characters
+      if (_rx_buffer_head == _rx_buffer_tail) {
+ 27e:	97 85       	ldd	r25, Z+15	; 0x0f
+ 280:	80 89       	ldd	r24, Z+16	; 0x10
+ 282:	98 17       	cp	r25, r24
+ 284:	61 f0       	breq	.+24     	; 0x29e <HardwareSerial::read()+0x22>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:722
+        return -1;
+      } else {
+        unsigned char c = _rx_buffer[_rx_buffer_tail];
+ 286:	a0 89       	ldd	r26, Z+16	; 0x10
+ 288:	ae 0f       	add	r26, r30
+ 28a:	bf 2f       	mov	r27, r31
+ 28c:	b1 1d       	adc	r27, r1
+ 28e:	53 96       	adiw	r26, 0x13	; 19
+ 290:	8c 91       	ld	r24, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:723
+        _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) & (SERIAL_RX_BUFFER_SIZE - 1);   // % SERIAL_RX_BUFFER_SIZE;
+ 292:	90 89       	ldd	r25, Z+16	; 0x10
+ 294:	9f 5f       	subi	r25, 0xFF	; 255
+ 296:	9f 73       	andi	r25, 0x3F	; 63
+ 298:	90 8b       	std	Z+16, r25	; 0x10
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:724
+        return c;
+ 29a:	90 e0       	ldi	r25, 0x00	; 0
+ 29c:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:720
+    }
+
+    int HardwareSerial::read(void) {
+      // if the head isn't ahead of the tail, we don't have any characters
+      if (_rx_buffer_head == _rx_buffer_tail) {
+        return -1;
+ 29e:	8f ef       	ldi	r24, 0xFF	; 255
+ 2a0:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:726
+      } else {
+        unsigned char c = _rx_buffer[_rx_buffer_tail];
+        _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) & (SERIAL_RX_BUFFER_SIZE - 1);   // % SERIAL_RX_BUFFER_SIZE;
+        return c;
+      }
+    }
+ 2a2:	08 95       	ret
+
+000002a4 <HardwareSerial::peek()>:
+peek():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:709
+
+    int HardwareSerial::available(void) {
+      return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) & (SERIAL_RX_BUFFER_SIZE - 1);   //% SERIAL_RX_BUFFER_SIZE;
+    }
+
+    int HardwareSerial::peek(void) {
+ 2a4:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:710
+      if (_rx_buffer_head == _rx_buffer_tail) {
+ 2a6:	97 85       	ldd	r25, Z+15	; 0x0f
+ 2a8:	80 89       	ldd	r24, Z+16	; 0x10
+ 2aa:	98 17       	cp	r25, r24
+ 2ac:	31 f0       	breq	.+12     	; 0x2ba <HardwareSerial::peek()+0x16>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:713
+        return -1;
+      } else {
+        return _rx_buffer[_rx_buffer_tail];
+ 2ae:	80 89       	ldd	r24, Z+16	; 0x10
+ 2b0:	e8 0f       	add	r30, r24
+ 2b2:	f1 1d       	adc	r31, r1
+ 2b4:	83 89       	ldd	r24, Z+19	; 0x13
+ 2b6:	90 e0       	ldi	r25, 0x00	; 0
+ 2b8:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:711
+      return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) & (SERIAL_RX_BUFFER_SIZE - 1);   //% SERIAL_RX_BUFFER_SIZE;
+    }
+
+    int HardwareSerial::peek(void) {
+      if (_rx_buffer_head == _rx_buffer_tail) {
+        return -1;
+ 2ba:	8f ef       	ldi	r24, 0xFF	; 255
+ 2bc:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:715
+      } else {
+        return _rx_buffer[_rx_buffer_tail];
+      }
+    }
+ 2be:	08 95       	ret
+
+000002c0 <HardwareSerial::available()>:
+available():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:705
+      // Note: Does not change output pins
+      // though the datasheetsays turning the TX module off sets it to input.
+      _state = 0;
+    }
+
+    int HardwareSerial::available(void) {
+ 2c0:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:706
+      return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) & (SERIAL_RX_BUFFER_SIZE - 1);   //% SERIAL_RX_BUFFER_SIZE;
+ 2c2:	97 85       	ldd	r25, Z+15	; 0x0f
+ 2c4:	20 89       	ldd	r18, Z+16	; 0x10
+ 2c6:	89 2f       	mov	r24, r25
+ 2c8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ca:	80 5c       	subi	r24, 0xC0	; 192
+ 2cc:	9f 4f       	sbci	r25, 0xFF	; 255
+ 2ce:	82 1b       	sub	r24, r18
+ 2d0:	91 09       	sbc	r25, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:707
+    }
+ 2d2:	8f 73       	andi	r24, 0x3F	; 63
+ 2d4:	99 27       	eor	r25, r25
+ 2d6:	08 95       	ret
+
+000002d8 <HardwareSerial::_poll_tx_data_empty()>:
+_poll_tx_data_empty():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:426
+        HardwareSerial._tx_buffer_tail = txTail;
+      }
+    #endif
+
+    // To invoke data empty "interrupt" via a call, use this method
+    void HardwareSerial::_poll_tx_data_empty(void) {
+ 2d8:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:427
+      if ((!(SREG & CPU_I_bm)) ||  CPUINT.STATUS) {
+ 2da:	0f b6       	in	r0, 0x3f	; 63
+ 2dc:	07 fe       	sbrs	r0, 7
+ 2de:	04 c0       	rjmp	.+8      	; 0x2e8 <HardwareSerial::_poll_tx_data_empty()+0x10>
+ 2e0:	80 91 11 01 	lds	r24, 0x0111	; 0x800111 <__TEXT_REGION_LENGTH__+0x7f0111>
+ 2e4:	88 23       	and	r24, r24
+ 2e6:	a1 f0       	breq	.+40     	; 0x310 <_poll_dre_done>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:444
+        // so we'll have to poll the "data register empty" flag ourselves.
+        // If it is set, pretend an interrupt has happened and call the handler
+        // to free up space for us.
+        // -Spence 10/23/20
+        // Invoke interrupt handler only if conditions data register is empty
+        if ((*_hwserial_module).STATUS & USART_DREIF_bm) {
+ 2e8:	a0 85       	ldd	r26, Z+8	; 0x08
+ 2ea:	b1 85       	ldd	r27, Z+9	; 0x09
+ 2ec:	14 96       	adiw	r26, 0x04	; 4
+ 2ee:	8c 91       	ld	r24, X
+ 2f0:	14 97       	sbiw	r26, 0x04	; 4
+ 2f2:	85 ff       	sbrs	r24, 5
+ 2f4:	0d c0       	rjmp	.+26     	; 0x310 <_poll_dre_done>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:445
+          if (_tx_buffer_head == _tx_buffer_tail) {
+ 2f6:	91 89       	ldd	r25, Z+17	; 0x11
+ 2f8:	82 89       	ldd	r24, Z+18	; 0x12
+ 2fa:	98 13       	cpse	r25, r24
+ 2fc:	07 c0       	rjmp	.+14     	; 0x30c <HardwareSerial::_poll_tx_data_empty()+0x34>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:447
+            // Buffer empty, so disable "data register empty" interrupt
+            (*_hwserial_module).CTRLA &= (~USART_DREIE_bm);
+ 2fe:	15 96       	adiw	r26, 0x05	; 5
+ 300:	8c 91       	ld	r24, X
+ 302:	15 97       	sbiw	r26, 0x05	; 5
+ 304:	8f 7d       	andi	r24, 0xDF	; 223
+ 306:	15 96       	adiw	r26, 0x05	; 5
+ 308:	8c 93       	st	X, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:471
+      #ifdef USART1
+                    ::"z"((uint16_t)thisSerial)
+      #else
+                    ::"z"(&Serial0)
+      #endif
+                    : "r18","r19","r24","r25","r26","r27"); // these got saved and restored in the ISR context, but here we don't need top and in many cases no action is needed.
+ 30a:	08 95       	ret
+ 30c:	e8 94       	clt
+ 30e:	3a c2       	rjmp	.+1140   	; 0x784 <_poll_dre>
+
+00000310 <_poll_dre_done>:
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:480
+        }
+      }
+      // In case interrupts are enabled, the interrupt routine will be invoked by itself
+      // Note that this currently does not handle cases where the DRE interruopt becomes
+      // disabled, yet you are actually attempting to send. I don't think it can happen.
+    }
+ 310:	08 95       	ret
+
+00000312 <HardwareSerial::write(unsigned char)>:
+write():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:773
+        // When we get here, nothing is queued anymore (DREIE is disabled) and
+        // the hardware finished transmission (TXCIF is set).
+      }
+
+
+      size_t HardwareSerial::write(uint8_t c) {
+ 312:	0f 93       	push	r16
+ 314:	1f 93       	push	r17
+ 316:	cf 93       	push	r28
+ 318:	df 93       	push	r29
+ 31a:	ec 01       	movw	r28, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:774
+        _state |= 1; // Record that we have written to serial since it was begun.
+ 31c:	8e 85       	ldd	r24, Y+14	; 0x0e
+ 31e:	81 60       	ori	r24, 0x01	; 1
+ 320:	8e 87       	std	Y+14, r24	; 0x0e
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:779
+        // If the buffer and the data register is empty, just write the byte
+        // to the data register and be done. This shortcut helps
+        // significantly improve the effective data rate at high (>
+        // 500kbit/s) bit rates, where interrupt overhead becomes a slowdown.
+        if ((_tx_buffer_head == _tx_buffer_tail) && ((*_hwserial_module).STATUS & USART_DREIF_bm)) {
+ 322:	99 89       	ldd	r25, Y+17	; 0x11
+ 324:	8a 89       	ldd	r24, Y+18	; 0x12
+ 326:	98 13       	cpse	r25, r24
+ 328:	0b c0       	rjmp	.+22     	; 0x340 <HardwareSerial::write(unsigned char)+0x2e>
+ 32a:	e8 85       	ldd	r30, Y+8	; 0x08
+ 32c:	f9 85       	ldd	r31, Y+9	; 0x09
+ 32e:	84 81       	ldd	r24, Z+4	; 0x04
+ 330:	85 ff       	sbrs	r24, 5
+ 332:	06 c0       	rjmp	.+12     	; 0x340 <HardwareSerial::write(unsigned char)+0x2e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:780
+          if (_state & 2) { // in half duplex mode, we turn off RXC interrupt
+ 334:	8e 85       	ldd	r24, Y+14	; 0x0e
+ 336:	81 fd       	sbrc	r24, 1
+ 338:	0d c0       	rjmp	.+26     	; 0x354 <HardwareSerial::write(unsigned char)+0x42>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:787
+            ctrla &= ~USART_RXCIE_bm;
+            ctrla |=  USART_TXCIE_bm;
+            (*_hwserial_module).STATUS = USART_TXCIF_bm;
+            (*_hwserial_module).CTRLA = ctrla;
+          } else {
+            (*_hwserial_module).STATUS = USART_TXCIF_bm;
+ 33a:	80 e4       	ldi	r24, 0x40	; 64
+ 33c:	84 83       	std	Z+4, r24	; 0x04
+ 33e:	12 c0       	rjmp	.+36     	; 0x364 <HardwareSerial::write(unsigned char)+0x52>
+ 340:	06 2f       	mov	r16, r22
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:808
+           * // that the interrupt handler is called in this situation
+           * (*_hwserial_module).CTRLA &= (~USART_DREIE_bm);
+           */
+          return 1;
+        }
+        tx_buffer_index_t i = (_tx_buffer_head + 1) & (SERIAL_TX_BUFFER_SIZE - 1);  // % SERIAL_TX_BUFFER_SIZE;
+ 342:	19 89       	ldd	r17, Y+17	; 0x11
+ 344:	1f 5f       	subi	r17, 0xFF	; 255
+ 346:	1f 73       	andi	r17, 0x3F	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:812
+
+        // If the output buffer is full, there's nothing we can do other than to
+        // wait for the interrupt handler to empty it a bit (or emulate interrupts)
+        while (i == _tx_buffer_tail) {
+ 348:	8a 89       	ldd	r24, Y+18	; 0x12
+ 34a:	81 13       	cpse	r24, r17
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:813
+          _poll_tx_data_empty();
+ 34c:	15 c0       	rjmp	.+42     	; 0x378 <HardwareSerial::write(unsigned char)+0x66>
+ 34e:	ce 01       	movw	r24, r28
+ 350:	c3 df       	rcall	.-122    	; 0x2d8 <HardwareSerial::_poll_tx_data_empty()>
+ 352:	fa cf       	rjmp	.-12     	; 0x348 <HardwareSerial::write(unsigned char)+0x36>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:781
+        // to the data register and be done. This shortcut helps
+        // significantly improve the effective data rate at high (>
+        // 500kbit/s) bit rates, where interrupt overhead becomes a slowdown.
+        if ((_tx_buffer_head == _tx_buffer_tail) && ((*_hwserial_module).STATUS & USART_DREIF_bm)) {
+          if (_state & 2) { // in half duplex mode, we turn off RXC interrupt
+            uint8_t ctrla = (*_hwserial_module).CTRLA;
+ 354:	85 81       	ldd	r24, Z+5	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:782
+            ctrla &= ~USART_RXCIE_bm;
+ 356:	8f 77       	andi	r24, 0x7F	; 127
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:783
+            ctrla |=  USART_TXCIE_bm;
+ 358:	80 64       	ori	r24, 0x40	; 64
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:784
+            (*_hwserial_module).STATUS = USART_TXCIF_bm;
+ 35a:	90 e4       	ldi	r25, 0x40	; 64
+ 35c:	94 83       	std	Z+4, r25	; 0x04
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:785
+            (*_hwserial_module).CTRLA = ctrla;
+ 35e:	e8 85       	ldd	r30, Y+8	; 0x08
+ 360:	f9 85       	ldd	r31, Y+9	; 0x09
+ 362:	85 83       	std	Z+5, r24	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:790
+          } else {
+            (*_hwserial_module).STATUS = USART_TXCIF_bm;
+          }
+          // MUST clear TXCIF **before** writing new char, otherwise ill-timed interrupt can cause it to erase the flag after the new charchter has been sent!
+          (*_hwserial_module).TXDATAL = c;
+ 364:	e8 85       	ldd	r30, Y+8	; 0x08
+ 366:	f9 85       	ldd	r31, Y+9	; 0x09
+ 368:	62 83       	std	Z+2, r22	; 0x02
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:828
+        } else {
+          // Enable "data register empty interrupt"
+          (*_hwserial_module).CTRLA |= USART_DREIE_bm;
+        }
+        return 1;
+      }
+ 36a:	81 e0       	ldi	r24, 0x01	; 1
+ 36c:	90 e0       	ldi	r25, 0x00	; 0
+ 36e:	df 91       	pop	r29
+ 370:	cf 91       	pop	r28
+ 372:	1f 91       	pop	r17
+ 374:	0f 91       	pop	r16
+ 376:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:815
+        // If the output buffer is full, there's nothing we can do other than to
+        // wait for the interrupt handler to empty it a bit (or emulate interrupts)
+        while (i == _tx_buffer_tail) {
+          _poll_tx_data_empty();
+        }
+        _tx_buffer[_tx_buffer_head] = c;
+ 378:	e9 89       	ldd	r30, Y+17	; 0x11
+ 37a:	ec 0f       	add	r30, r28
+ 37c:	fd 2f       	mov	r31, r29
+ 37e:	f1 1d       	adc	r31, r1
+ 380:	ed 5a       	subi	r30, 0xAD	; 173
+ 382:	ff 4f       	sbci	r31, 0xFF	; 255
+ 384:	00 83       	st	Z, r16
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:816
+        _tx_buffer_head = i;
+ 386:	19 8b       	std	Y+17, r17	; 0x11
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:817
+        if (_state & 2) { // in half duplex mode, we turn off RXC interrupt
+ 388:	8e 85       	ldd	r24, Y+14	; 0x0e
+ 38a:	e8 85       	ldd	r30, Y+8	; 0x08
+ 38c:	f9 85       	ldd	r31, Y+9	; 0x09
+ 38e:	81 ff       	sbrs	r24, 1
+ 390:	09 c0       	rjmp	.+18     	; 0x3a4 <HardwareSerial::write(unsigned char)+0x92>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:818
+          uint8_t ctrla = (*_hwserial_module).CTRLA;
+ 392:	85 81       	ldd	r24, Z+5	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:819
+          ctrla &= ~USART_RXCIE_bm;
+ 394:	8f 77       	andi	r24, 0x7F	; 127
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:820
+          ctrla |= USART_TXCIE_bm | USART_DREIE_bm;
+ 396:	80 66       	ori	r24, 0x60	; 96
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:821
+          (*_hwserial_module).STATUS = USART_TXCIF_bm;
+ 398:	90 e4       	ldi	r25, 0x40	; 64
+ 39a:	94 83       	std	Z+4, r25	; 0x04
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:822
+          (*_hwserial_module).CTRLA = ctrla;
+ 39c:	e8 85       	ldd	r30, Y+8	; 0x08
+ 39e:	f9 85       	ldd	r31, Y+9	; 0x09
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:825
+        } else {
+          // Enable "data register empty interrupt"
+          (*_hwserial_module).CTRLA |= USART_DREIE_bm;
+ 3a0:	85 83       	std	Z+5, r24	; 0x05
+ 3a2:	e3 cf       	rjmp	.-58     	; 0x36a <HardwareSerial::write(unsigned char)+0x58>
+ 3a4:	85 81       	ldd	r24, Z+5	; 0x05
+ 3a6:	80 62       	ori	r24, 0x20	; 32
+ 3a8:	fb cf       	rjmp	.-10     	; 0x3a0 <HardwareSerial::write(unsigned char)+0x8e>
+
+000003aa <HardwareSerial::flush()>:
+flush():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:742
+          return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+        }
+        return tail - head - 1;
+      }
+
+      void HardwareSerial::flush() {
+ 3aa:	cf 93       	push	r28
+ 3ac:	df 93       	push	r29
+ 3ae:	ec 01       	movw	r28, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:746
+        // If we have never written a byte, no need to flush. This special
+        // case is needed since there is no way to force the TXCIF (transmit
+        // complete) bit to 1 during initialization
+        if (!(_state & 1)) {
+ 3b0:	8e 85       	ldd	r24, Y+14	; 0x0e
+ 3b2:	80 ff       	sbrs	r24, 0
+ 3b4:	0b c0       	rjmp	.+22     	; 0x3cc <HardwareSerial::flush()+0x22>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:761
+        // it's appropriate to use for applications where it has only very small benefits, and significant risk of surprising the user and causing
+        // breakage of code that would otherwise work. Finally, the previous implementation didn't check if it was called from the current lvl1 ISR
+        // and in that case flush(), and write() with full buffer would just straight up hang...
+
+        // Spin until the data-register-empty-interrupt is disabled and TX complete interrupt flag is raised
+        while (((*_hwserial_module).CTRLA & USART_DREIE_bm) || (!((*_hwserial_module).STATUS & USART_TXCIF_bm))) {
+ 3b6:	e8 85       	ldd	r30, Y+8	; 0x08
+ 3b8:	f9 85       	ldd	r31, Y+9	; 0x09
+ 3ba:	85 81       	ldd	r24, Z+5	; 0x05
+ 3bc:	85 fd       	sbrc	r24, 5
+ 3be:	03 c0       	rjmp	.+6      	; 0x3c6 <HardwareSerial::flush()+0x1c>
+ 3c0:	84 81       	ldd	r24, Z+4	; 0x04
+ 3c2:	86 fd       	sbrc	r24, 6
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:766
+
+          // If interrupts are globally disabled or the and DR empty interrupt is disabled,
+          // poll the "data register empty" interrupt flag to prevent deadlock
+
+          _poll_tx_data_empty();
+ 3c4:	03 c0       	rjmp	.+6      	; 0x3cc <HardwareSerial::flush()+0x22>
+ 3c6:	ce 01       	movw	r24, r28
+ 3c8:	87 df       	rcall	.-242    	; 0x2d8 <HardwareSerial::_poll_tx_data_empty()>
+ 3ca:	f5 cf       	rjmp	.-22     	; 0x3b6 <HardwareSerial::flush()+0xc>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:770
+        }
+        // When we get here, nothing is queued anymore (DREIE is disabled) and
+        // the hardware finished transmission (TXCIF is set).
+      }
+ 3cc:	df 91       	pop	r29
+ 3ce:	cf 91       	pop	r28
+ 3d0:	08 95       	ret
+
+000003d2 <TwoWire::HandleSlaveIRQ(TwoWire*)>:
+HandleSlaveIRQ():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1292
+
+
+
+
+
+void TwoWire::HandleSlaveIRQ(TwoWire *wire_s) {
+ 3d2:	1f 93       	push	r17
+ 3d4:	cf 93       	push	r28
+ 3d6:	df 93       	push	r29
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1293
+  if (wire_s == NULL) {
+ 3d8:	00 97       	sbiw	r24, 0x00	; 0
+ 3da:	c1 f1       	breq	.+112    	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+ 3dc:	ec 01       	movw	r28, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1317
+  #if defined(TWI_MANDS)
+    wire_s->_bools._toggleStreamFn = 0x01;
+  #endif
+
+  uint8_t action = 0;
+  uint8_t clientStatus = wire_s->_module->SSTATUS;
+ 3de:	a8 85       	ldd	r26, Y+8	; 0x08
+ 3e0:	b9 85       	ldd	r27, Y+9	; 0x09
+ 3e2:	1b 96       	adiw	r26, 0x0b	; 11
+ 3e4:	1c 91       	ld	r17, X
+ 3e6:	1b 97       	sbiw	r26, 0x0b	; 11
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1320
+
+
+  if (clientStatus & TWI_APIF_bm) {   // Address/Stop Bit set
+ 3e8:	16 ff       	sbrs	r17, 6
+ 3ea:	43 c0       	rjmp	.+134    	; 0x472 <__LOCK_REGION_LENGTH__+0x72>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1321
+    if (wire_s->_bools._hostDataSent != 0) { // At this point, we have either a START, REPSTART or a STOP
+ 3ec:	8b 85       	ldd	r24, Y+11	; 0x0b
+ 3ee:	83 ff       	sbrs	r24, 3
+ 3f0:	09 c0       	rjmp	.+18     	; 0x404 <__LOCK_REGION_LENGTH__+0x4>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1322
+      wire_s->_bools._hostDataSent = 0x00;
+ 3f2:	87 7f       	andi	r24, 0xF7	; 247
+ 3f4:	8b 87       	std	Y+11, r24	; 0x0b
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1323
+      if (wire_s->user_onReceive != NULL) {   // only if the last APIF was a Master Write,
+ 3f6:	ef 85       	ldd	r30, Y+15	; 0x0f
+ 3f8:	f8 89       	ldd	r31, Y+16	; 0x10
+ 3fa:	30 97       	sbiw	r30, 0x00	; 0
+ 3fc:	19 f0       	breq	.+6      	; 0x404 <__LOCK_REGION_LENGTH__+0x4>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1324
+        wire_s->user_onReceive((*head));      // we notify the sketch about new Data
+ 3fe:	8a 89       	ldd	r24, Y+18	; 0x12
+ 400:	90 e0       	ldi	r25, 0x00	; 0
+ 402:	09 95       	icall
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1328
+      }
+    }
+
+    if (clientStatus & TWI_AP_bm) {     // Address bit set
+ 404:	10 ff       	sbrs	r17, 0
+ 406:	2b c0       	rjmp	.+86     	; 0x45e <__LOCK_REGION_LENGTH__+0x5e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1329
+      if ((*head) == 0) {                 // only if there was no data (START)
+ 408:	8a 89       	ldd	r24, Y+18	; 0x12
+ 40a:	81 11       	cpse	r24, r1
+ 40c:	0b c0       	rjmp	.+22     	; 0x424 <__LOCK_REGION_LENGTH__+0x24>
+pauseDeepSleep():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1468
+    sleepStackLoc |= bit_mask;      // Remember which module is busy
+    sleepStack = sleepStackLoc;
+  #else
+    (void) module_lower_Addr;
+
+    if (sleepStack == 0x00) {
+ 40e:	80 91 90 60 	lds	r24, 0x6090	; 0x806090 <__data_end>
+ 412:	81 11       	cpse	r24, r1
+ 414:	07 c0       	rjmp	.+14     	; 0x424 <__LOCK_REGION_LENGTH__+0x24>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1469
+      uint8_t slp = SLPCTRL.CTRLA;    // save current sleep State
+ 416:	80 91 50 00 	lds	r24, 0x0050	; 0x800050 <__TEXT_REGION_LENGTH__+0x7f0050>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1470
+      sleepStack = slp;               // using local variable for less store/load
+ 41a:	80 93 90 60 	sts	0x6090, r24	; 0x806090 <__data_end>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1471
+      SLPCTRL.CTRLA = slp & 0x01;     // only leave the SEN bit, if it was set
+ 41e:	81 70       	andi	r24, 0x01	; 1
+ 420:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x7f0050>
+HandleSlaveIRQ():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1332
+
+    if (clientStatus & TWI_AP_bm) {     // Address bit set
+      if ((*head) == 0) {                 // only if there was no data (START)
+        pauseDeepSleep((uint8_t)((uint16_t)wire_s->_module));  // Only START can wake from deep sleep, change to IDLE
+      }
+      (*head) = 0;
+ 424:	1a 8a       	std	Y+18, r1	; 0x12
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1333
+      (*tail) = 0;
+ 426:	1b 8a       	std	Y+19, r1	; 0x13
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1334
+      (*address) = wire_s->_module->SDATA;  // read address from data register
+ 428:	e8 85       	ldd	r30, Y+8	; 0x08
+ 42a:	f9 85       	ldd	r31, Y+9	; 0x09
+ 42c:	85 85       	ldd	r24, Z+13	; 0x0d
+ 42e:	89 8b       	std	Y+17, r24	; 0x11
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1335
+      if (clientStatus & TWI_DIR_bm) {      // Master is reading
+ 430:	11 ff       	sbrs	r17, 1
+ 432:	10 c0       	rjmp	.+32     	; 0x454 <__LOCK_REGION_LENGTH__+0x54>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1336
+        if (wire_s->user_onRequest != NULL) {
+ 434:	ed 85       	ldd	r30, Y+13	; 0x0d
+ 436:	fe 85       	ldd	r31, Y+14	; 0x0e
+ 438:	30 97       	sbiw	r30, 0x00	; 0
+ 43a:	09 f0       	breq	.+2      	; 0x43e <__LOCK_REGION_LENGTH__+0x3e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1337
+          wire_s->user_onRequest();
+ 43c:	09 95       	icall
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1339
+        }
+        if ((*head) == 0) {                     // If no data to transmit, send NACK
+ 43e:	8a 89       	ldd	r24, Y+18	; 0x12
+ 440:	81 11       	cpse	r24, r1
+ 442:	0b c0       	rjmp	.+22     	; 0x45a <__LOCK_REGION_LENGTH__+0x5a>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1340
+          action = TWI_ACKACT_bm | TWI_SCMD_COMPTRANS_gc;  // NACK + "Wait for any Start (S/Sr) condition"
+ 444:	86 e0       	ldi	r24, 0x06	; 6
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1385
+          action = TWI_SCMD_RESPONSE_gc;            // "Execute Acknowledge Action succeeded by reception of next byte"
+        }
+      }
+    }
+  }
+  wire_s->_module->SCTRLB = action;  // using local variable (register) reduces the amount of loading _module
+ 446:	e8 85       	ldd	r30, Y+8	; 0x08
+ 448:	f9 85       	ldd	r31, Y+9	; 0x09
+ 44a:	82 87       	std	Z+10, r24	; 0x0a
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1389
+  #if defined(TWI_MANDS)
+    wire_s->_bools._toggleStreamFn = 0x00;
+  #endif
+}
+ 44c:	df 91       	pop	r29
+ 44e:	cf 91       	pop	r28
+ 450:	1f 91       	pop	r17
+ 452:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1345
+          action = TWI_ACKACT_bm | TWI_SCMD_COMPTRANS_gc;  // NACK + "Wait for any Start (S/Sr) condition"
+        } else {
+          action = TWI_SCMD_RESPONSE_gc;        // "Execute Acknowledge Action succeeded by reception of next byte"
+        }
+      } else {                          // Master is writing
+        wire_s->_bools._hostDataSent = 0x01;
+ 454:	8b 85       	ldd	r24, Y+11	; 0x0b
+ 456:	88 60       	ori	r24, 0x08	; 8
+ 458:	8b 87       	std	Y+11, r24	; 0x0b
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1346
+        action = TWI_SCMD_RESPONSE_gc;  // "Execute Acknowledge Action succeeded by slave data interrupt"
+ 45a:	83 e0       	ldi	r24, 0x03	; 3
+ 45c:	f4 cf       	rjmp	.-24     	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+restoreSleep():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1493
+      }
+    }
+    sleepStack = sleepStackLoc;
+  #else
+    (void) module_lower_Addr;
+    SLPCTRL.CTRLA = sleepStack;
+ 45e:	80 91 90 60 	lds	r24, 0x6090	; 0x806090 <__data_end>
+ 462:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x7f0050>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1494
+    sleepStack = 0;
+ 466:	10 92 90 60 	sts	0x6090, r1	; 0x806090 <__data_end>
+HandleSlaveIRQ():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1350
+        wire_s->_bools._hostDataSent = 0x01;
+        action = TWI_SCMD_RESPONSE_gc;  // "Execute Acknowledge Action succeeded by slave data interrupt"
+      }
+    } else {                          // Stop bit set
+      restoreSleep((uint8_t)((uint16_t)wire_s->_module));
+      (*head) = 0;
+ 46a:	1a 8a       	std	Y+18, r1	; 0x12
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1351
+      (*tail) = 0;
+ 46c:	1b 8a       	std	Y+19, r1	; 0x13
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1369
+          wire_s->_module->SDATA = buffer[(*tail)];  // Writing to the register to send data
+          (*tail)++;                              // Increment counter for sent bytes
+          action = TWI_SCMD_RESPONSE_gc;          // "Execute Acknowledge Action succeeded by reception of next byte"
+        } else {                                  // No more data available
+          (*head) = 0;                            // Avoid triggering REPSTART handler
+          action = TWI_SCMD_COMPTRANS_gc;         // "Wait for any Start (S/Sr) condition"
+ 46e:	82 e0       	ldi	r24, 0x02	; 2
+ 470:	ea cf       	rjmp	.-44     	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1354
+      restoreSleep((uint8_t)((uint16_t)wire_s->_module));
+      (*head) = 0;
+      (*tail) = 0;
+      action = TWI_SCMD_COMPTRANS_gc;  // "Wait for any Start (S/Sr) condition"
+    }
+  } else if (clientStatus & TWI_DIF_bm) { // Data bit set
+ 472:	17 ff       	sbrs	r17, 7
+ 474:	2e c0       	rjmp	.+92     	; 0x4d2 <__LOCK_REGION_LENGTH__+0xd2>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1309
+    buffer  =   wire_s->_clientBuffer;
+  #else
+    address = &(wire_s->_clientAddress);
+    head    = &(wire_s->_bytesToReadWrite);
+    tail    = &(wire_s->_bytesReadWritten);
+    buffer  =   wire_s->_hostBuffer;
+ 476:	9c 01       	movw	r18, r24
+ 478:	2b 5e       	subi	r18, 0xEB	; 235
+ 47a:	3f 4f       	sbci	r19, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1355
+      (*head) = 0;
+      (*tail) = 0;
+      action = TWI_SCMD_COMPTRANS_gc;  // "Wait for any Start (S/Sr) condition"
+    }
+  } else if (clientStatus & TWI_DIF_bm) { // Data bit set
+    if (clientStatus & TWI_DIR_bm) {        // Master is reading
+ 47c:	11 ff       	sbrs	r17, 1
+ 47e:	1a c0       	rjmp	.+52     	; 0x4b4 <__LOCK_REGION_LENGTH__+0xb4>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1356
+      if (clientStatus & wire_s->client_irq_mask) {   // If a collision was detected, or RXACK bit is set (when it matters)
+ 480:	8a 85       	ldd	r24, Y+10	; 0x0a
+ 482:	18 23       	and	r17, r24
+ 484:	21 f0       	breq	.+8      	; 0x48e <__LOCK_REGION_LENGTH__+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1357
+        wire_s->client_irq_mask = TWI_COLL_bm;  // stop checking for NACK
+ 486:	88 e0       	ldi	r24, 0x08	; 8
+ 488:	8a 87       	std	Y+10, r24	; 0x0a
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1368
+        if ((*tail) < (*head)) {                // Data is available
+          wire_s->_module->SDATA = buffer[(*tail)];  // Writing to the register to send data
+          (*tail)++;                              // Increment counter for sent bytes
+          action = TWI_SCMD_RESPONSE_gc;          // "Execute Acknowledge Action succeeded by reception of next byte"
+        } else {                                  // No more data available
+          (*head) = 0;                            // Avoid triggering REPSTART handler
+ 48a:	1a 8a       	std	Y+18, r1	; 0x12
+ 48c:	f0 cf       	rjmp	.-32     	; 0x46e <__LOCK_REGION_LENGTH__+0x6e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1361
+      if (clientStatus & wire_s->client_irq_mask) {   // If a collision was detected, or RXACK bit is set (when it matters)
+        wire_s->client_irq_mask = TWI_COLL_bm;  // stop checking for NACK
+        (*head) = 0;                            // Abort further data writes
+        action = TWI_SCMD_COMPTRANS_gc;         // "Wait for any Start (S/Sr) condition"
+      } else {                                // RXACK bit not set, no COLL
+        wire_s->_bytesTransmittedS++;           // increment bytes transmitted counter (for register model)
+ 48e:	8c 89       	ldd	r24, Y+20	; 0x14
+ 490:	8f 5f       	subi	r24, 0xFF	; 255
+ 492:	8c 8b       	std	Y+20, r24	; 0x14
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1362
+        wire_s->client_irq_mask = TWI_COLL_bm | TWI_RXACK_bm;  // start checking for NACK
+ 494:	88 e1       	ldi	r24, 0x18	; 24
+ 496:	8a 87       	std	Y+10, r24	; 0x0a
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1363
+        if ((*tail) < (*head)) {                // Data is available
+ 498:	eb 89       	ldd	r30, Y+19	; 0x13
+ 49a:	8a 89       	ldd	r24, Y+18	; 0x12
+ 49c:	e8 17       	cp	r30, r24
+ 49e:	a8 f7       	brcc	.-22     	; 0x48a <__LOCK_REGION_LENGTH__+0x8a>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1364
+          wire_s->_module->SDATA = buffer[(*tail)];  // Writing to the register to send data
+ 4a0:	e2 0f       	add	r30, r18
+ 4a2:	f3 2f       	mov	r31, r19
+ 4a4:	f1 1d       	adc	r31, r1
+ 4a6:	80 81       	ld	r24, Z
+ 4a8:	1d 96       	adiw	r26, 0x0d	; 13
+ 4aa:	8c 93       	st	X, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1365
+          (*tail)++;                              // Increment counter for sent bytes
+ 4ac:	8b 89       	ldd	r24, Y+19	; 0x13
+ 4ae:	8f 5f       	subi	r24, 0xFF	; 255
+ 4b0:	8b 8b       	std	Y+19, r24	; 0x13
+ 4b2:	d3 cf       	rjmp	.-90     	; 0x45a <__LOCK_REGION_LENGTH__+0x5a>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1373
+          (*head) = 0;                            // Avoid triggering REPSTART handler
+          action = TWI_SCMD_COMPTRANS_gc;         // "Wait for any Start (S/Sr) condition"
+        }
+      }
+    } else {                                  // Master is writing
+      uint8_t payload = wire_s->_module->SDATA;     // reading SDATA will clear the DATA IRQ flag
+ 4b4:	1d 96       	adiw	r26, 0x0d	; 13
+ 4b6:	8c 91       	ld	r24, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1374
+      if ((*head) < TWI_BUFFER_LENGTH) {            // make sure that we don't have a buffer overflow in case Master ignores NACK
+ 4b8:	ea 89       	ldd	r30, Y+18	; 0x12
+ 4ba:	e2 38       	cpi	r30, 0x82	; 130
+ 4bc:	50 f4       	brcc	.+20     	; 0x4d2 <__LOCK_REGION_LENGTH__+0xd2>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1375
+        buffer[(*head)] = payload;                  // save data
+ 4be:	e2 0f       	add	r30, r18
+ 4c0:	f3 2f       	mov	r31, r19
+ 4c2:	f1 1d       	adc	r31, r1
+ 4c4:	80 83       	st	Z, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1376
+        (*head)++;                                  // Advance Head
+ 4c6:	8a 89       	ldd	r24, Y+18	; 0x12
+ 4c8:	8f 5f       	subi	r24, 0xFF	; 255
+ 4ca:	8a 8b       	std	Y+18, r24	; 0x12
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1377
+        if ((*head) == TWI_BUFFER_LENGTH) {         // if buffer is not yet full
+ 4cc:	82 38       	cpi	r24, 0x82	; 130
+ 4ce:	29 f6       	brne	.-118    	; 0x45a <__LOCK_REGION_LENGTH__+0x5a>
+ 4d0:	b9 cf       	rjmp	.-142    	; 0x444 <__LOCK_REGION_LENGTH__+0x44>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1316
+
+  #if defined(TWI_MANDS)
+    wire_s->_bools._toggleStreamFn = 0x01;
+  #endif
+
+  uint8_t action = 0;
+ 4d2:	80 e0       	ldi	r24, 0x00	; 0
+ 4d4:	b8 cf       	rjmp	.-144    	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+
+000004d6 <TwoWire::flush()>:
+flush():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1117
+ *
+ *@return     void
+ */
+void TwoWire::flush(void) {
+  /* Turn off and on TWI module */
+  TWI_t* module = _module;
+ 4d6:	dc 01       	movw	r26, r24
+ 4d8:	18 96       	adiw	r26, 0x08	; 8
+ 4da:	ed 91       	ld	r30, X+
+ 4dc:	fc 91       	ld	r31, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1121
+  #if defined(ERRATA_TWI_FLUSH)
+    // badCall("The AVR DA-series parts are impacted by an errata that leaves the TWI peripheral in a non-functioning state when using flush.");
+    // restarting TWI hardware by hand. Extra size shouldn't matter on DA series
+    uint8_t temp_MCTRLA     = module->MCTRLA;
+ 4de:	93 81       	ldd	r25, Z+3	; 0x03
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1122
+    uint8_t temp_SCTRLA     = module->SCTRLA;
+ 4e0:	81 85       	ldd	r24, Z+9	; 0x09
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1123
+    module->MCTRLA  = 0x00;
+ 4e2:	13 82       	std	Z+3, r1	; 0x03
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1124
+    module->SCTRLA  = 0x00;
+ 4e4:	11 86       	std	Z+9, r1	; 0x09
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1125
+    module->MCTRLA  = temp_MCTRLA;
+ 4e6:	93 83       	std	Z+3, r25	; 0x03
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1126
+    module->MSTATUS = 0x01;  // force TWI state machine into idle state
+ 4e8:	91 e0       	ldi	r25, 0x01	; 1
+ 4ea:	95 83       	std	Z+5, r25	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1127
+    module->SCTRLA  = temp_SCTRLA;
+ 4ec:	81 87       	std	Z+9, r24	; 0x09
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1131
+  #else
+    module->MCTRLB |= TWI_FLUSH_bm;
+  #endif
+}
+ 4ee:	08 95       	ret
+
+000004f0 <TwoWire::peek()>:
+peek():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1097
+    } else
+  #endif
+  {
+    rxHead   = &(_bytesToReadWrite);
+    rxTail   = &(_bytesReadWritten);
+    rxBuffer =   _hostBuffer;
+ 4f0:	9c 01       	movw	r18, r24
+ 4f2:	2b 5e       	subi	r18, 0xEB	; 235
+ 4f4:	3f 4f       	sbci	r19, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1100
+  }
+
+  if ((*rxTail) < (*rxHead)) {   // if there are bytes to read
+ 4f6:	dc 01       	movw	r26, r24
+ 4f8:	53 96       	adiw	r26, 0x13	; 19
+ 4fa:	ec 91       	ld	r30, X
+ 4fc:	53 97       	sbiw	r26, 0x13	; 19
+ 4fe:	52 96       	adiw	r26, 0x12	; 18
+ 500:	8c 91       	ld	r24, X
+ 502:	e8 17       	cp	r30, r24
+ 504:	30 f4       	brcc	.+12     	; 0x512 <TwoWire::peek()+0x22>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1101
+    return rxBuffer[(*rxTail)];
+ 506:	e2 0f       	add	r30, r18
+ 508:	f3 2f       	mov	r31, r19
+ 50a:	f1 1d       	adc	r31, r1
+ 50c:	80 81       	ld	r24, Z
+ 50e:	90 e0       	ldi	r25, 0x00	; 0
+ 510:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1103
+  } else {      // No bytes to read
+    return -1;
+ 512:	8f ef       	ldi	r24, 0xFF	; 255
+ 514:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1105
+  }
+}
+ 516:	08 95       	ret
+
+00000518 <TwoWire::read()>:
+read():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1017
+ *@param      void
+ *
+ *@return     int
+ *@retval     byte in the buffer or -1 if buffer is empty
+ */
+int TwoWire::read(void) {
+ 518:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1030
+    } else
+  #endif
+  {
+    rxHead   = &(_bytesToReadWrite);
+    rxTail   = &(_bytesReadWritten);
+    rxBuffer =   _hostBuffer;
+ 51a:	dc 01       	movw	r26, r24
+ 51c:	55 96       	adiw	r26, 0x15	; 21
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1034
+  }
+
+
+  if ((*rxTail) < (*rxHead)) {   // if there are bytes to read
+ 51e:	93 89       	ldd	r25, Z+19	; 0x13
+ 520:	82 89       	ldd	r24, Z+18	; 0x12
+ 522:	98 17       	cp	r25, r24
+ 524:	40 f4       	brcc	.+16     	; 0x536 <TwoWire::read()+0x1e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1035
+    uint8_t c = rxBuffer[(*rxTail)];
+ 526:	a9 0f       	add	r26, r25
+ 528:	b1 1d       	adc	r27, r1
+ 52a:	2c 91       	ld	r18, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1036
+    (*rxTail)++;
+ 52c:	9f 5f       	subi	r25, 0xFF	; 255
+ 52e:	93 8b       	std	Z+19, r25	; 0x13
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1037
+    return c;
+ 530:	82 2f       	mov	r24, r18
+ 532:	90 e0       	ldi	r25, 0x00	; 0
+ 534:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1039
+  } else {                      // No bytes to read. At this point, rxTail moved up to
+    return -1;                  // rxHead. To reset both to 0, a MasterRead or AddrWrite has to be called
+ 536:	8f ef       	ldi	r24, 0xFF	; 255
+ 538:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1041
+  }
+}
+ 53a:	08 95       	ret
+
+0000053c <TwoWire::available()>:
+available():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:992
+ *@param      void
+ *
+ *@return     int
+ *@retval     amount of bytes available to read from the host buffer
+ */
+int TwoWire::available(void) {
+ 53c:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:999
+    if (_bools._toggleStreamFn == 0x01) {
+      return (_bytesToReadWriteS - _bytesReadWrittenS);
+    }
+  #endif
+
+  return (_bytesToReadWrite - _bytesReadWritten);
+ 53e:	82 89       	ldd	r24, Z+18	; 0x12
+ 540:	93 89       	ldd	r25, Z+19	; 0x13
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1000
+}
+ 542:	89 1b       	sub	r24, r25
+ 544:	99 0b       	sbc	r25, r25
+ 546:	08 95       	ret
+
+00000548 <TwoWire::write(unsigned char)>:
+write():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:930
+ *
+ *
+ *@return     uint8_t
+ *@retval     1 if successful, 0 if the buffer is full
+ */
+size_t TwoWire::write(uint8_t data) {
+ 548:	fc 01       	movw	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:946
+    txBuffer =   _hostBuffer;
+  }
+
+  /* Put byte in txBuffer */
+
+  if ((*txHead) < TWI_BUFFER_LENGTH) {    // while buffer not full, write to it
+ 54a:	a2 89       	ldd	r26, Z+18	; 0x12
+ 54c:	a2 38       	cpi	r26, 0x82	; 130
+ 54e:	58 f4       	brcc	.+22     	; 0x566 <TwoWire::write(unsigned char)+0x1e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:947
+    txBuffer[(*txHead)] = data;             // Load data into the buffer
+ 550:	a8 0f       	add	r26, r24
+ 552:	b9 2f       	mov	r27, r25
+ 554:	b1 1d       	adc	r27, r1
+ 556:	55 96       	adiw	r26, 0x15	; 21
+ 558:	6c 93       	st	X, r22
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:948
+    (*txHead)++;                            // advancing the head
+ 55a:	82 89       	ldd	r24, Z+18	; 0x12
+ 55c:	8f 5f       	subi	r24, 0xFF	; 255
+ 55e:	82 8b       	std	Z+18, r24	; 0x12
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:949
+    return 1;
+ 560:	81 e0       	ldi	r24, 0x01	; 1
+ 562:	90 e0       	ldi	r25, 0x00	; 0
+ 564:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:951
+  } else {
+    return 0;
+ 566:	90 e0       	ldi	r25, 0x00	; 0
+ 568:	80 e0       	ldi	r24, 0x00	; 0
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:953
+  }
+}
+ 56a:	08 95       	ret
+
+0000056c <TwoWire::write(unsigned char const*, unsigned int)>:
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:968
+ *
+ *
+ *@return     uint8_t
+ *@retval     amount of bytes copied
+ */
+size_t TwoWire::write(const uint8_t *data, size_t quantity) {
+ 56c:	bf 92       	push	r11
+ 56e:	cf 92       	push	r12
+ 570:	df 92       	push	r13
+ 572:	ef 92       	push	r14
+ 574:	ff 92       	push	r15
+ 576:	0f 93       	push	r16
+ 578:	1f 93       	push	r17
+ 57a:	cf 93       	push	r28
+ 57c:	df 93       	push	r29
+ 57e:	7c 01       	movw	r14, r24
+ 580:	6a 01       	movw	r12, r20
+ 582:	b6 2e       	mov	r11, r22
+ 584:	eb 01       	movw	r28, r22
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:970
+  twi_buf_index_t i = 0;
+  for (; i < quantity; i++) {
+ 586:	0c 2f       	mov	r16, r28
+ 588:	0b 19       	sub	r16, r11
+ 58a:	10 e0       	ldi	r17, 0x00	; 0
+ 58c:	0c 15       	cp	r16, r12
+ 58e:	1d 05       	cpc	r17, r13
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:971
+    if (TwoWire::write(*(data++)) == 0)
+ 590:	28 f4       	brcc	.+10     	; 0x59c <TwoWire::write(unsigned char const*, unsigned int)+0x30>
+ 592:	69 91       	ld	r22, Y+
+ 594:	c7 01       	movw	r24, r14
+ 596:	d8 df       	rcall	.-80     	; 0x548 <TwoWire::write(unsigned char)>
+ 598:	89 2b       	or	r24, r25
+ 59a:	a9 f7       	brne	.-22     	; 0x586 <TwoWire::write(unsigned char const*, unsigned int)+0x1a>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:976
+      break;   // break if buffer full
+  }
+
+  return i;
+}
+ 59c:	c8 01       	movw	r24, r16
+ 59e:	df 91       	pop	r29
+ 5a0:	cf 91       	pop	r28
+ 5a2:	1f 91       	pop	r17
+ 5a4:	0f 91       	pop	r16
+ 5a6:	ff 90       	pop	r15
+ 5a8:	ef 90       	pop	r14
+ 5aa:	df 90       	pop	r13
+ 5ac:	cf 90       	pop	r12
+ 5ae:	bf 90       	pop	r11
+ 5b0:	08 95       	ret
+
+000005b2 <Print::availableForWrite()>:
+availableForWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore\api/Print.h:65
+      return write((const uint8_t *)buffer, size);
+    }
+
+    // default to zero, meaning "a single write may block"
+    // should be overridden by subclasses with buffering
+    virtual int availableForWrite() { return 0; }
+ 5b2:	90 e0       	ldi	r25, 0x00	; 0
+ 5b4:	80 e0       	ldi	r24, 0x00	; 0
+ 5b6:	08 95       	ret
+
+000005b8 <digitalWrite>:
+digitalWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:323
+      }
+    #endif
+  }
+}
+
+void digitalWrite(uint8_t pin, uint8_t val) {
+ 5b8:	cf 93       	push	r28
+ 5ba:	df 93       	push	r29
+check_valid_digital_pin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/Arduino.h:800
+
+
+
+
+inline __attribute__((always_inline)) void check_valid_digital_pin(pin_size_t pin) {
+  if (__builtin_constant_p(pin)) {
+ 5bc:	28 2f       	mov	r18, r24
+ 5be:	30 e0       	ldi	r19, 0x00	; 0
+digitalWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:326
+  check_valid_digital_pin(pin);
+  /* Get bit mask for pin */
+  uint8_t bit_mask = digitalPinToBitMask(pin);
+ 5c0:	e9 01       	movw	r28, r18
+ 5c2:	cf 5a       	subi	r28, 0xAF	; 175
+ 5c4:	df 49       	sbci	r29, 0x9F	; 159
+ 5c6:	88 81       	ld	r24, Y
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:327
+  if (bit_mask == NOT_A_PIN) {
+ 5c8:	8f 3f       	cpi	r24, 0xFF	; 255
+ 5ca:	09 f4       	brne	.+2      	; 0x5ce <digitalWrite+0x16>
+ 5cc:	3c c0       	rjmp	.+120    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:332
+    return;
+  }
+
+  /* Get port */
+  PORT_t *port = digitalPinToPortStruct(pin);
+ 5ce:	a9 01       	movw	r20, r18
+ 5d0:	4a 5c       	subi	r20, 0xCA	; 202
+ 5d2:	5f 49       	sbci	r21, 0x9F	; 159
+ 5d4:	da 01       	movw	r26, r20
+ 5d6:	ec 91       	ld	r30, X
+ 5d8:	b0 e2       	ldi	r27, 0x20	; 32
+ 5da:	eb 9f       	mul	r30, r27
+ 5dc:	f0 01       	movw	r30, r0
+ 5de:	11 24       	eor	r1, r1
+ 5e0:	fc 5f       	subi	r31, 0xFC	; 252
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:340
+  the behavior of digitalWrite() on classic AVR devices, where
+  you could digitalWrite() a pin while it's an input, to ensure
+  that the value of the port was set correctly when it was
+  changed to an output. Code in the wild relies on this behavior. */
+
+  if (val == LOW) { /* If LOW */
+ 5e2:	61 11       	cpse	r22, r1
+ 5e4:	33 c0       	rjmp	.+102    	; 0x64c <digitalWrite+0x94>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:341
+    port->OUTCLR = bit_mask;
+ 5e6:	86 83       	std	Z+6, r24	; 0x06
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:365
+  } else {
+    port->OUTSET = bit_mask;
+  }
+
+  /* Input direction */
+  if (!(port->DIR & bit_mask)) {
+ 5e8:	90 81       	ld	r25, Z
+ 5ea:	89 23       	and	r24, r25
+ 5ec:	a1 f4       	brne	.+40     	; 0x616 <digitalWrite+0x5e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:372
+      pull up is enabled if this function is called.
+      Should we purposely implement this side effect?
+    */
+
+    /* Get bit position for getting pin ctrl reg */
+    uint8_t bit_pos = digitalPinToBitPosition(pin);
+ 5ee:	c9 01       	movw	r24, r18
+ 5f0:	85 5e       	subi	r24, 0xE5	; 229
+ 5f2:	9f 49       	sbci	r25, 0x9F	; 159
+ 5f4:	dc 01       	movw	r26, r24
+ 5f6:	9c 91       	ld	r25, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:375
+
+    /* Calculate where pin control register is */
+    volatile uint8_t *pin_ctrl_reg = getPINnCTRLregister(port, bit_pos);
+ 5f8:	30 97       	sbiw	r30, 0x00	; 0
+ 5fa:	51 f1       	breq	.+84     	; 0x650 <digitalWrite+0x98>
+ 5fc:	98 30       	cpi	r25, 0x08	; 8
+ 5fe:	40 f5       	brcc	.+80     	; 0x650 <digitalWrite+0x98>
+ 600:	70 96       	adiw	r30, 0x10	; 16
+ 602:	e9 0f       	add	r30, r25
+ 604:	f1 1d       	adc	r31, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:378
+
+    /* Save system status and disable interrupts */
+    uint8_t status = SREG;
+ 606:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:379
+    cli();
+ 608:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:383
+
+    if (val == LOW) {
+      /* Disable pullup */
+      *pin_ctrl_reg &= ~PORT_PULLUPEN_bm;
+ 60a:	80 81       	ld	r24, Z
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:381
+
+    /* Save system status and disable interrupts */
+    uint8_t status = SREG;
+    cli();
+
+    if (val == LOW) {
+ 60c:	61 11       	cpse	r22, r1
+ 60e:	23 c0       	rjmp	.+70     	; 0x656 <digitalWrite+0x9e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:383
+      /* Disable pullup */
+      *pin_ctrl_reg &= ~PORT_PULLUPEN_bm;
+ 610:	87 7f       	andi	r24, 0xF7	; 247
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:386
+    } else {
+      /* Enable pull-up */
+      *pin_ctrl_reg |= PORT_PULLUPEN_bm;
+ 612:	80 83       	st	Z, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:390
+    }
+
+    /* Restore system status */
+    SREG = status;
+ 614:	9f bf       	out	0x3f, r25	; 63
+turnOffPWM():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:112
+ * digitalPinToTimerNow() in wiring_analog.c. That's why it's recommended to make sure
+ * that no pin you're about to move the PWM output of a TCA onto is currently outputting
+ * PWM. It can also be used from user code (unlike on the stock core). */
+void turnOffPWM(uint8_t pin) {
+  check_valid_digital_pin(pin);   // Compile error if pin is constant and isn't a pin.
+  uint8_t bit_mask = digitalPinToBitMask(pin);
+ 616:	98 81       	ld	r25, Y
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:113
+  if (bit_mask == NOT_A_PIN) return; //this catches any run-time determined pin that isn't a pin.
+ 618:	9f 3f       	cpi	r25, 0xFF	; 255
+ 61a:	a9 f0       	breq	.+42     	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:118
+  uint8_t portnum  = digitalPinToPort(pin);
+  #if (defined(TCA1)||defined(TCA0))
+    uint8_t offset = 0;
+
+    uint8_t portmux_tca = PORTMUX.TCAROUTEA;
+ 61c:	80 91 e6 05 	lds	r24, 0x05E6	; 0x8005e6 <__TEXT_REGION_LENGTH__+0x7f05e6>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:124
+    TCA_t* timer_A = NULL;
+    #if defined(TCA1)
+      uint8_t threepin = 0;
+    #endif
+    // It could be a TCA0 or TCA1 mux 0 or 3;
+    if (bit_mask < 0x40) {
+ 620:	90 34       	cpi	r25, 0x40	; 64
+ 622:	d8 f4       	brcc	.+54     	; 0x65a <digitalWrite+0xa2>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:126
+      #if defined(TCA0)
+        if (((portmux_tca & PORTMUX_TCA0_gm) == portnum) && ((__PeripheralControl & TIMERA0))) {
+ 624:	87 70       	andi	r24, 0x07	; 7
+ 626:	fa 01       	movw	r30, r20
+ 628:	40 81       	ld	r20, Z
+ 62a:	48 13       	cpse	r20, r24
+ 62c:	16 c0       	rjmp	.+44     	; 0x65a <digitalWrite+0xa2>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:169
+          _SWAP(offset); // So swapo to get 0b00000xxx
+        }
+      #endif
+
+      uint8_t ctrlb = offset;
+      if (offset > 0x04) { // if 0b00xx x000
+ 62e:	95 30       	cpi	r25, 0x05	; 5
+ 630:	08 f0       	brcs	.+2      	; 0x634 <digitalWrite+0x7c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:170
+        ctrlb <<= 1;       // we leftshift what we're going to write to CTRLB one bit to get it into high nybble
+ 632:	99 0f       	add	r25, r25
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:173
+      }
+
+      uint8_t t = timer_A->SPLIT.CTRLB;
+ 634:	20 91 01 0a 	lds	r18, 0x0A01	; 0x800a01 <__TEXT_REGION_LENGTH__+0x7f0a01>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:174
+      uint8_t oldSREG = SREG;
+ 638:	8f b7       	in	r24, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:175
+      cli();
+ 63a:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:176
+      t &= ~ctrlb;
+ 63c:	90 95       	com	r25
+ 63e:	92 23       	and	r25, r18
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:177
+      timer_A->SPLIT.CTRLB = t;
+ 640:	90 93 01 0a 	sts	0x0A01, r25	; 0x800a01 <__TEXT_REGION_LENGTH__+0x7f0a01>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:178
+      SREG = oldSREG;
+ 644:	8f bf       	out	0x3f, r24	; 63
+digitalWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:403
+   * analogWritten() 255, then digitallyWritten() to HIGH, which
+   * would turn it off for the time between turnOffPWM() and
+   * PORT->OUTCLR)
+   * Since there's no penalty, why make a glitch we don't have to? */
+  turnOffPWM(pin);
+}
+ 646:	df 91       	pop	r29
+ 648:	cf 91       	pop	r28
+ 64a:	08 95       	ret
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:361
+    // val will now be 0 (LOW) if the toggling made it LOW
+    // or bit_mask if not. And further down, we only need to
+    // know if it's
+  /* If HIGH OR  > TOGGLE  */
+  } else {
+    port->OUTSET = bit_mask;
+ 64c:	85 83       	std	Z+5, r24	; 0x05
+ 64e:	cc cf       	rjmp	.-104    	; 0x5e8 <digitalWrite+0x30>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:375
+
+    /* Get bit position for getting pin ctrl reg */
+    uint8_t bit_pos = digitalPinToBitPosition(pin);
+
+    /* Calculate where pin control register is */
+    volatile uint8_t *pin_ctrl_reg = getPINnCTRLregister(port, bit_pos);
+ 650:	f0 e0       	ldi	r31, 0x00	; 0
+ 652:	e0 e0       	ldi	r30, 0x00	; 0
+ 654:	d8 cf       	rjmp	.-80     	; 0x606 <digitalWrite+0x4e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:386
+    if (val == LOW) {
+      /* Disable pullup */
+      *pin_ctrl_reg &= ~PORT_PULLUPEN_bm;
+    } else {
+      /* Enable pull-up */
+      *pin_ctrl_reg |= PORT_PULLUPEN_bm;
+ 656:	88 60       	ori	r24, 0x08	; 8
+ 658:	dc cf       	rjmp	.-72     	; 0x612 <digitalWrite+0x5a>
+turnOffPWM():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:231
+        return;
+      }
+    }
+  #endif
+  /* Now we use the table in variant */
+  uint8_t digital_pin_timer = digitalPinToTimer(pin);
+ 65a:	20 50       	subi	r18, 0x00	; 0
+ 65c:	30 4a       	sbci	r19, 0xA0	; 160
+ 65e:	d9 01       	movw	r26, r18
+ 660:	ec 91       	ld	r30, X
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:232
+  if (digital_pin_timer) {
+ 662:	ee 23       	and	r30, r30
+ 664:	81 f3       	breq	.-32     	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:235
+    #if defined(TCD0)
+      // Dx-series
+      if (((digital_pin_timer & 0xC0) == 0x40) && (__PeripheralControl & TIMERD0)) { // TCD
+ 666:	8e 2f       	mov	r24, r30
+ 668:	80 7c       	andi	r24, 0xC0	; 192
+ 66a:	80 34       	cpi	r24, 0x40	; 64
+ 66c:	59 f5       	brne	.+86     	; 0x6c4 <digitalWrite+0x10c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:237
+        uint8_t tcdmux = digital_pin_timer & 0x07;
+        uint8_t muxval = ((PORTMUX.TCDROUTEA & PORTMUX_TCD0_gm) >> PORTMUX_TCD0_gp );
+ 66e:	80 91 e8 05 	lds	r24, 0x05E8	; 0x8005e8 <__TEXT_REGION_LENGTH__+0x7f05e8>
+ 672:	87 70       	andi	r24, 0x07	; 7
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:240
+        #if !defined(__AVR_DA__)
+          uint8_t usetcd0 = 0;
+          if (tcdmux == muxval)
+ 674:	9e 2f       	mov	r25, r30
+ 676:	97 70       	andi	r25, 0x07	; 7
+ 678:	98 13       	cpse	r25, r24
+ 67a:	24 c0       	rjmp	.+72     	; 0x6c4 <digitalWrite+0x10c>
+digitalWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:256
+        {
+          uint8_t fc_mask;
+          if (digital_pin_timer & 0x20) {
+            fc_mask = 0x40;
+          } else {
+            fc_mask = 0x10;
+ 67c:	80 e1       	ldi	r24, 0x10	; 16
+turnOffPWM():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:253
+        #else
+          if (tcdmux == 0 && muxval == 0)
+        #endif
+        {
+          uint8_t fc_mask;
+          if (digital_pin_timer & 0x20) {
+ 67e:	e5 fd       	sbrc	r30, 5
+digitalWrite():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:254
+            fc_mask = 0x40;
+ 680:	80 e4       	ldi	r24, 0x40	; 64
+turnOffPWM():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:258
+          } else {
+            fc_mask = 0x10;
+          }
+          if (digital_pin_timer & 0x10) {
+ 682:	e4 fd       	sbrc	r30, 4
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:259
+            fc_mask <<= 1;
+ 684:	88 0f       	add	r24, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:261
+          }
+          uint8_t oldSREG = SREG;
+ 686:	2f b7       	in	r18, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:263
+          /* Check if channel active, if so, have to turn it off */
+          if ((TCD0.FAULTCTRL & fc_mask)) {
+ 688:	90 91 92 0b 	lds	r25, 0x0B92	; 0x800b92 <__TEXT_REGION_LENGTH__+0x7f0b92>
+ 68c:	98 23       	and	r25, r24
+ 68e:	b1 f0       	breq	.+44     	; 0x6bc <digitalWrite+0x104>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:265
+            // see remarks in analogWrite()
+            uint8_t temp2 = TCD0.CTRLA;
+ 690:	90 91 80 0b 	lds	r25, 0x0B80	; 0x800b80 <__TEXT_REGION_LENGTH__+0x7f0b80>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:266
+            TCD0.CTRLA = temp2 & (~TCD_ENABLE_bm);
+ 694:	39 2f       	mov	r19, r25
+ 696:	3e 7f       	andi	r19, 0xFE	; 254
+ 698:	30 93 80 0b 	sts	0x0B80, r19	; 0x800b80 <__TEXT_REGION_LENGTH__+0x7f0b80>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:267
+            while(!(TCD0.STATUS & 0x01));    // wait until it can be re-enabled
+ 69c:	30 91 8e 0b 	lds	r19, 0x0B8E	; 0x800b8e <__TEXT_REGION_LENGTH__+0x7f0b8e>
+ 6a0:	30 ff       	sbrs	r19, 0
+ 6a2:	fc cf       	rjmp	.-8      	; 0x69c <digitalWrite+0xe4>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:268
+            _PROTECTED_WRITE(TCD0.FAULTCTRL, ((~fc_mask) & TCD0.FAULTCTRL));
+ 6a4:	30 91 92 0b 	lds	r19, 0x0B92	; 0x800b92 <__TEXT_REGION_LENGTH__+0x7f0b92>
+ 6a8:	80 95       	com	r24
+ 6aa:	83 23       	and	r24, r19
+ 6ac:	38 ed       	ldi	r19, 0xD8	; 216
+ 6ae:	34 bf       	out	0x34, r19	; 52
+ 6b0:	80 93 92 0b 	sts	0x0B92, r24	; 0x800b92 <__TEXT_REGION_LENGTH__+0x7f0b92>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:270
+            // while(!(TCD0.STATUS & 0x01));    // wait until it can be re-enabled
+            TCD0.CTRLA = temp2; // re-enable it if it was enabled
+ 6b4:	90 93 80 0b 	sts	0x0B80, r25	; 0x800b80 <__TEXT_REGION_LENGTH__+0x7f0b80>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:274
+          } else {
+            TCD0.CTRLE = TCD_SYNCEOC_bm; // it was already on - just set new value and set sync flag.
+          }
+          SREG = oldSREG; // Turn interrupts back on, if they were off.
+ 6b8:	2f bf       	out	0x3f, r18	; 63
+ 6ba:	c5 cf       	rjmp	.-118    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:272
+            while(!(TCD0.STATUS & 0x01));    // wait until it can be re-enabled
+            _PROTECTED_WRITE(TCD0.FAULTCTRL, ((~fc_mask) & TCD0.FAULTCTRL));
+            // while(!(TCD0.STATUS & 0x01));    // wait until it can be re-enabled
+            TCD0.CTRLA = temp2; // re-enable it if it was enabled
+          } else {
+            TCD0.CTRLE = TCD_SYNCEOC_bm; // it was already on - just set new value and set sync flag.
+ 6bc:	81 e0       	ldi	r24, 0x01	; 1
+ 6be:	80 93 84 0b 	sts	0x0B84, r24	; 0x800b84 <__TEXT_REGION_LENGTH__+0x7f0b84>
+ 6c2:	fa cf       	rjmp	.-12     	; 0x6b8 <digitalWrite+0x100>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:279
+          SREG = oldSREG; // Turn interrupts back on, if they were off.
+          return;
+        }
+      }
+    #endif
+    if ((digital_pin_timer & 0xF0) == 0x10 ) {
+ 6c4:	8e 2f       	mov	r24, r30
+ 6c6:	80 7f       	andi	r24, 0xF0	; 240
+ 6c8:	80 31       	cpi	r24, 0x10	; 16
+ 6ca:	79 f4       	brne	.+30     	; 0x6ea <digitalWrite+0x132>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:282
+      /* its on a TCB */
+      TCB_t * timer_B;
+      timer_B = &TCB0 + (digital_pin_timer & 0x07);
+ 6cc:	e7 70       	andi	r30, 0x07	; 7
+ 6ce:	b0 e1       	ldi	r27, 0x10	; 16
+ 6d0:	eb 9f       	mul	r30, r27
+ 6d2:	f0 01       	movw	r30, r0
+ 6d4:	11 24       	eor	r1, r1
+ 6d6:	f5 5f       	subi	r31, 0xF5	; 245
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:283
+      if (((timer_B->CTRLB) & TCB_CNTMODE_gm) == TCB_CNTMODE_PWM8_gc ) {
+ 6d8:	81 81       	ldd	r24, Z+1	; 0x01
+ 6da:	87 70       	andi	r24, 0x07	; 7
+ 6dc:	87 30       	cpi	r24, 0x07	; 7
+ 6de:	09 f0       	breq	.+2      	; 0x6e2 <digitalWrite+0x12a>
+ 6e0:	b2 cf       	rjmp	.-156    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:285
+        /* Disable Timer Output */
+        timer_B->CTRLB &= (~TCB_CCMPEN_bm);
+ 6e2:	81 81       	ldd	r24, Z+1	; 0x01
+ 6e4:	8f 7e       	andi	r24, 0xEF	; 239
+ 6e6:	81 83       	std	Z+1, r24	; 0x01
+ 6e8:	ae cf       	rjmp	.-164    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:302
+          return;
+        }
+      }
+    #endif
+    #if defined(DAC0)
+      if (digital_pin_timer == DACOUT) {
+ 6ea:	e8 3f       	cpi	r30, 0xF8	; 248
+ 6ec:	09 f0       	breq	.+2      	; 0x6f0 <digitalWrite+0x138>
+ 6ee:	ab cf       	rjmp	.-170    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:303
+        uint8_t ctrla = DAC0.CTRLA;
+ 6f0:	80 91 a0 06 	lds	r24, 0x06A0	; 0x8006a0 <__TEXT_REGION_LENGTH__+0x7f06a0>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:304
+        if (!(ctrla & 0x01)) {
+ 6f4:	80 ff       	sbrs	r24, 0
+ 6f6:	a7 cf       	rjmp	.-178    	; 0x646 <digitalWrite+0x8e>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:308
+          // DAC off already, done
+          return;
+        }
+        ctrla &= ~0x41;
+ 6f8:	8e 7b       	andi	r24, 0xBE	; 190
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:309
+        DAC0.CTRLA = ctrla;
+ 6fa:	80 93 a0 06 	sts	0x06A0, r24	; 0x8006a0 <__TEXT_REGION_LENGTH__+0x7f06a0>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:314
+        // Now what does other PWM do when it turns off a timer?
+        // analogWrite(pin,100); TurnOffPWM(pin);
+        // leads to a pin that is usually set output
+        // and which can detect it's input levels.
+        PORTD.PIN6CTRL &= 0xF0; // re-enable input
+ 6fe:	80 91 76 04 	lds	r24, 0x0476	; 0x800476 <__TEXT_REGION_LENGTH__+0x7f0476>
+ 702:	80 7f       	andi	r24, 0xF0	; 240
+ 704:	80 93 76 04 	sts	0x0476, r24	; 0x800476 <__TEXT_REGION_LENGTH__+0x7f0476>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:315
+        VPORTD.DIR |= 0x40; //set output
+ 708:	66 9a       	sbi	0x0c, 6	; 12
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2431
+
+  void __attribute__((weak)) onClockTimeout() {
+    _blinkCode(3);
+  }
+  #ifdef CLKCTRL_CFD_vect
+    ISR(CLKCTRL_CFD_vect){
+ 70a:	9d cf       	rjmp	.-198    	; 0x646 <digitalWrite+0x8e>
+
+0000070c <__vector_3>:
+__vector_3():
+ 70c:	1f 92       	push	r1
+ 70e:	0f 92       	push	r0
+ 710:	0f b6       	in	r0, 0x3f	; 63
+ 712:	0f 92       	push	r0
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2435
+      onClockFailure();
+    }
+    void __attribute__((weak)) onClockFailure() {
+       _blinkCode(4);
+ 714:	11 24       	eor	r1, r1
+onClockFailure():
+ 716:	84 e0       	ldi	r24, 0x04	; 4
+ 718:	0b dd       	rcall	.-1514   	; 0x130 <_blinkCode>
+
+0000071a <__vector_31>:
+__vector_31():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:135
+      }
+      RTC.INTFLAGS = RTC_OVF_bm | RTC_CMP_bm; // clear flag
+    }
+  #elif !defined(MILLIS_USE_TIMERNONE)
+    ISR(MILLIS_VECTOR, ISR_NAKED) {
+      __asm__ __volatile__(
+ 71a:	ef 93       	push	r30
+ 71c:	ff 93       	push	r31
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:140
+      "push       r30"          "\n\t" // First we make room for the pointer to timingStruct by pushing the Z registers
+      "push       r31"          "\n\t" //
+      ::);
+    #if defined(MILLIS_USE_TCB)
+      __asm__ __volatile__(
+ 71e:	e1 e9       	ldi	r30, 0x91	; 145
+ 720:	f0 e6       	ldi	r31, 0x60	; 96
+ 722:	8f 93       	push	r24
+ 724:	8f b7       	in	r24, 0x3f	; 63
+ 726:	8f 93       	push	r24
+ 728:	80 81       	ld	r24, Z
+ 72a:	8f 5f       	subi	r24, 0xFF	; 255
+ 72c:	80 83       	st	Z, r24
+ 72e:	81 81       	ldd	r24, Z+1	; 0x01
+ 730:	8f 4f       	sbci	r24, 0xFF	; 255
+ 732:	81 83       	std	Z+1, r24	; 0x01
+ 734:	82 81       	ldd	r24, Z+2	; 0x02
+ 736:	8f 4f       	sbci	r24, 0xFF	; 255
+ 738:	82 83       	std	Z+2, r24	; 0x02
+ 73a:	83 81       	ldd	r24, Z+3	; 0x03
+ 73c:	8f 4f       	sbci	r24, 0xFF	; 255
+ 73e:	83 83       	std	Z+3, r24	; 0x03
+ 740:	81 e0       	ldi	r24, 0x01	; 1
+ 742:	80 93 26 0b 	sts	0x0B26, r24	; 0x800b26 <__TEXT_REGION_LENGTH__+0x7f0b26>
+ 746:	8f 91       	pop	r24
+ 748:	8f bf       	out	0x3f, r24	; 63
+ 74a:	8f 91       	pop	r24
+ 74c:	ff 91       	pop	r31
+ 74e:	ef 91       	pop	r30
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:96
+    ISR(USART2_DRE_vect, ISR_NAKED) {
+      __asm__ __volatile__(
+                "push  r30"       "\n\t"
+                "push  r31"       "\n\t"
+                "cbi   0x1F, 0"   "\n\t"
+                :::);
+ 750:	18 95       	reti
+
+00000752 <__vector_39>:
+__vector_39():
+ 752:	ef 93       	push	r30
+ 754:	ff 93       	push	r31
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:103
+#if PROGMEM_SIZE > 8192
+                "jmp _do_dre"     "\n\t"
+#else
+                "rjmp _do_dre"    "\n\t"
+#endif
+                ::"z"(&Serial2));
+ 756:	f8 98       	cbi	0x1f, 0	; 31
+ 758:	e5 e9       	ldi	r30, 0x95	; 149
+ 75a:	f0 e6       	ldi	r31, 0x60	; 96
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:73
+      ISR(USART2_RXC_vect, ISR_NAKED) {
+        __asm__ __volatile__(
+              "push      r30"     "\n\t" //we start out 5-6 clocks behind the ball, then do 2 push + 2 ldi + 2-3 for jump = 11 or 13 clocks to _do_rxc (and dre is the same)
+              "push      r31"     "\n\t"
+              "cbi   0x1F, 0"     "\n\t"
+              :::);
+ 75c:	0b c0       	rjmp	.+22     	; 0x774 <_do_dre()>
+
+0000075e <__vector_38>:
+__vector_38():
+ 75e:	ef 93       	push	r30
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:80
+#if PROGMEM_SIZE > 8192
+              "jmp   _do_rxc"     "\n\t"
+#else
+              "rjmp   _do_rxc"    "\n\t"
+#endif
+              ::"z"(&Serial2));
+ 760:	ff 93       	push	r31
+ 762:	f8 98       	cbi	0x1f, 0	; 31
+ 764:	e5 e9       	ldi	r30, 0x95	; 149
+ 766:	f0 e6       	ldi	r31, 0x60	; 96
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:35
+#elif defined(USE_ASM_TXC) && USE_ASM_TXC == 2
+    ISR(USART2_TXC_vect, ISR_NAKED) {
+        __asm__ __volatile__(
+              "push      r30"     "\n\t"
+              "push      r31"     "\n\t"
+              :::);
+ 768:	33 c0       	rjmp	.+102    	; 0x7d0 <_do_rxc()>
+
+0000076a <__vector_40>:
+__vector_40():
+ 76a:	ef 93       	push	r30
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART2.cpp:42
+#if PROGMEM_SIZE > 8192
+              "jmp   _do_txc"     "\n\t"
+#else
+              "rjmp   _do_txc"    "\n\t"
+#endif
+              ::"z"(&Serial2));
+ 76c:	ff 93       	push	r31
+ 76e:	e5 e9       	ldi	r30, 0x95	; 149
+ 770:	f0 e6       	ldi	r31, 0x60	; 96
+ 772:	5e c0       	rjmp	.+188    	; 0x830 <_do_txc()>
+
+00000774 <_do_dre()>:
+_Z7_do_drev():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:387
+          "out        0x3f,     r18"      "\n\t"  // restore SREG
+          "pop         r18"               "\n\t"  // pop old r18
+          "pop         r31"               "\n\t"  // pop the Z that the isr pushed.
+          "pop         r30"               "\n\t"
+          "reti"                          "\n"   // and RETI!
+          ::);
+ 774:	2f 93       	push	r18
+ 776:	2f b7       	in	r18, 0x3f	; 63
+ 778:	2f 93       	push	r18
+ 77a:	8f 93       	push	r24
+ 77c:	9f 93       	push	r25
+ 77e:	af 93       	push	r26
+ 780:	bf 93       	push	r27
+ 782:	68 94       	set
+
+00000784 <_poll_dre>:
+ 784:	cf 93       	push	r28
+ 786:	df 93       	push	r29
+ 788:	20 e0       	ldi	r18, 0x00	; 0
+ 78a:	c0 85       	ldd	r28, Z+8	; 0x08
+ 78c:	d8 e0       	ldi	r29, 0x08	; 8
+ 78e:	92 89       	ldd	r25, Z+18	; 0x12
+ 790:	df 01       	movw	r26, r30
+ 792:	a9 0f       	add	r26, r25
+ 794:	b2 1f       	adc	r27, r18
+ 796:	ad 5a       	subi	r26, 0xAD	; 173
+ 798:	bf 4f       	sbci	r27, 0xFF	; 255
+ 79a:	8c 91       	ld	r24, X
+ 79c:	20 e4       	ldi	r18, 0x40	; 64
+ 79e:	2c 83       	std	Y+4, r18	; 0x04
+ 7a0:	8a 83       	std	Y+2, r24	; 0x02
+ 7a2:	9f 5f       	subi	r25, 0xFF	; 255
+ 7a4:	9f 73       	andi	r25, 0x3F	; 63
+ 7a6:	8d 81       	ldd	r24, Y+5	; 0x05
+ 7a8:	21 89       	ldd	r18, Z+17	; 0x11
+ 7aa:	29 13       	cpse	r18, r25
+ 7ac:	02 c0       	rjmp	.+4      	; 0x7b2 <_done_dre_irq>
+ 7ae:	8f 7d       	andi	r24, 0xDF	; 223
+ 7b0:	8d 83       	std	Y+5, r24	; 0x05
+
+000007b2 <_done_dre_irq>:
+ 7b2:	92 8b       	std	Z+18, r25	; 0x12
+ 7b4:	df 91       	pop	r29
+ 7b6:	cf 91       	pop	r28
+ 7b8:	0e f0       	brts	.+2      	; 0x7bc <_done_dre_irq+0xa>
+ 7ba:	aa cd       	rjmp	.-1196   	; 0x310 <_poll_dre_done>
+ 7bc:	bf 91       	pop	r27
+ 7be:	af 91       	pop	r26
+ 7c0:	9f 91       	pop	r25
+ 7c2:	8f 91       	pop	r24
+ 7c4:	2f 91       	pop	r18
+ 7c6:	2f bf       	out	0x3f, r18	; 63
+ 7c8:	2f 91       	pop	r18
+ 7ca:	ff 91       	pop	r31
+ 7cc:	ef 91       	pop	r30
+ 7ce:	18 95       	reti
+
+000007d0 <_do_rxc()>:
+_Z7_do_rxcv():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:251
+            "pop        r30"              "\n\t" // pointer to serial instance
+            "reti"                        "\n\t" // return
+          "_buff_full_rxc:"               "\n\t" // _buff_full_rxc moved to after the reti, and then rjmps back, saving 2 clocks for the common case
+            "ori        r19,      0x40"   "\n\t" // record that there was a ring buffer overflow. 1 clk
+            "rjmp _end_rxc"               "\n\t" // and now jump back to end. That way we don't need to jump over this in the middle of the common case.
+            ::); // total: 77 or 79 clocks, just barely squeaks by for cyclic RX of up to RX_BUFFER_SIZE characters.
+ 7d0:	2f 93       	push	r18
+ 7d2:	2f b7       	in	r18, 0x3f	; 63
+ 7d4:	2f 93       	push	r18
+ 7d6:	3f 93       	push	r19
+ 7d8:	8f 93       	push	r24
+ 7da:	9f 93       	push	r25
+ 7dc:	cf 93       	push	r28
+ 7de:	df 93       	push	r29
+ 7e0:	c0 85       	ldd	r28, Z+8	; 0x08
+ 7e2:	d8 e0       	ldi	r29, 0x08	; 8
+ 7e4:	2e 81       	ldd	r18, Y+6	; 0x06
+ 7e6:	2f 7e       	andi	r18, 0xEF	; 239
+ 7e8:	2e 83       	std	Y+6, r18	; 0x06
+ 7ea:	89 81       	ldd	r24, Y+1	; 0x01
+ 7ec:	98 81       	ld	r25, Y
+ 7ee:	86 74       	andi	r24, 0x46	; 70
+ 7f0:	88 0f       	add	r24, r24
+ 7f2:	36 85       	ldd	r19, Z+14	; 0x0e
+ 7f4:	38 2b       	or	r19, r24
+ 7f6:	82 fd       	sbrc	r24, 2
+ 7f8:	0d c0       	rjmp	.+26     	; 0x814 <_end_rxc>
+ 7fa:	c7 85       	ldd	r28, Z+15	; 0x0f
+ 7fc:	81 e0       	ldi	r24, 0x01	; 1
+ 7fe:	8c 0f       	add	r24, r28
+ 800:	8f 73       	andi	r24, 0x3F	; 63
+ 802:	20 89       	ldd	r18, Z+16	; 0x10
+ 804:	28 17       	cp	r18, r24
+ 806:	91 f0       	breq	.+36     	; 0x82c <_buff_full_rxc>
+ 808:	ce 0f       	add	r28, r30
+ 80a:	df 2f       	mov	r29, r31
+ 80c:	20 e0       	ldi	r18, 0x00	; 0
+ 80e:	d2 1f       	adc	r29, r18
+ 810:	9b 8b       	std	Y+19, r25	; 0x13
+ 812:	87 87       	std	Z+15, r24	; 0x0f
+
+00000814 <_end_rxc>:
+ 814:	36 87       	std	Z+14, r19	; 0x0e
+ 816:	df 91       	pop	r29
+ 818:	cf 91       	pop	r28
+ 81a:	9f 91       	pop	r25
+ 81c:	8f 91       	pop	r24
+ 81e:	3f 91       	pop	r19
+ 820:	2f 91       	pop	r18
+ 822:	2f bf       	out	0x3f, r18	; 63
+ 824:	2f 91       	pop	r18
+ 826:	ff 91       	pop	r31
+ 828:	ef 91       	pop	r30
+ 82a:	18 95       	reti
+
+0000082c <_buff_full_rxc>:
+ 82c:	30 64       	ori	r19, 0x40	; 64
+ 82e:	f2 cf       	rjmp	.-28     	; 0x814 <_end_rxc>
+
+00000830 <_do_txc()>:
+_Z7_do_txcv():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:126
+            "pop        r24"              "\n\t"  // pop r24 restore it
+            "pop        r31"              "\n\t"  // and r31
+            "pop        r30"              "\n\t"  // Pop the register the ISR did
+            "reti"                        "\n"    // return from the interrupt.
+            ::
+          );
+ 830:	8f 93       	push	r24
+ 832:	8f b7       	in	r24, 0x3f	; 63
+ 834:	8f 93       	push	r24
+ 836:	9f 93       	push	r25
+ 838:	cf 93       	push	r28
+ 83a:	df 93       	push	r29
+ 83c:	c0 85       	ldd	r28, Z+8	; 0x08
+ 83e:	d8 e0       	ldi	r29, 0x08	; 8
+ 840:	9d 81       	ldd	r25, Y+5	; 0x05
+
+00000842 <_txc_flush_rx>:
+ 842:	88 81       	ld	r24, Y
+ 844:	8c 81       	ldd	r24, Y+4	; 0x04
+ 846:	87 fd       	sbrc	r24, 7
+ 848:	fc cf       	rjmp	.-8      	; 0x842 <_txc_flush_rx>
+ 84a:	9f 7b       	andi	r25, 0xBF	; 191
+ 84c:	90 68       	ori	r25, 0x80	; 128
+ 84e:	9d 83       	std	Y+5, r25	; 0x05
+ 850:	df 91       	pop	r29
+ 852:	cf 91       	pop	r28
+ 854:	9f 91       	pop	r25
+ 856:	8f 91       	pop	r24
+ 858:	8f bf       	out	0x3f, r24	; 63
+ 85a:	8f 91       	pop	r24
+ 85c:	ff 91       	pop	r31
+ 85e:	ef 91       	pop	r30
+ 860:	18 95       	reti
+
+00000862 <__vector_42>:
+__vector_42():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1433
+
+/**
+ *@brief      TWI1 Slave Interrupt vector
+ */
+#if defined(TWI1)
+  ISR(TWI1_TWIS_vect) {
+ 862:	1f 92       	push	r1
+ 864:	0f 92       	push	r0
+ 866:	0f b6       	in	r0, 0x3f	; 63
+ 868:	0f 92       	push	r0
+ 86a:	11 24       	eor	r1, r1
+ 86c:	2f 93       	push	r18
+ 86e:	3f 93       	push	r19
+ 870:	4f 93       	push	r20
+ 872:	5f 93       	push	r21
+ 874:	6f 93       	push	r22
+ 876:	7f 93       	push	r23
+ 878:	8f 93       	push	r24
+ 87a:	9f 93       	push	r25
+ 87c:	af 93       	push	r26
+ 87e:	bf 93       	push	r27
+ 880:	ef 93       	push	r30
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1434
+    TwoWire::HandleSlaveIRQ(twi1_wire);
+ 882:	ff 93       	push	r31
+ 884:	80 91 28 61 	lds	r24, 0x6128	; 0x806128 <twi1_wire>
+ 888:	90 91 29 61 	lds	r25, 0x6129	; 0x806129 <twi1_wire+0x1>
+ 88c:	a2 dd       	rcall	.-1212   	; 0x3d2 <TwoWire::HandleSlaveIRQ(TwoWire*)>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1435
+  }
+ 88e:	ff 91       	pop	r31
+ 890:	ef 91       	pop	r30
+ 892:	bf 91       	pop	r27
+ 894:	af 91       	pop	r26
+ 896:	9f 91       	pop	r25
+ 898:	8f 91       	pop	r24
+ 89a:	7f 91       	pop	r23
+ 89c:	6f 91       	pop	r22
+ 89e:	5f 91       	pop	r21
+ 8a0:	4f 91       	pop	r20
+ 8a2:	3f 91       	pop	r19
+ 8a4:	2f 91       	pop	r18
+ 8a6:	0f 90       	pop	r0
+ 8a8:	0f be       	out	0x3f, r0	; 63
+ 8aa:	0f 90       	pop	r0
+ 8ac:	1f 90       	pop	r1
+ 8ae:	18 95       	reti
+
+000008b0 <__vector_18>:
+__vector_18():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1424
+
+
+/**
+ *@brief      TWI0 Slave Interrupt vector
+ */
+ISR(TWI0_TWIS_vect) {
+ 8b0:	1f 92       	push	r1
+ 8b2:	0f 92       	push	r0
+ 8b4:	0f b6       	in	r0, 0x3f	; 63
+ 8b6:	0f 92       	push	r0
+ 8b8:	11 24       	eor	r1, r1
+ 8ba:	2f 93       	push	r18
+ 8bc:	3f 93       	push	r19
+ 8be:	4f 93       	push	r20
+ 8c0:	5f 93       	push	r21
+ 8c2:	6f 93       	push	r22
+ 8c4:	7f 93       	push	r23
+ 8c6:	8f 93       	push	r24
+ 8c8:	9f 93       	push	r25
+ 8ca:	af 93       	push	r26
+ 8cc:	bf 93       	push	r27
+ 8ce:	ef 93       	push	r30
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1425
+  TwoWire::HandleSlaveIRQ(twi0_wire);
+ 8d0:	ff 93       	push	r31
+ 8d2:	80 91 2a 61 	lds	r24, 0x612A	; 0x80612a <twi0_wire>
+ 8d6:	90 91 2b 61 	lds	r25, 0x612B	; 0x80612b <twi0_wire+0x1>
+ 8da:	7b dd       	rcall	.-1290   	; 0x3d2 <TwoWire::HandleSlaveIRQ(TwoWire*)>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\libraries\Wire\src/Wire.cpp:1426
+}
+ 8dc:	ff 91       	pop	r31
+ 8de:	ef 91       	pop	r30
+ 8e0:	bf 91       	pop	r27
+ 8e2:	af 91       	pop	r26
+ 8e4:	9f 91       	pop	r25
+ 8e6:	8f 91       	pop	r24
+ 8e8:	7f 91       	pop	r23
+ 8ea:	6f 91       	pop	r22
+ 8ec:	5f 91       	pop	r21
+ 8ee:	4f 91       	pop	r20
+ 8f0:	3f 91       	pop	r19
+ 8f2:	2f 91       	pop	r18
+ 8f4:	0f 90       	pop	r0
+ 8f6:	0f be       	out	0x3f, r0	; 63
+ 8f8:	0f 90       	pop	r0
+ 8fa:	1f 90       	pop	r1
+ 8fc:	18 95       	reti
+
+000008fe <global constructors keyed to 65535_0_ManualAnalogControl.ino.cpp.o.3150>:
+_GLOBAL__I_65535_0_ManualAnalogControl.ino.cpp.o.3150():
+ 8fe:	e5 e9       	ldi	r30, 0x95	; 149
+ 900:	f0 e6       	ldi	r31, 0x60	; 96
+ 902:	12 82       	std	Z+2, r1	; 0x02
+ 904:	13 82       	std	Z+3, r1	; 0x03
+ 906:	88 ee       	ldi	r24, 0xE8	; 232
+ 908:	93 e0       	ldi	r25, 0x03	; 3
+ 90a:	a0 e0       	ldi	r26, 0x00	; 0
+ 90c:	b0 e0       	ldi	r27, 0x00	; 0
+ 90e:	84 83       	std	Z+4, r24	; 0x04
+ 910:	95 83       	std	Z+5, r25	; 0x05
+ 912:	a6 83       	std	Z+6, r26	; 0x06
+ 914:	b7 83       	std	Z+7, r27	; 0x07
+ 916:	20 e7       	ldi	r18, 0x70	; 112
+ 918:	30 e6       	ldi	r19, 0x60	; 96
+ 91a:	20 83       	st	Z, r18
+ 91c:	31 83       	std	Z+1, r19	; 0x01
+ 91e:	20 e4       	ldi	r18, 0x40	; 64
+ 920:	38 e0       	ldi	r19, 0x08	; 8
+ 922:	20 87       	std	Z+8, r18	; 0x08
+ 924:	31 87       	std	Z+9, r19	; 0x09
+ 926:	20 eb       	ldi	r18, 0xB0	; 176
+ 928:	30 e0       	ldi	r19, 0x00	; 0
+ 92a:	22 87       	std	Z+10, r18	; 0x0a
+ 92c:	33 87       	std	Z+11, r19	; 0x0b
+ 92e:	22 e0       	ldi	r18, 0x02	; 2
+ 930:	24 87       	std	Z+12, r18	; 0x0c
+ 932:	15 86       	std	Z+13, r1	; 0x0d
+ 934:	16 86       	std	Z+14, r1	; 0x0e
+ 936:	ec e2       	ldi	r30, 0x2C	; 44
+ 938:	f1 e6       	ldi	r31, 0x61	; 97
+ 93a:	12 82       	std	Z+2, r1	; 0x02
+ 93c:	13 82       	std	Z+3, r1	; 0x03
+ 93e:	84 83       	std	Z+4, r24	; 0x04
+ 940:	95 83       	std	Z+5, r25	; 0x05
+ 942:	a6 83       	std	Z+6, r26	; 0x06
+ 944:	b7 83       	std	Z+7, r27	; 0x07
+ 946:	82 e8       	ldi	r24, 0x82	; 130
+ 948:	90 e6       	ldi	r25, 0x60	; 96
+ 94a:	80 83       	st	Z, r24
+ 94c:	91 83       	std	Z+1, r25	; 0x01
+ 94e:	e0 93 2a 61 	sts	0x612A, r30	; 0x80612a <twi0_wire>
+ 952:	f0 93 2b 61 	sts	0x612B, r31	; 0x80612b <twi0_wire+0x1>
+ 956:	80 e0       	ldi	r24, 0x00	; 0
+ 958:	99 e0       	ldi	r25, 0x09	; 9
+ 95a:	80 87       	std	Z+8, r24	; 0x08
+ 95c:	91 87       	std	Z+9, r25	; 0x09
+ 95e:	08 95       	ret
+
+00000960 <main>:
+init_clock():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2209
+      #else
+        // it's a DB/DD/DU with the crystal-supporting version of CLKCTRL.
+        // turn on clock failure detection - it'll just go to the blink code error, but the alternative would be hanging with no indication of why!
+        // Unfortunately, this is not reliable when a crystal is used, only for external clock. It appears that crystal problems often result in
+        // a clock sufficiently broken that it resets instead.
+        _PROTECTED_WRITE(CLKCTRL_MCLKCTRLC, CLKCTRL_CFDSRC_CLKMAIN_gc | CLKCTRL_CFDEN_bm);
+ 960:	88 ed       	ldi	r24, 0xD8	; 216
+ 962:	21 e0       	ldi	r18, 0x01	; 1
+ 964:	30 e0       	ldi	r19, 0x00	; 0
+ 966:	84 bf       	out	0x34, r24	; 52
+ 968:	20 93 62 00 	sts	0x0062, r18	; 0x800062 <__TEXT_REGION_LENGTH__+0x7f0062>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2210
+        _PROTECTED_WRITE(CLKCTRL_MCLKINTCTRL, CLKCTRL_CFD_bm);
+ 96c:	91 e0       	ldi	r25, 0x01	; 1
+ 96e:	84 bf       	out	0x34, r24	; 52
+ 970:	90 93 63 00 	sts	0x0063, r25	; 0x800063 <__TEXT_REGION_LENGTH__+0x7f0063>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2219
+          // 0x02 is the numeric value of that constant. I can't even provide compatibility defines, because I don't have any way to tell which one it is for a given version of the headers.
+          _PROTECTED_WRITE(CLKCTRL_XOSCHFCTRLA, (0x02 | CLKCTRL_ENABLE_bm));
+          uint8_t i = 255;
+        #else
+          // external crystal
+          _PROTECTED_WRITE(CLKCTRL_XOSCHFCTRLA, (USE_CSUTHF | USE_XTAL_DRIVE | /* CLKCTRL_SELHF_XTAL_gc = 0x00, and keeps changing names! |*/ CLKCTRL_ENABLE_bm));
+ 974:	95 e2       	ldi	r25, 0x25	; 37
+ 976:	84 bf       	out	0x34, r24	; 52
+ 978:	90 93 80 00 	sts	0x0080, r25	; 0x800080 <__TEXT_REGION_LENGTH__+0x7f0080>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2224
+          /*Formerly CLKCTRL_SELHF_CRYSTAL_gc, but they changed it 6 months after they started shipping DB's*/
+          uint16_t i = 8192; // crystals can take a lot longer to reach stability.
+        #endif
+      #endif
+      _PROTECTED_WRITE(CLKCTRL_MCLKCTRLA, CLKCTRL_CLKSEL_EXTCLK_gc);
+ 97c:	93 e0       	ldi	r25, 0x03	; 3
+ 97e:	84 bf       	out	0x34, r24	; 52
+ 980:	90 93 60 00 	sts	0x0060, r25	; 0x800060 <__TEXT_REGION_LENGTH__+0x7f0060>
+ 984:	80 e0       	ldi	r24, 0x00	; 0
+ 986:	90 e2       	ldi	r25, 0x20	; 32
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2225
+      while(CLKCTRL.MCLKSTATUS & CLKCTRL_SOSC_bm) {
+ 988:	20 91 65 00 	lds	r18, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7f0065>
+ 98c:	20 fd       	sbrc	r18, 0
+ 98e:	25 c1       	rjmp	.+586    	; 0xbda <main+0x27a>
+init_TCA0():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2556
+
+#if defined(TCA0)
+  void __attribute__((weak)) init_TCA0() {
+    /* TCA0_PINS from pins_arduino.h */
+    /* Enable Split Mode to get more PWM pins, since analogWrite() only provides 8-bit PWM anyway*/
+    TCA0.SPLIT.CTRLD = TCA_SPLIT_SPLITM_bm;
+ 990:	31 e0       	ldi	r19, 0x01	; 1
+ 992:	30 93 03 0a 	sts	0x0A03, r19	; 0x800a03 <__TEXT_REGION_LENGTH__+0x7f0a03>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2561
+
+    // Only 1 WGM so no need to specifically set up.
+
+    /* Period setting, 8-bit register in SPLIT mode */
+    TCA0.SPLIT.LPER    = PWM_TIMER_PERIOD;
+ 996:	8e ef       	ldi	r24, 0xFE	; 254
+ 998:	80 93 26 0a 	sts	0x0A26, r24	; 0x800a26 <__TEXT_REGION_LENGTH__+0x7f0a26>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2562
+    TCA0.SPLIT.HPER    = PWM_TIMER_PERIOD;
+ 99c:	80 93 27 0a 	sts	0x0A27, r24	; 0x800a27 <__TEXT_REGION_LENGTH__+0x7f0a27>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2589
+      TCA0.SPLIT.CTRLA   = (TCA_SPLIT_CLKSEL_DIV256_gc) | (TCA_SPLIT_ENABLE_bm);
+    #elif (F_CPU > 5000000) // use 64 divider unless it's 5 MHz or under
+      #if defined(MILLIS_USE_TIMERA0) && (TIME_TRACKING_TIMER_DIVIDER != 64)
+        #error "wiring.c and timers.h want to set millis timer TCA0 to different divider"
+      #endif
+      TCA0.SPLIT.CTRLA   =  (TCA_SPLIT_CLKSEL_DIV64_gc) | (TCA_SPLIT_ENABLE_bm);
+ 9a0:	9b e0       	ldi	r25, 0x0B	; 11
+ 9a2:	90 93 00 0a 	sts	0x0A00, r25	; 0x800a00 <__TEXT_REGION_LENGTH__+0x7f0a00>
+init_timers():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2535
+    init_TCA1();
+    PORTMUX.TCAROUTEA = TCA1_PINS;
+    #warning "You appear to have a TCA1 but not a TCA0. This should not be possible"
+  #elif !defined(TCA1) && defined(TCA0)
+    init_TCA0();
+    PORTMUX.TCAROUTEA = TCA0_PINS;
+ 9a6:	23 e0       	ldi	r18, 0x03	; 3
+ 9a8:	20 93 e6 05 	sts	0x05E6, r18	; 0x8005e6 <__TEXT_REGION_LENGTH__+0x7f05e6>
+init_TCBs():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2686
+ * Set up routing (defined in pins_arduino.h)
+ * Notice how there's no semicolon until after the preprocessor conditionals.
+ * In other words, that's all one line.
+ */
+  #if defined(PORTMUX_TCBROUTEA)
+    PORTMUX.TCBROUTEA = 0
+ 9ac:	10 92 e7 05 	sts	0x05E7, r1	; 0x8005e7 <__TEXT_REGION_LENGTH__+0x7f05e7>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2759
+    #elif defined(MILLIS_USE_TIMERB7)
+      if(timer_B != (TCB_t *)&TCB7)
+    #endif
+    {
+      // 8 bit PWM mode, but do not enable output yet, will do in analogWrite()
+      timer_B->CTRLB = (TCB_CNTMODE_PWM8_gc);
+ 9b0:	47 e0       	ldi	r20, 0x07	; 7
+ 9b2:	40 93 01 0b 	sts	0x0B01, r20	; 0x800b01 <__TEXT_REGION_LENGTH__+0x7f0b01>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2765
+
+      // Assign 8-bit period
+      #if (defined(TODO_ERRATUM_CHECK))
+        timer_B->CCMPL = PWM_TIMER_PERIOD; // TOP = 254 see section at start
+      #else /* fall back to erratum-safe */
+        timer_B->CCMPL = PWM_TIMER_PERIOD; // TOP = 254 see section at start
+ 9b6:	80 93 0c 0b 	sts	0x0B0C, r24	; 0x800b0c <__TEXT_REGION_LENGTH__+0x7f0b0c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2767
+
+        timer_B->CCMPH = PWM_TIMER_COMPARE;
+ 9ba:	10 92 0d 0b 	sts	0x0B0D, r1	; 0x800b0d <__TEXT_REGION_LENGTH__+0x7f0b0d>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2770
+      #endif
+      #if defined(TCA0)
+        timer_B->CTRLA = (TCB_CLKSEL_TCA0_gc) | (TCB_ENABLE_bm);
+ 9be:	95 e0       	ldi	r25, 0x05	; 5
+ 9c0:	90 93 00 0b 	sts	0x0B00, r25	; 0x800b00 <__TEXT_REGION_LENGTH__+0x7f0b00>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2759
+    #elif defined(MILLIS_USE_TIMERB7)
+      if(timer_B != (TCB_t *)&TCB7)
+    #endif
+    {
+      // 8 bit PWM mode, but do not enable output yet, will do in analogWrite()
+      timer_B->CTRLB = (TCB_CNTMODE_PWM8_gc);
+ 9c4:	40 93 11 0b 	sts	0x0B11, r20	; 0x800b11 <__TEXT_REGION_LENGTH__+0x7f0b11>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2765
+
+      // Assign 8-bit period
+      #if (defined(TODO_ERRATUM_CHECK))
+        timer_B->CCMPL = PWM_TIMER_PERIOD; // TOP = 254 see section at start
+      #else /* fall back to erratum-safe */
+        timer_B->CCMPL = PWM_TIMER_PERIOD; // TOP = 254 see section at start
+ 9c8:	80 93 1c 0b 	sts	0x0B1C, r24	; 0x800b1c <__TEXT_REGION_LENGTH__+0x7f0b1c>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2767
+
+        timer_B->CCMPH = PWM_TIMER_COMPARE;
+ 9cc:	10 92 1d 0b 	sts	0x0B1D, r1	; 0x800b1d <__TEXT_REGION_LENGTH__+0x7f0b1d>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2770
+      #endif
+      #if defined(TCA0)
+        timer_B->CTRLA = (TCB_CLKSEL_TCA0_gc) | (TCB_ENABLE_bm);
+ 9d0:	90 93 10 0b 	sts	0x0B10, r25	; 0x800b10 <__TEXT_REGION_LENGTH__+0x7f0b10>
+init_TCD0():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2821
+ * be set in the status register. We skip checking this here because, as we do many places the  *
+ * initialization functions assume that the chip starts from a reset condition.                */
+
+void __attribute__((weak)) init_TCD0() {
+  #if defined(USE_TIMERD0_PWM) || defined (MILLIS_USE_TIMERD0)
+    TCD0.CMPACLR  = 0x0FFF;
+ 9d4:	4f ef       	ldi	r20, 0xFF	; 255
+ 9d6:	5f e0       	ldi	r21, 0x0F	; 15
+ 9d8:	40 93 aa 0b 	sts	0x0BAA, r20	; 0x800baa <__TEXT_REGION_LENGTH__+0x7f0baa>
+ 9dc:	50 93 ab 0b 	sts	0x0BAB, r21	; 0x800bab <__TEXT_REGION_LENGTH__+0x7f0bab>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2825
+    // Match with CMPBCLR clears all outputs. For normal PWM this just needs to be higher than
+    // it will count to - so set to maximum (other settings used for non-overlapping PWM and
+    // other advanced functionality)
+    TCD0.CTRLC    = 0x80;                   // WOD outputs PWM B, WOC outputs PWM A
+ 9e0:	80 e8       	ldi	r24, 0x80	; 128
+ 9e2:	80 93 82 0b 	sts	0x0B82, r24	; 0x800b82 <__TEXT_REGION_LENGTH__+0x7f0b82>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2827
+    // That doesn't need to be that way, but I declare that that's all we support through analogWrite()
+    TCD0.CTRLB    = TIMERD0_WGMODE_SETTING;
+ 9e6:	10 92 81 0b 	sts	0x0B81, r1	; 0x800b81 <__TEXT_REGION_LENGTH__+0x7f0b81>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2830
+    // One ramp or dual slope are the only options that are viable to reproduce classic behavior without
+    // considerable calculation overhead. We use one-ramp mode
+    TCD0.CMPBCLR  = TIMERD0_TOP_SETTING;
+ 9ea:	4e ef       	ldi	r20, 0xFE	; 254
+ 9ec:	50 e0       	ldi	r21, 0x00	; 0
+ 9ee:	40 93 ae 0b 	sts	0x0BAE, r20	; 0x800bae <__TEXT_REGION_LENGTH__+0x7f0bae>
+ 9f2:	50 93 af 0b 	sts	0x0BAF, r21	; 0x800baf <__TEXT_REGION_LENGTH__+0x7f0baf>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2835
+    // From timers.h - is equal to (255 * 2^n)-1 where n is an integer value. This lets us lower
+    // PWM frequency, or hold it constant and lower the sync prescale, reducing sync delays.
+
+    #if defined(TIMERD0_SET_CLOCK)
+      _PROTECTED_WRITE(CLKCTRL_OSCHFCTRLA, (TIMERD0_SET_CLOCK));
+ 9f6:	88 ed       	ldi	r24, 0xD8	; 216
+ 9f8:	44 e1       	ldi	r20, 0x14	; 20
+ 9fa:	84 bf       	out	0x34, r24	; 52
+ 9fc:	40 93 68 00 	sts	0x0068, r20	; 0x800068 <__TEXT_REGION_LENGTH__+0x7f0068>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2839
+    #endif
+
+
+    TCD0.CTRLA    = TIMERD0_CLOCK_SETTING | TCD_ENABLE_bm;
+ a00:	81 e1       	ldi	r24, 0x11	; 17
+ a02:	80 93 80 0b 	sts	0x0B80, r24	; 0x800b80 <__TEXT_REGION_LENGTH__+0x7f0b80>
+init_timers():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2545
+  #endif
+  init_TCBs();
+  /* init_TCBs() or's together all the portmux options for the up-to-5 timers on extant parts, and will go to 8 without changes)*/
+  #if (defined(TCD0) && defined(USE_TIMERD0_PWM) && !defined(MILLIS_USE_TIMERD0))
+    init_TCD0();
+    PORTMUX.TCDROUTEA = TCD0_PINS;
+ a06:	10 92 e8 05 	sts	0x05E8, r1	; 0x8005e8 <__TEXT_REGION_LENGTH__+0x7f05e8>
+init_ADC0():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1897
+
+
+#if defined(ADC0)
+  void __attribute__((weak)) init_ADC0() {
+    ADC_t* pADC;
+    _fastPtr_d(pADC, &ADC0);
+ a0a:	e0 e0       	ldi	r30, 0x00	; 0
+ a0c:	f6 e0       	ldi	r31, 0x06	; 6
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1958
+      #elif F_CPU >= 20000000
+        pADC->CTRLC = ADC_PRESC_DIV16_gc; // 1.25 @ 20 MHz
+      #elif F_CPU >  12000000
+        pADC->CTRLC = ADC_PRESC_DIV12_gc; // 1 @ 12, 1.333 @ 16 MHz
+      #elif F_CPU >= 8000000
+        pADC->CTRLC = ADC_PRESC_DIV8_gc;  // 1-1.499 between 8 and 11.99 MHz
+ a0e:	82 e0       	ldi	r24, 0x02	; 2
+ a10:	82 83       	std	Z+2, r24	; 0x02
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1964
+      #elif F_CPU >= 4000000
+        pADC->CTRLC = ADC_PRESC_DIV4_gc;  // 1 MHz
+      #else  // 1 MHz / 2 = 500 kHz - the lowest setting
+        pADC->CTRLC = ADC_PRESC_DIV2_gc;
+      #endif
+      pADC->SAMPCTRL = 14; // 16 ADC clock sampling time - should be about the same amount of *time* as originally?
+ a12:	8e e0       	ldi	r24, 0x0E	; 14
+ a14:	85 83       	std	Z+5, r24	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1966
+      // This is WAY conservative! We could drop it down...
+      pADC->CTRLD = ADC_INITDLY_DLY64_gc; // VREF can take 50uS to become ready, and we're running the ADC clock
+ a16:	80 e6       	ldi	r24, 0x60	; 96
+ a18:	83 83       	std	Z+3, r24	; 0x03
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1969
+      // at around 1 MHz, so we want 64 ADC clocks when we start up a new reference so we don't get bad readings at first
+      /* Enable ADC */
+      pADC->CTRLA = ADC_ENABLE_bm | ADC_RESSEL_10BIT_gc;
+ a1a:	90 83       	st	Z, r25
+DACReference():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_analog.c:174
+#ifdef DAC0 /* Only DAC-bearing parts get this */
+  void DACReference(uint8_t mode) {
+    if (__builtin_constant_p(mode)) {
+      check_valid_analog_ref(mode);
+    }
+    _SWAP(mode);
+ a1c:	85 e5       	ldi	r24, 0x55	; 85
+ a1e:	82 95       	swap	r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_analog.c:176
+    mode &= 0x07;
+    uint8_t temp = VREF.DAC0REF & ~VREF_REFSEL_gm;
+ a20:	90 91 b2 00 	lds	r25, 0x00B2	; 0x8000b2 <__TEXT_REGION_LENGTH__+0x7f00b2>
+ a24:	98 7f       	andi	r25, 0xF8	; 248
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_analog.c:175
+  void DACReference(uint8_t mode) {
+    if (__builtin_constant_p(mode)) {
+      check_valid_analog_ref(mode);
+    }
+    _SWAP(mode);
+    mode &= 0x07;
+ a26:	87 70       	andi	r24, 0x07	; 7
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_analog.c:177
+    uint8_t temp = VREF.DAC0REF & ~VREF_REFSEL_gm;
+    temp |= mode;
+ a28:	89 2b       	or	r24, r25
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_analog.c:178
+    VREF.DAC0REF = temp;
+ a2a:	80 93 b2 00 	sts	0x00B2, r24	; 0x8000b2 <__TEXT_REGION_LENGTH__+0x7f00b2>
+init_millis():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1800
+        #endif
+        RTC.INTCTRL         = 0x01; // enable overflow interrupt
+        RTC.CTRLA           = (RTC_RUNSTDBY_bm|RTC_RTCEN_bm|RTC_PRESCALER_DIV32_gc);//fire it up, prescale by 32.
+      */
+    #else // It's a type b timer - we have already errored out if that wasn't defined
+      _timer->CCMP = TIME_TRACKING_TIMER_PERIOD;
+ a2e:	8f e9       	ldi	r24, 0x9F	; 159
+ a30:	9f e0       	ldi	r25, 0x0F	; 15
+ a32:	80 93 2c 0b 	sts	0x0B2C, r24	; 0x800b2c <__TEXT_REGION_LENGTH__+0x7f0b2c>
+ a36:	90 93 2d 0b 	sts	0x0B2D, r25	; 0x800b2d <__TEXT_REGION_LENGTH__+0x7f0b2d>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1802
+      // Enable timer interrupt, but clear the rest of register
+      _timer->INTCTRL = TCB_CAPT_bm;
+ a3a:	30 93 25 0b 	sts	0x0B25, r19	; 0x800b25 <__TEXT_REGION_LENGTH__+0x7f0b25>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1804
+      // Clear timer mode (since it will have been set as PWM by init())
+      _timer->CTRLB = 0;
+ a3e:	10 92 21 0b 	sts	0x0B21, r1	; 0x800b21 <__TEXT_REGION_LENGTH__+0x7f0b21>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:1806
+      // CLK_PER/1 is 0b00, . CLK_PER/2 is 0b01, so bitwise OR of valid divider with enable works
+      _timer->CTRLA = TIME_TRACKING_TIMER_DIVIDER|TCB_ENABLE_bm;  // Keep this last before enabling interrupts to ensure tracking as accurate as possible
+ a42:	20 93 20 0b 	sts	0x0B20, r18	; 0x800b20 <__TEXT_REGION_LENGTH__+0x7f0b20>
+main():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/main.cpp:94
+ * just waiting for the DU-series now                                                           */
+int main() {
+  onBeforeInit(); // Emnpty callback called before init but after the .init stuff. First normal code executed
+  init(); // Interrupts are turned on just prior to init() returning.
+  initVariant();
+  if (!onAfterInit()) sei();  // enable interrupts.
+ a46:	78 94       	sei
+begin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:545
+    }
+
+    void HardwareSerial::begin(unsigned long baud, uint16_t options) {
+      // Make sure no transmissions are ongoing and USART is disabled in case begin() is called by accident
+      // without first calling end()
+      _poll_tx_data_empty(); // Workaround to fix compiler omitting this function, causing compile to fail.
+ a48:	85 e9       	ldi	r24, 0x95	; 149
+ a4a:	90 e6       	ldi	r25, 0x60	; 96
+ a4c:	45 dc       	rcall	.-1910   	; 0x2d8 <HardwareSerial::_poll_tx_data_empty()>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:546
+      if (_state & 1) {
+ a4e:	80 91 a3 60 	lds	r24, 0x60A3	; 0x8060a3 <Serial2+0xe>
+ a52:	80 ff       	sbrs	r24, 0
+ a54:	11 c0       	rjmp	.+34     	; 0xa78 <main+0x118>
+end():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:690
+        return NOT_A_MUX; // At this point, we have checked all group codes for this peripheral. It ain't there. Return NOT_A_MUX.
+      }
+    }
+    void HardwareSerial::end() {
+      // wait for transmission of outgoing data
+      flush();
+ a56:	85 e9       	ldi	r24, 0x95	; 149
+ a58:	90 e6       	ldi	r25, 0x60	; 96
+ a5a:	a7 dc       	rcall	.-1714   	; 0x3aa <HardwareSerial::flush()>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:693
+      // Disable receiver and transmitter as well as the RX complete and the data register empty interrupts.
+      // TXCIE only used in half duplex - we can just turn the damned thing off yo!
+      volatile USART_t * temp = _hwserial_module; /* compiler does a slightly better job with this. */
+ a5c:	e0 91 9d 60 	lds	r30, 0x609D	; 0x80609d <Serial2+0x8>
+ a60:	f0 91 9e 60 	lds	r31, 0x609E	; 0x80609e <Serial2+0x9>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:694
+      temp -> CTRLB = 0; //~(USART_RXEN_bm | USART_TXEN_bm);
+ a64:	16 82       	std	Z+6, r1	; 0x06
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:695
+      temp -> CTRLA = 0; //~(USART_RXCIE_bm | USART_DREIE_bm | USART_TXCIE_bm);
+ a66:	15 82       	std	Z+5, r1	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:696
+      temp -> STATUS =  USART_TXCIF_bm | USART_RXCIF_bm; // want to make sure no chance of that firing in error now that the USART is off. TXCIE only used in half duplex
+ a68:	80 ec       	ldi	r24, 0xC0	; 192
+ a6a:	84 83       	std	Z+4, r24	; 0x04
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:698
+      // clear any received data
+      _rx_buffer_head = _rx_buffer_tail;
+ a6c:	80 91 a5 60 	lds	r24, 0x60A5	; 0x8060a5 <Serial2+0x10>
+ a70:	80 93 a4 60 	sts	0x60A4, r24	; 0x8060a4 <Serial2+0xf>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:702
+
+      // Note: Does not change output pins
+      // though the datasheetsays turning the TX module off sets it to input.
+      _state = 0;
+ a74:	10 92 a3 60 	sts	0x60A3, r1	; 0x8060a3 <Serial2+0xe>
+begin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:585
+        setpinmask             |= 0x10;         // this tells _set_pins not to disturb the configuration on the RX pin.
+      }
+      if (ctrla & USART_RS485_bm) {             // RS485 mode recorded here too... because we need to set
+        setpinmask             |= 0x01;         // set pin output if we need to do that. Datasheet isn't clear
+      }
+      uint8_t oldSREG = SREG;
+ a78:	6f b7       	in	r22, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:586
+      cli();
+ a7a:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:587
+      volatile USART_t* MyUSART = _hwserial_module;
+ a7c:	e0 91 9d 60 	lds	r30, 0x609D	; 0x80609d <Serial2+0x8>
+ a80:	f0 91 9e 60 	lds	r31, 0x609E	; 0x80609e <Serial2+0x9>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:588
+      (*MyUSART).CTRLB          = 0;            // gotta disable first - some things are enable-locked.
+ a84:	16 82       	std	Z+6, r1	; 0x06
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:589
+      (*MyUSART).CTRLC          = ctrlc;        // No reason not to set first.
+ a86:	33 e0       	ldi	r19, 0x03	; 3
+ a88:	37 83       	std	Z+7, r19	; 0x07
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:590
+      (*MyUSART).BAUD           = baud_setting; // Wish I could have set it long ago
+ a8a:	85 e0       	ldi	r24, 0x05	; 5
+ a8c:	9d e0       	ldi	r25, 0x0D	; 13
+ a8e:	80 87       	std	Z+8, r24	; 0x08
+ a90:	91 87       	std	Z+9, r25	; 0x09
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:596
+      if (ctrla & 0x20) {                       // Now we have to do a bit of work
+        setpinmask             &= 0x7F;         // Remove the RX pin in this case because we get the input from elsewhere.
+        (*MyUSART).EVCTRL       = 1;            // enable event input - not clear from datasheet what's needed to
+        (*MyUSART).TXPLCTRL     = 0xFF;         // Disable pulse length encoding.
+      } else {
+        (*MyUSART).EVCTRL       = 0;            // This needs to be turned off when not in use.
+ a92:	14 86       	std	Z+12, r1	; 0x0c
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:598
+      }                                         // finally strip out the SERIAL_EVENT_RX bit which is in the DREIE
+      (*MyUSART).CTRLA          = ctrla & 0xDF; // position, which we never set in begin.
+ a94:	80 e8       	ldi	r24, 0x80	; 128
+ a96:	85 83       	std	Z+5, r24	; 0x05
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:599
+      (*MyUSART).CTRLB          = ctrlb;        // Set the all important CTRLB...
+ a98:	80 ec       	ldi	r24, 0xC0	; 192
+ a9a:	86 83       	std	Z+6, r24	; 0x06
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:600
+        _set_pins(_usart_pins, _mux_count, _pin_set, setpinmask); // set up the pin(s)
+ a9c:	20 91 a2 60 	lds	r18, 0x60A2	; 0x8060a2 <Serial2+0xd>
+ aa0:	70 91 a1 60 	lds	r23, 0x60A1	; 0x8060a1 <Serial2+0xc>
+ aa4:	80 91 9f 60 	lds	r24, 0x609F	; 0x80609f <Serial2+0xa>
+ aa8:	90 91 a0 60 	lds	r25, 0x60A0	; 0x8060a0 <Serial2+0xb>
+_set_pins():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:647
+    //  1  1  1  0      TX set output, RX not changed. Loopback mode: you can only see what you send since TX is OUTPUT and that's what's connected to RX.
+    //  1  1  1  1      TX set input pullup. Half-duplex mode.
+    // * indicates that RS485 mode if requested will be enabled, even though it is inappropriate. These configurations are documented unsupported.
+    // Static
+    void HardwareSerial::_set_pins(uint8_t* mux_table_ptr, uint8_t mux_count, uint8_t mux_setting, uint8_t enmask) {
+      uint8_t* mux_row_ptr   = mux_table_ptr + (mux_setting * USART_PINS_WIDTH);
+ aac:	fc 01       	movw	r30, r24
+ aae:	23 9f       	mul	r18, r19
+ ab0:	e0 0d       	add	r30, r0
+ ab2:	f1 1d       	adc	r31, r1
+ ab4:	11 24       	eor	r1, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:648
+      uint16_t mux_row_gc_tx = pgm_read_word_near(mux_row_ptr); // Clever trick for faster PGM reads of consecutive bytes!
+ ab6:	45 91       	lpm	r20, Z+
+ ab8:	54 91       	lpm	r21, Z
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:650
+      uint8_t mux_group_code = (uint8_t) (mux_row_gc_tx);       // this is the mux
+      if (mux_setting < mux_count) {              // if false, pinmux none was selected, and we skip the pin configuration.
+ aba:	27 17       	cp	r18, r23
+ abc:	08 f0       	brcs	.+2      	; 0xac0 <main+0x160>
+ abe:	3e c0       	rjmp	.+124    	; 0xb3c <main+0x1dc>
+_pinMode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:79
+    }
+  #endif
+  _pinMode(pin, mode);
+}
+void _pinMode(uint8_t pin, uint8_t mode) {
+  uint8_t bit_mask = digitalPinToBitMask(pin);
+ ac0:	5b 31       	cpi	r21, 0x1B	; 27
+ ac2:	90 f4       	brcc	.+36     	; 0xae8 <main+0x188>
+check_valid_digital_pin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/Arduino.h:800
+ ac4:	25 2f       	mov	r18, r21
+ ac6:	30 e0       	ldi	r19, 0x00	; 0
+_pinMode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:79
+ ac8:	f9 01       	movw	r30, r18
+ aca:	ef 5a       	subi	r30, 0xAF	; 175
+ acc:	ff 49       	sbci	r31, 0x9F	; 159
+ ace:	a0 81       	ld	r26, Z
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:80
+  if ((bit_mask == NOT_A_PIN) || (mode > INPUT_PULLUP)) {
+ ad0:	af 3f       	cpi	r26, 0xFF	; 255
+ ad2:	51 f0       	breq	.+20     	; 0xae8 <main+0x188>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:83
+    return;                             /* ignore invalid pins passed at runtime */
+  }
+  PORT_t *port = digitalPinToPortStruct(pin);
+ ad4:	2a 5c       	subi	r18, 0xCA	; 202
+ ad6:	3f 49       	sbci	r19, 0x9F	; 159
+ ad8:	e9 01       	movw	r28, r18
+ ada:	e8 81       	ld	r30, Y
+ adc:	d0 e2       	ldi	r29, 0x20	; 32
+ ade:	ed 9f       	mul	r30, r29
+ ae0:	f0 01       	movw	r30, r0
+ ae2:	11 24       	eor	r1, r1
+ ae4:	fc 5f       	subi	r31, 0xFC	; 252
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:86
+  // if (port == NULL) return;           /* skip this test; if bit_mask isn't NOT_A_PIN, port won't be null - if it is, pins_arduino.h contains errors and we can't expect any digital I/O to work correctly.
+  if (mode == OUTPUT) {
+    port->DIRSET = bit_mask;            /* Configure direction as output and done*/
+ ae6:	a1 83       	std	Z+1, r26	; 0x01
+_set_pins():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:659
+          pinMode(mux_pin_tx, OUTPUT);            // If and only if TX is enabled and open drain isn't should the TX pin be output.
+        } else if (enmask & 0x50) {               // if it is enabled but is in open drain mode, or is disabled, but loopback is enabled
+          pinMode(mux_pin_tx, INPUT_PULLUP);      // TX should be INPUT_PULLUP.
+        }
+        if (enmask & 0x80 && !(enmask & 0x10)) {  // Likewise if RX is enabled, unless loopback mode is too
+          pinMode(mux_pin_tx + 1, INPUT_PULLUP);  // (in which case we caught it above), it should be pulled up
+ ae8:	21 e0       	ldi	r18, 0x01	; 1
+ aea:	25 0f       	add	r18, r21
+_pinMode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:79
+    }
+  #endif
+  _pinMode(pin, mode);
+}
+void _pinMode(uint8_t pin, uint8_t mode) {
+  uint8_t bit_mask = digitalPinToBitMask(pin);
+ aec:	2b 31       	cpi	r18, 0x1B	; 27
+ aee:	30 f5       	brcc	.+76     	; 0xb3c <main+0x1dc>
+check_valid_digital_pin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/Arduino.h:800
+ af0:	30 e0       	ldi	r19, 0x00	; 0
+_pinMode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:79
+ af2:	f9 01       	movw	r30, r18
+ af4:	ef 5a       	subi	r30, 0xAF	; 175
+ af6:	ff 49       	sbci	r31, 0x9F	; 159
+ af8:	c0 81       	ld	r28, Z
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:80
+  if ((bit_mask == NOT_A_PIN) || (mode > INPUT_PULLUP)) {
+ afa:	cf 3f       	cpi	r28, 0xFF	; 255
+ afc:	f9 f0       	breq	.+62     	; 0xb3c <main+0x1dc>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:83
+    return;                             /* ignore invalid pins passed at runtime */
+  }
+  PORT_t *port = digitalPinToPortStruct(pin);
+ afe:	f9 01       	movw	r30, r18
+ b00:	ea 5c       	subi	r30, 0xCA	; 202
+ b02:	ff 49       	sbci	r31, 0x9F	; 159
+ b04:	a0 81       	ld	r26, Z
+ b06:	e0 e2       	ldi	r30, 0x20	; 32
+ b08:	ae 9f       	mul	r26, r30
+ b0a:	d0 01       	movw	r26, r0
+ b0c:	11 24       	eor	r1, r1
+ b0e:	bc 5f       	subi	r27, 0xFC	; 252
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:89
+  // if (port == NULL) return;           /* skip this test; if bit_mask isn't NOT_A_PIN, port won't be null - if it is, pins_arduino.h contains errors and we can't expect any digital I/O to work correctly.
+  if (mode == OUTPUT) {
+    port->DIRSET = bit_mask;            /* Configure direction as output and done*/
+  } else {                              /* mode == INPUT or INPUT_PULLUP - more complicated */
+                                        /* Calculate where pin control register is */
+    uint8_t bit_pos = digitalPinToBitPosition(pin);
+ b10:	25 5e       	subi	r18, 0xE5	; 229
+ b12:	3f 49       	sbci	r19, 0x9F	; 159
+ b14:	f9 01       	movw	r30, r18
+ b16:	d0 81       	ld	r29, Z
+main():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:90
+    volatile uint8_t *pin_ctrl = getPINnCTRLregister(port, bit_pos);
+ b18:	f0 e0       	ldi	r31, 0x00	; 0
+ b1a:	e0 e0       	ldi	r30, 0x00	; 0
+_pinMode():
+ b1c:	d8 30       	cpi	r29, 0x08	; 8
+ b1e:	30 f4       	brcc	.+12     	; 0xb2c <main+0x1cc>
+ b20:	9d 01       	movw	r18, r26
+ b22:	20 5f       	subi	r18, 0xF0	; 240
+ b24:	3f 4f       	sbci	r19, 0xFF	; 255
+ b26:	f9 01       	movw	r30, r18
+ b28:	ed 0f       	add	r30, r29
+ b2a:	f1 1d       	adc	r31, r1
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:91
+    uint8_t status = SREG;              /* Save state */
+ b2c:	3f b7       	in	r19, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:92
+    cli();                              /* Interrupts off for PINnCTRL stuff */
+ b2e:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:93
+    port->DIRCLR = bit_mask;            /* Configure direction as input */
+ b30:	12 96       	adiw	r26, 0x02	; 2
+ b32:	cc 93       	st	X, r28
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:95
+    if (mode == INPUT_PULLUP) {         /* Configure pull-up resistor */
+      *pin_ctrl |= PORT_PULLUPEN_bm;    /* Enable pull-up */
+ b34:	20 81       	ld	r18, Z
+ b36:	28 60       	ori	r18, 0x08	; 8
+ b38:	20 83       	st	Z, r18
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:99
+    } else {                            /* mode == INPUT (no pullup) */
+      *pin_ctrl &= ~(PORT_PULLUPEN_bm); /* Disable pull-up */
+    }
+    SREG = status;                      /* Restore state */
+ b3a:	3f bf       	out	0x3f, r19	; 63
+_mux_set():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:617
+      uint8_t temp   = *portmux;
+      temp          &= ~((uint8_t) (mux_options_off_gm >> 8)); // Group Mask
+      temp          |= mux_code;
+      *portmux       = temp;
+    #else
+      uint8_t* mux_info_ptr = mux_table_ptr + (mux_count * USART_PINS_WIDTH) + 2;
+ b3c:	fc 01       	movw	r30, r24
+ b3e:	23 e0       	ldi	r18, 0x03	; 3
+ b40:	72 9f       	mul	r23, r18
+ b42:	e0 0d       	add	r30, r0
+ b44:	f1 1d       	adc	r31, r1
+ b46:	11 24       	eor	r1, r1
+ b48:	32 96       	adiw	r30, 0x02	; 2
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:619
+      /* Only one register, so no offset, so only read a byte */
+      uint8_t mux_mask = pgm_read_byte_near(mux_info_ptr);     // only read the group mask
+ b4a:	e4 91       	lpm	r30, Z
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:621
+      volatile uint8_t* portmux = (uint8_t*)(HWSERIAL_MUX_REGISTER_BASE);
+      uint8_t temp   = *portmux;
+ b4c:	80 91 e2 05 	lds	r24, 0x05E2	; 0x8005e2 <__TEXT_REGION_LENGTH__+0x7f05e2>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:622
+      temp          &= ~(mux_mask);
+ b50:	e0 95       	com	r30
+ b52:	e8 23       	and	r30, r24
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:623
+      temp          |= mux_code;
+ b54:	e4 2b       	or	r30, r20
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:624
+      *portmux       = temp;
+ b56:	e0 93 e2 05 	sts	0x05E2, r30	; 0x8005e2 <__TEXT_REGION_LENGTH__+0x7f05e2>
+begin():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/UART.cpp:601
+        (*MyUSART).EVCTRL       = 0;            // This needs to be turned off when not in use.
+      }                                         // finally strip out the SERIAL_EVENT_RX bit which is in the DREIE
+      (*MyUSART).CTRLA          = ctrla & 0xDF; // position, which we never set in begin.
+      (*MyUSART).CTRLB          = ctrlb;        // Set the all important CTRLB...
+        _set_pins(_usart_pins, _mux_count, _pin_set, setpinmask); // set up the pin(s)
+      SREG = oldSREG;                             // re-enable interrupts, and we're done.
+ b5a:	6f bf       	out	0x3f, r22	; 63
+_pinMode():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:91
+    port->DIRSET = bit_mask;            /* Configure direction as output and done*/
+  } else {                              /* mode == INPUT or INPUT_PULLUP - more complicated */
+                                        /* Calculate where pin control register is */
+    uint8_t bit_pos = digitalPinToBitPosition(pin);
+    volatile uint8_t *pin_ctrl = getPINnCTRLregister(port, bit_pos);
+    uint8_t status = SREG;              /* Save state */
+ b5c:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:92
+    cli();                              /* Interrupts off for PINnCTRL stuff */
+ b5e:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:93
+    port->DIRCLR = bit_mask;            /* Configure direction as input */
+ b60:	80 e2       	ldi	r24, 0x20	; 32
+ b62:	80 93 02 04 	sts	0x0402, r24	; 0x800402 <__TEXT_REGION_LENGTH__+0x7f0402>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:97
+    if (mode == INPUT_PULLUP) {         /* Configure pull-up resistor */
+      *pin_ctrl |= PORT_PULLUPEN_bm;    /* Enable pull-up */
+    } else {                            /* mode == INPUT (no pullup) */
+      *pin_ctrl &= ~(PORT_PULLUPEN_bm); /* Disable pull-up */
+ b66:	80 91 15 04 	lds	r24, 0x0415	; 0x800415 <__TEXT_REGION_LENGTH__+0x7f0415>
+ b6a:	87 7f       	andi	r24, 0xF7	; 247
+ b6c:	80 93 15 04 	sts	0x0415, r24	; 0x800415 <__TEXT_REGION_LENGTH__+0x7f0415>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:99
+    }
+    SREG = status;                      /* Restore state */
+ b70:	9f bf       	out	0x3f, r25	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:91
+    port->DIRSET = bit_mask;            /* Configure direction as output and done*/
+  } else {                              /* mode == INPUT or INPUT_PULLUP - more complicated */
+                                        /* Calculate where pin control register is */
+    uint8_t bit_pos = digitalPinToBitPosition(pin);
+    volatile uint8_t *pin_ctrl = getPINnCTRLregister(port, bit_pos);
+    uint8_t status = SREG;              /* Save state */
+ b72:	2f b7       	in	r18, 0x3f	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:92
+    cli();                              /* Interrupts off for PINnCTRL stuff */
+ b74:	f8 94       	cli
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:93
+    port->DIRCLR = bit_mask;            /* Configure direction as input */
+ b76:	90 e1       	ldi	r25, 0x10	; 16
+ b78:	90 93 02 04 	sts	0x0402, r25	; 0x800402 <__TEXT_REGION_LENGTH__+0x7f0402>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:97
+    if (mode == INPUT_PULLUP) {         /* Configure pull-up resistor */
+      *pin_ctrl |= PORT_PULLUPEN_bm;    /* Enable pull-up */
+    } else {                            /* mode == INPUT (no pullup) */
+      *pin_ctrl &= ~(PORT_PULLUPEN_bm); /* Disable pull-up */
+ b7c:	80 91 14 04 	lds	r24, 0x0414	; 0x800414 <__TEXT_REGION_LENGTH__+0x7f0414>
+ b80:	87 7f       	andi	r24, 0xF7	; 247
+ b82:	80 93 14 04 	sts	0x0414, r24	; 0x800414 <__TEXT_REGION_LENGTH__+0x7f0414>
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:99
+    }
+    SREG = status;                      /* Restore state */
+ b86:	2f bf       	out	0x3f, r18	; 63
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring_digital.c:86
+    return;                             /* ignore invalid pins passed at runtime */
+  }
+  PORT_t *port = digitalPinToPortStruct(pin);
+  // if (port == NULL) return;           /* skip this test; if bit_mask isn't NOT_A_PIN, port won't be null - if it is, pins_arduino.h contains errors and we can't expect any digital I/O to work correctly.
+  if (mode == OUTPUT) {
+    port->DIRSET = bit_mask;            /* Configure direction as output and done*/
+ b88:	90 93 61 04 	sts	0x0461, r25	; 0x800461 <__TEXT_REGION_LENGTH__+0x7f0461>
+ b8c:	88 e0       	ldi	r24, 0x08	; 8
+ b8e:	80 93 61 04 	sts	0x0461, r24	; 0x800461 <__TEXT_REGION_LENGTH__+0x7f0461>
+ b92:	84 e0       	ldi	r24, 0x04	; 4
+ b94:	80 93 61 04 	sts	0x0461, r24	; 0x800461 <__TEXT_REGION_LENGTH__+0x7f0461>
+ b98:	82 e0       	ldi	r24, 0x02	; 2
+ b9a:	80 93 61 04 	sts	0x0461, r24	; 0x800461 <__TEXT_REGION_LENGTH__+0x7f0461>
+loop():
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:25
+
+}
+
+void loop() {
+
+digitalWrite(degF_LED, HIGH);
+ b9e:	61 e0       	ldi	r22, 0x01	; 1
+ ba0:	80 e1       	ldi	r24, 0x10	; 16
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:26
+delay(1000);
+ ba2:	0a dd       	rcall	.-1516   	; 0x5b8 <digitalWrite>
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:27
+digitalWrite(degF_LED, LOW);
+ ba4:	08 db       	rcall	.-2544   	; 0x1b6 <delay.constprop.9>
+ ba6:	60 e0       	ldi	r22, 0x00	; 0
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:29
+
+digitalWrite(degC_LED, HIGH);
+ ba8:	80 e1       	ldi	r24, 0x10	; 16
+ baa:	06 dd       	rcall	.-1524   	; 0x5b8 <digitalWrite>
+ bac:	61 e0       	ldi	r22, 0x01	; 1
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:30
+delay(1000);
+ bae:	8f e0       	ldi	r24, 0x0F	; 15
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:31
+digitalWrite(degC_LED, LOW);
+ bb0:	03 dd       	rcall	.-1530   	; 0x5b8 <digitalWrite>
+ bb2:	01 db       	rcall	.-2558   	; 0x1b6 <delay.constprop.9>
+ bb4:	60 e0       	ldi	r22, 0x00	; 0
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:33
+
+digitalWrite(percent_LED, HIGH);
+ bb6:	8f e0       	ldi	r24, 0x0F	; 15
+ bb8:	ff dc       	rcall	.-1538   	; 0x5b8 <digitalWrite>
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:34
+delay(1000);
+ bba:	61 e0       	ldi	r22, 0x01	; 1
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:35
+digitalWrite(percent_LED, LOW);
+ bbc:	8e e0       	ldi	r24, 0x0E	; 14
+ bbe:	fc dc       	rcall	.-1544   	; 0x5b8 <digitalWrite>
+ bc0:	fa da       	rcall	.-2572   	; 0x1b6 <delay.constprop.9>
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:37
+
+digitalWrite(volt_LED, HIGH);
+ bc2:	60 e0       	ldi	r22, 0x00	; 0
+ bc4:	8e e0       	ldi	r24, 0x0E	; 14
+ bc6:	f8 dc       	rcall	.-1552   	; 0x5b8 <digitalWrite>
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:38
+delay(1000);
+ bc8:	61 e0       	ldi	r22, 0x01	; 1
+ bca:	8d e0       	ldi	r24, 0x0D	; 13
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:39
+digitalWrite(volt_LED, LOW);
+ bcc:	f5 dc       	rcall	.-1558   	; 0x5b8 <digitalWrite>
+ bce:	f3 da       	rcall	.-2586   	; 0x1b6 <delay.constprop.9>
+ bd0:	60 e0       	ldi	r22, 0x00	; 0
+ bd2:	8d e0       	ldi	r24, 0x0D	; 13
+C:\Users\ehinde\Code\Manual Analog Control\ManualAnalogControl/ManualAnalogControl.ino:41
+
+delay(1000);
+ bd4:	f1 dc       	rcall	.-1566   	; 0x5b8 <digitalWrite>
+ bd6:	ef da       	rcall	.-2594   	; 0x1b6 <delay.constprop.9>
+ bd8:	e2 cf       	rjmp	.-60     	; 0xb9e <main+0x23e>
+ bda:	01 97       	sbiw	r24, 0x01	; 1
+init_clock():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2227
+        #endif
+      #endif
+      _PROTECTED_WRITE(CLKCTRL_MCLKCTRLA, CLKCTRL_CLKSEL_EXTCLK_gc);
+      while(CLKCTRL.MCLKSTATUS & CLKCTRL_SOSC_bm) {
+        i--;
+        if(i == 0) onClockTimeout();
+ bdc:	09 f0       	breq	.+2      	; 0xbe0 <main+0x280>
+ bde:	d4 ce       	rjmp	.-600    	; 0x988 <main+0x28>
+onClockTimeout():
+C:\Users\ehinde\AppData\Local\Arduino15\packages\DxCore\hardware\megaavr\1.6.2\cores\dxcore/wiring.c:2428
+      }
+    }
+  }
+
+  void __attribute__((weak)) onClockTimeout() {
+    _blinkCode(3);
+ be0:	83 e0       	ldi	r24, 0x03	; 3
+ be2:	a6 da       	rcall	.-2740   	; 0x130 <_blinkCode>
+
+00000be4 <__muluhisi3>:
+__muluhisi3():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:626
+ be4:	0f d0       	rcall	.+30     	; 0xc04 <__umulhisi3>
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:627
+ be6:	a5 9f       	mul	r26, r21
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:628
+ be8:	90 0d       	add	r25, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:629
+ bea:	b4 9f       	mul	r27, r20
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:630
+ bec:	90 0d       	add	r25, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:631
+ bee:	a4 9f       	mul	r26, r20
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:632
+ bf0:	80 0d       	add	r24, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:633
+ bf2:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:634
+ bf4:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:635
+ bf6:	08 95       	ret
+
+00000bf8 <__tablejump2__>:
+__tablejump2__():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
+ bf8:	ee 0f       	add	r30, r30
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2297
+ bfa:	ff 1f       	adc	r31, r31
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2328
+ bfc:	05 90       	lpm	r0, Z+
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2329
+ bfe:	f4 91       	lpm	r31, Z
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2330
+ c00:	e0 2d       	mov	r30, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2331
+ c02:	09 94       	ijmp
+
+00000c04 <__umulhisi3>:
+__umulhisi3():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:564
+ c04:	a2 9f       	mul	r26, r18
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:565
+ c06:	b0 01       	movw	r22, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:566
+ c08:	b3 9f       	mul	r27, r19
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:567
+ c0a:	c0 01       	movw	r24, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:568
+ c0c:	a3 9f       	mul	r26, r19
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:573
+ c0e:	70 0d       	add	r23, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:574
+ c10:	81 1d       	adc	r24, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:575
+ c12:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:576
+ c14:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:580
+ c16:	b2 9f       	mul	r27, r18
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:581
+ c18:	70 0d       	add	r23, r0
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:582
+ c1a:	81 1d       	adc	r24, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:583
+ c1c:	11 24       	eor	r1, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:584
+ c1e:	91 1d       	adc	r25, r1
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:585
+ c20:	08 95       	ret
+
+00000c22 <_exit>:
+exit():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+ c22:	f8 94       	cli
+
+00000c24 <__stop_program>:
+__stop_program():
+/home/admin/Arduino/toolchain-avr-special-master/gcc-build/avr/avrxmega2/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+ c24:	ff cf       	rjmp	.-2      	; 0xc24 <__stop_program>
