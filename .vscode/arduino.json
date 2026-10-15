@@ -1,4 +1,5 @@
 {
     "board": "DxCore:megaavr:avrdb",
-    "port": "COM6"
+    "port": "COM6",
+    "sketch": "ManualAnalogControlRevP2.ino"
 }
