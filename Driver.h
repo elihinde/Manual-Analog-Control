@@ -8,7 +8,7 @@
     // Serves as the index for their respective character in "charCodes".
     enum Character {
         CHAR_0, CHAR_1, CHAR_2, CHAR_3, CHAR_4,
-        CHAR_5, CHAR_6, CHAR_7, CHAR_8, CHAR_9,
+        CHAR_5, CHAR_6, CHAR_7, CHAR_8, CHAR_9,       
 
         CHAR_A, CHAR_B, CHAR_C, CHAR_D, CHAR_E,
         CHAR_F, CHAR_G, CHAR_H, CHAR_I, CHAR_J,
@@ -52,7 +52,7 @@ private:
         0b000000000111001, // 'C'
         0b001001000001111, // 'D'
         0b000000001111001, // 'E'
-        0b000000001110001, // 'F'
+        0b000000011110001, // 'F'
         0b000000010111101, // 'G'
         0b000000011110110, // 'H'
         0b001001000001001, // 'I'

@@ -8,6 +8,8 @@
 
 
 volatile int counter;
+volatile long counterRTDF;
+volatile int counterRTDC;
 volatile int counterF;
 volatile int counterC;
 volatile int counterP;
@@ -15,85 +17,145 @@ volatile int counterV;
 volatile int mode;
 volatile int counterF_New;
 volatile int dipSwitch;
+volatile int dipOne;
+volatile int dipTwo;
+volatile int dipFour;
+volatile int dipEight;
 unsigned long last_run = 0;
 double counterNew;
 int tracker;
-unsigned int dacValue;
+int dacValue;
+
+// ***NEW*** Global variables
+bool encpush;                       //tracks the enc button
+
+volatile bool editMode = false;     //holds edit mode
+bool lastEncPush = LOW;             //holds value for last 
+unsigned long lastButtonTime = 0;   //holds time for last button press
+
+//***NEW*** display flashing
+bool displayVisible = true;
+unsigned long lastDisplayFlash = 0;
+bool blinkMode = false;
 
 void ISR_ENCA(){
+    //***NEW***
+    //Ignore encoder movement unless edit mode is enabled
+    if(editMode == false){
+        return;
+    }
+
     switch (tracker){
-    case 1: 
-        if(millis() - last_run > 5){
-            if(digitalRead(encB) == 1){
-                if(counterF < 350){
-                    counterF++;
-                    EEPROM.write(0, counterF);
+        case 0:
+        
+            if(millis() - last_run > 5){                //only run every 5ms - acts as a debouncing technique so the encoder isnt read too frequently
+                if(digitalRead(encB) == 1){             //if enc b is high
+                    if(counterRTDF < 250){              //top limit (prevent from going over this value)
+                        counterRTDF++;                  //Increase counter
+                    }
                 }
+                        if(digitalRead(encB) == 0){     //if enc b is low aka turning counter clockwise
+                            if(counterRTDF > 0){        //set lower limit to 0
+                                counterRTDF--;          //subtract from counter variable
+                            }  
+                        }
+                last_run = millis();                    //save current time
+            } 
+
+        break;
+
+        case 1:
+        
+            if(millis() - last_run > 5){
+                if(digitalRead(encB) == 1){
+                    if(counterRTDC < 180){
+                        counterRTDC++;
+                    }
+                }
+                        if(digitalRead(encB) == 0){
+                            if(counterRTDC > 0){
+                                counterRTDC--;
+                            }  
+                        }
+                last_run = millis();
             }
-        if(digitalRead(encB) == 0){
-            if(counterF > 0){
-                counterF--;
-                EEPROM.write(0, counterF);
-            }  
-        }
-        last_run = millis();
-    } 
-    break;
-    case 2: 
+
+        break;
+
+        case 2:
+            if(millis() - last_run > 5){
+                if(digitalRead(encB) == 1){
+                    if(counterF < 350){
+                        counterF++;
+                    }
+                }
+                        if(digitalRead(encB) == 0){
+                            if(counterF > 0){
+                                counterF--;
+                            }  
+                        }
+                last_run = millis();
+            } 
+        break;
+
+        case 3:
+        
         if(millis() - last_run > 5){
             if(digitalRead(encB) == 1){
                 if(counterC < 180){
                     counterC++;
-                    EEPROM.write(4, counterC);
                 }
             }
         if(digitalRead(encB) == 0){
             if(counterC > 0){
                 counterC--;
-                EEPROM.write(4, counterC);
             }  
         }
         last_run = millis();
     } 
 
-    break;
-    case 3: 
-        if(millis() - last_run > 5){
-            if(digitalRead(encB) == 1){
-                if(counterP < 100){
-                    counterP++;
-                    EEPROM.write(8, counterP);
-                }
-            }
-        if(digitalRead(encB) == 0){
-            if(counterP > 0){
-                counterP--;
-                EEPROM.write(8, counterP);
-            }  
-        }
-        last_run = millis();
-    } 
 
-    break;
-    case 4: 
+        break;
+
+        case 4:
+        
         if(millis() - last_run > 5){
             if(digitalRead(encB) == 1){
-                if(counterV < 10){
+                if(counterV < 100){
                     counterV++;
-                    EEPROM.write(12, counterV);
                 }
             }
         if(digitalRead(encB) == 0){
             if(counterV > 0){
                 counterV--;
-                EEPROM.write(12, counterV);
             }  
         }
         last_run = millis();
     } 
 
-    break;
+        break;
+
+        case 5:
+        
+        if(millis() - last_run > 5){
+            if(digitalRead(encB) == 1){
+                if(counterP < 100){
+                    counterP++;
+                }
+            }
+        if(digitalRead(encB) == 0){
+            if(counterP > 0){
+                counterP--;
+            }  
+        }
+        last_run = millis();
+    } 
+
+        break;
+
     }
+
+
 }
 
 void AnalogControl::SetupCore(){
@@ -104,6 +166,7 @@ void AnalogControl::SetupCore(){
 
     //initialize serial monitor
     dbgSerial.begin(baudRate);
+    dbgSerial.println("Test");
 
     //Dip Switch Inputs
     pinMode(dipStatusOne, INPUT);
@@ -121,17 +184,15 @@ void AnalogControl::SetupCore(){
     pinMode(encA, INPUT_PULLUP);
     pinMode(encB, INPUT_PULLUP);
 
-    counterF = EEPROM.read(0) + EEPROM.read(1);
-    counterC = EEPROM.read(4);
-    counterP = EEPROM.read(8);
-    counterV = EEPROM.read(12);
-
-    //button = 1;
-    tracker = EEPROM.read(E_MODE);
-    dbgSerial.println(EEPROM.read(E_MODE));
-    
+    // counterF = EEPROM.read(0) + EEPROM.read(1);
+    // counterC = EEPROM.read(4);
+    // counterP = EEPROM.read(8);
+    // counterV = EEPROM.read(12);
 
     attachInterrupt(digitalPinToInterrupt(encA), ISR_ENCA, LOW);
+
+    //set bool to false 
+    encpush = false;
 }
 
 void AnalogControl::SetupDisplay()
@@ -258,33 +319,74 @@ void AnalogControl::WriteCharacter(Character chr, uint16_t lowerSegAddr, bool dp
 
 void AnalogControl::Loop(){
 
+
+
 //Read status of dip switch inputs
-digitalRead(dipStatusOne);
-digitalRead(dipStatusTwo);
-digitalRead(dipStatusFour);
-digitalRead(dipStatusEight);
+dipOne = digitalRead(dipStatusOne);
+dipTwo = digitalRead(dipStatusTwo);
+dipFour = digitalRead(dipStatusFour);
+dipEight = digitalRead(dipStatusEight);
+encpush = digitalRead(enc_Button);
+
+if(encpush == HIGH && lastEncPush == LOW && millis() - lastButtonTime > 100){
+    editMode = !editMode;        // lock or unlock edit mode
+    lastButtonTime = millis();
+}
+
+lastEncPush = encpush;
+
+// ************************************************
+// NEW - Flash display while editing
+// ************************************************
+
+// Flash display while editing
+if(editMode)
+{
+    blinkMode = true; //this bool controls when data is written to the dac for output signal
+
+    if(displayVisible && millis() - lastDisplayFlash > 1100)
+    {
+        // Turn display OFF after 1 second
+        displayVisible = false;
+        lastDisplayFlash = millis();
+    }
+
+    if(!displayVisible && millis() - lastDisplayFlash > 150)
+    {
+        // Turn display back ON after 100 ms
+        displayVisible = true;
+        lastDisplayFlash = millis();
+    }
+}
+else
+{
+    displayVisible = true; 
+
+    blinkMode = false; //bool control for output signal
+}
 
 //Dip swtich inputs manipulate the variable of tracker
-if(dipStatusEight == 0 && dipStatusFour == 0 && dipStatusTwo == 0 && dipStatusOne == 0){
+delay(25); //used to prevent imperfections from the mechanical dipswitch
+if(dipEight == 1 && dipFour == 1 && dipTwo == 1 && dipOne == 1){
     tracker = 0;
 }
-    else if(dipStatusEight == 0 && dipStatusFour == 0 && dipStatusTwo == 0 && dipStatusOne == 1){
+    else if(dipEight == 1 && dipFour == 1 && dipTwo == 1 && dipOne == 0){
         tracker = 1;
     } 
-        else if(dipStatusEight == 0 && dipStatusFour == 0 && dipStatusTwo == 1 && dipStatusOne == 0){   
+        else if(dipEight == 1 && dipFour == 1 && dipTwo == 0 && dipOne == 1){   
             tracker = 2;
         }
-            else if(dipStatusEight == 0 && dipStatusFour == 0 && dipStatusTwo == 1 && dipStatusOne == 1){   
+            else if(dipEight == 1 && dipFour == 1 && dipTwo == 0 && dipOne == 0){   
                 tracker = 3;
             }
-                else if(dipStatusEight == 0 && dipStatusFour == 1 && dipStatusTwo == 0 && dipStatusOne == 0){   
+                else if(dipEight == 1 && dipFour == 0 && dipTwo == 1 && dipOne == 1){   
                     tracker = 4;
                 }
-                    else if(dipStatusEight == 0 && dipStatusFour == 1 && dipStatusTwo == 0 && dipStatusOne == 1){   
+                    else if(dipEight == 1 && dipFour == 0 && dipTwo == 1 && dipOne == 0){   
                         tracker = 5;
                     }
                         else{
-                            tracker = tracker;
+                            tracker = 11;
                         }
 
 //Turn on mode LED
@@ -294,29 +396,37 @@ switch (tracker){
         digitalWrite(degC_LED, LOW);
         digitalWrite(percent_LED, LOW);
         digitalWrite(volt_LED, LOW);
-        EEPROM.update(E_MODE, 1);
         break;
     case 1 : case 3:
         digitalWrite(degF_LED, LOW);
         digitalWrite(degC_LED, HIGH);
         digitalWrite(percent_LED, LOW);
         digitalWrite(volt_LED, LOW);
-        EEPROM.update(E_MODE, 2);
         break;
     case 4: 
         digitalWrite(degF_LED, LOW);
         digitalWrite(degC_LED, LOW);
-        digitalWrite(percent_LED, HIGH);
-        digitalWrite(volt_LED, LOW);
-        EEPROM.update(E_MODE, 3);
+        digitalWrite(volt_LED, HIGH);
+        digitalWrite(percent_LED, LOW);
         break;
     case 5: 
         digitalWrite(degF_LED, LOW);
         digitalWrite(degC_LED, LOW);
-        digitalWrite(percent_LED, LOW);
-        digitalWrite(volt_LED, HIGH);
-        EEPROM.update(E_MODE, 4);
+        digitalWrite(volt_LED, LOW);
+        digitalWrite(percent_LED, HIGH);
         break;
+    case 11:
+        digitalWrite(degF_LED, HIGH);
+        digitalWrite(degC_LED, HIGH);
+        digitalWrite(volt_LED, HIGH);
+        digitalWrite(percent_LED, HIGH);
+        delay(500);
+        digitalWrite(degF_LED, LOW);
+        digitalWrite(degC_LED, LOW);
+        digitalWrite(volt_LED, LOW);
+        digitalWrite(percent_LED, LOW);
+        delay(500);        
+        break; 
 }
 
     //dacValue(variable) = counter(variable) * slope
@@ -324,97 +434,80 @@ switch (tracker){
     //Write to DAC
     //Seperate counter(variable) into single digits
     //Write digits to segments
-    
-    if(tracker == 1){
 
-        //multiply encoder value by slope for DAC I2C 
-        dacValue = counterF * 4.095;
-        
-        // limit to 12-bit
-        if(dacValue > 4095)
-        {
-            dacValue = 4095;
-        }
-
-        // First byte:
-        // 0000 D11 D10 D9 D8
-        byte firstByte = dacValue >> 8;
-
-        // Second byte:
-        // D7 D6 D5 D4 D3 D2 D1 D0
-        byte secondByte = dacValue & 0xFF;
-
-        //write to DAC
-        Wire.beginTransmission(0x60);
-        Wire.write(firstByte);
-        Wire.write(secondByte);
-        Wire.endTransmission();
-
-
-        //Seperate counter(variable) into single digits
-        int a = counterF / 1000;
-        int b = (counterF / 100) % 10;
-        int c = (counterF / 10) % 10;
-        int d = counterF % 10;
-
-        //Write digits to segments
-        WriteCharacter(Character (a) , B_DIG_1_LOWER_SEG, 0);
-        WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
-        WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
-        WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
-        
-        if(counterF > 255){
-            EEPROM.update(0, 255);
-            EEPROM.update(1, counterF - 255); 
-        }
-        else{
-            EEPROM.update(1, 0);
-        }
-    
-    }
-        else if(tracker == 2){
-
-            //multiply encoder value by slope for DAC I2C 
-            float tempF = (counterC * 9.0 / 5.0) + 32.0;
-            dacValue = tempF * 4.095;
-            
-            // limit to 12-bit
-            if(dacValue > 4095)
-            {
-                dacValue = 4095;
-            }
-
-            // First byte:
-            // 0000 D11 D10 D9 D8
-            byte firstByte = dacValue >> 8;
-
-            // Second byte:
-            // D7 D6 D5 D4 D3 D2 D1 D0
-            byte secondByte = dacValue & 0xFF;
-
-            //write to DAC
-            Wire.beginTransmission(0x60);
-            Wire.write(firstByte);
-            Wire.write(secondByte);
-            Wire.endTransmission();
-
-
-            //Seperate counter(variable) into single digits
-            int a = counterC / 1000;
-            int b = (counterC / 100) % 10;
-            int c = (counterC / 10) % 10;
-            int d = counterC % 10;
-
-            //Write digits to segments
-            WriteCharacter(Character (a) , B_DIG_1_LOWER_SEG, 0);
-            WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
-            WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
-            WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
-        }
-            else if(tracker == 3){
-
+    if (tracker == 0){
                 //multiply encoder value by slope for DAC I2C 
-                dacValue = counterP * 40.95;
+                dacValue = ((counterRTDF * 6552) +409500) / 1000;
+                
+                // limit to 12-bit
+                if(dacValue > 4095)
+                {
+                    dacValue = 4095;
+                }
+
+                dacValue = dacValue +5;
+
+                // First byte:
+                // 0000 D11 D10 D9 D8
+                byte firstByte = dacValue >> 8;
+
+                // Second byte:
+                // D7 D6 D5 D4 D3 D2 D1 D0
+                byte secondByte = dacValue & 0xFF;
+
+                if(blinkMode == false){
+                    //write to DAC
+                    Wire.beginTransmission(0x60);
+                    Wire.write(firstByte);
+                    Wire.write(secondByte);
+                    Wire.endTransmission();
+                }
+
+                //Seperate counter(variable) into single digits
+                int a = counterRTDF / 1000;
+                int b = (counterRTDF / 100) % 10;
+                int c = (counterRTDF / 10) % 10;
+                int d = counterRTDF % 10;
+
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
+                // dbgSerial.print("counterRTD: ");
+                // dbgSerial.println(counterRTDF);
+
+                // dbgSerial.print("dacValue: ");
+                // dbgSerial.println(dacValue);
+                
+                // dbgSerial.print("first byte: ");
+                // dbgSerial.println(firstByte);
+
+                // dbgSerial.print("second byte: ");
+                // dbgSerial.println(secondByte);
+
+                // dbgSerial.print(a);
+                // dbgSerial.print(b);
+                // dbgSerial.print(c);
+                // dbgSerial.println(d);
+
+                // dbgSerial.println("");
+
+    }   
+        else if(tracker == 1){
+                //multiply encoder value by slope for DAC I2C 
+                dacValue = (counterRTDC * 11.796) + 619.473;
                 
                 // limit to 12-bit
                 if(dacValue > 4095)
@@ -430,29 +523,40 @@ switch (tracker){
                 // D7 D6 D5 D4 D3 D2 D1 D0
                 byte secondByte = dacValue & 0xFF;
 
-                //write to DAC
-                Wire.beginTransmission(0x60);
-                Wire.write(firstByte);
-                Wire.write(secondByte);
-                Wire.endTransmission();
-
+                if(blinkMode == false){
+                    //write to DAC
+                    Wire.beginTransmission(0x60);
+                    Wire.write(firstByte);
+                    Wire.write(secondByte);
+                    Wire.endTransmission();
+                }
 
                 //Seperate counter(variable) into single digits
-                int a = counterP / 1000;
-                int b = (counterP / 100) % 10;
-                int c = (counterP / 10) % 10;
-                int d = counterP % 10;
+                int a = counterRTDC / 1000;
+                int b = (counterRTDC / 100) % 10;
+                int c = (counterRTDC / 10) % 10;
+                int d = counterRTDC % 10;
 
-                //Write digits to segments
-                WriteCharacter(Character (a) , B_DIG_1_LOWER_SEG, 0);
-                WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
-                WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
-                WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
-            }
-                else if(tracker == 4){
-
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
+        }
+            else if(tracker == 2){
                 //multiply encoder value by slope for DAC I2C 
-                dacValue = counterV * 409.5;
+                dacValue = counterF * 4.095;
                 
                 // limit to 12-bit
                 if(dacValue > 4095)
@@ -468,30 +572,230 @@ switch (tracker){
                 // D7 D6 D5 D4 D3 D2 D1 D0
                 byte secondByte = dacValue & 0xFF;
 
-                //write to DAC
-                Wire.beginTransmission(0x60);
-                Wire.write(firstByte);
-                Wire.write(secondByte);
-                Wire.endTransmission();
-
+                if(blinkMode == false){
+                    //write to DAC
+                    Wire.beginTransmission(0x60);
+                    Wire.write(firstByte);
+                    Wire.write(secondByte);
+                    Wire.endTransmission();
+                }
 
                 //Seperate counter(variable) into single digits
-                int a = counterV / 1000;
-                int b = (counterV / 100) % 10;
-                int c = (counterV / 10) % 10;
-                int d = counterV % 10;
+                int a = counterF / 1000;
+                int b = (counterF / 100) % 10;
+                int c = (counterF / 10) % 10;
+                int d = counterF % 10;
 
-                //Write digits to segments
-                WriteCharacter(Character (a) , B_DIG_1_LOWER_SEG, 0);
-                WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
-                WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
-                WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
-            }
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
+
+                // if(counterF > 255){
+                //     EEPROM.update(0, 255);
+                //     EEPROM.update(1, counterF - 255); 
+                // }
+                // else{
+                //     EEPROM.update(1, 0);
+                // }
+            }   
+                else if(tracker == 3){
+                    //multiply encoder value by slope for DAC I2C 
+                    float tempF = (counterC * 9.0 / 5.0) + 32.0;
+                    dacValue = tempF * 4.095;
+                    
+                    // limit to 12-bit
+                    if(dacValue > 4095)
+                    {
+                        dacValue = 4095;
+                    }
+
+                    // First byte:
+                    // 0000 D11 D10 D9 D8
+                    byte firstByte = dacValue >> 8;
+
+                    // Second byte:
+                    // D7 D6 D5 D4 D3 D2 D1 D0
+                    byte secondByte = dacValue & 0xFF;
+
+                    if(blinkMode == false){
+                        //write to DAC
+                        Wire.beginTransmission(0x60);
+                        Wire.write(firstByte);
+                        Wire.write(secondByte);
+                        Wire.endTransmission();
+                    }
+
+                    //Seperate counter(variable) into single digits
+                    int a = counterC / 1000;
+                    int b = (counterC / 100) % 10;
+                    int c = (counterC / 10) % 10;
+                    int d = counterC % 10;
+
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
+                }   
+                    else if(tracker == 4){
+                        //multiply encoder value by slope for DAC I2C 
+                        dacValue = counterV * 40.95;
+                        
+                        // limit to 12-bit
+                        if(dacValue > 4095)
+                        {
+                            dacValue = 4095;
+                        }
+
+                        // First byte:
+                        // 0000 D11 D10 D9 D8
+                        byte firstByte = dacValue >> 8;
+
+                        // Second byte:
+                        // D7 D6 D5 D4 D3 D2 D1 D0
+                        byte secondByte = dacValue & 0xFF;
+
+                        if(blinkMode == false){
+                            //write to DAC
+                            Wire.beginTransmission(0x60);
+                            Wire.write(firstByte);
+                            Wire.write(secondByte);
+                            Wire.endTransmission();
+                        }
+
+                        //Seperate counter(variable) into single digits
+                        int a = counterV / 1000;
+                        int b = (counterV / 100) % 10;
+                        int c = (counterV / 10) % 10;
+                        int d = counterV % 10;
+
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 1);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
 
 
 
+                    }
+                        else if(tracker == 5){
+                            //multiply encoder value by slope for DAC I2C 
+                            dacValue = counterP * 40.95;
+                            
+                            // limit to 12-bit
+                            if(dacValue > 4095)
+                            {
+                                dacValue = 4095;
+                            }
+
+                            // First byte:
+                            // 0000 D11 D10 D9 D8
+                            byte firstByte = dacValue >> 8;
+
+                            // Second byte:
+                            // D7 D6 D5 D4 D3 D2 D1 D0
+                            byte secondByte = dacValue & 0xFF;
+
+                            if(blinkMode == false){
+                                //write to DAC
+                                Wire.beginTransmission(0x60);
+                                Wire.write(firstByte);
+                                Wire.write(secondByte);
+                                Wire.endTransmission();
+                            }
+
+                            //Seperate counter(variable) into single digits
+                            int a = counterP / 1000;
+                            int b = (counterP / 100) % 10;
+                            int c = (counterP / 10) % 10;
+                            int d = counterP % 10;
+
+                //***NEW*** Display Flashing
+                if(displayVisible)
+                {
+                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                }
+                else
+                {
+                    // Blank display while flashing
+                    WriteCharacter(CHAR_BLANK, B_DIG_1_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_2_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, B_DIG_3_LOWER_SEG, 0);
+                    WriteCharacter(CHAR_BLANK, T_DIG_4_LOWER_SEG, 0);
+                }
+                        }
+                            else{
+                                    //multiply encoder value by slope for DAC I2C 
+                                    dacValue = 0;
+                                    
 
 
+                                    // First byte:
+                                    // 0000 D11 D10 D9 D8
+                                    byte firstByte = dacValue >> 8;
+
+                                    // Second byte:
+                                    // D7 D6 D5 D4 D3 D2 D1 D0
+                                    byte secondByte = dacValue & 0xFF;
+
+                                
+                                    //write to DAC
+                                    Wire.beginTransmission(0x60);
+                                    Wire.write(firstByte);
+                                    Wire.write(secondByte);
+                                    Wire.endTransmission();
+                                
+
+                                    //Seperate counter(variable) into single digits
+                                    int a = 0;
+                                    int b = 0;
+                                    int c = 0;
+                                    int d = 0;
+
+                                    WriteCharacter(Character (a), B_DIG_1_LOWER_SEG, 0);
+                                    WriteCharacter(Character (b), B_DIG_2_LOWER_SEG, 0);
+                                    WriteCharacter(Character (c), B_DIG_3_LOWER_SEG, 0);
+                                    WriteCharacter(Character (d), T_DIG_4_LOWER_SEG, 0);
+                                    
+                            }   
 
 
 }
