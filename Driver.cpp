@@ -26,6 +26,18 @@ double counterNew;
 int tracker;
 int dacValue;
 
+// ***NEW*** tracking variables to find when eeprom updates
+volatile int trackcounterRTDF;
+volatile int trackcounterRTDC;
+volatile int trackcounterF;
+volatile int trackcounterC;
+volatile int trackcounterV;
+volatile int trackcounterP;
+
+// ***NEW*** bools to control when eeprom does change
+volatile bool eepromsave = false;
+
+
 // ***NEW*** Global variables
 bool encpush;                       //tracks the enc button
 
@@ -33,10 +45,10 @@ volatile bool editMode = false;     //holds edit mode
 bool lastEncPush = LOW;             //holds value for last 
 unsigned long lastButtonTime = 0;   //holds time for last button press
 
-//***NEW*** display flashing
+// ***NEW*** display flashing
 bool displayVisible = true;
 unsigned long lastDisplayFlash = 0;
-bool blinkMode = false;
+bool blinkMode = false;             //tracks if display is blinking
 
 void ISR_ENCA(){
     //***NEW***
@@ -52,11 +64,13 @@ void ISR_ENCA(){
                 if(digitalRead(encB) == 1){             //if enc b is high
                     if(counterRTDF < 250){              //top limit (prevent from going over this value)
                         counterRTDF++;                  //Increase counter
+                        eepromsave = true;
                     }
                 }
                         if(digitalRead(encB) == 0){     //if enc b is low aka turning counter clockwise
                             if(counterRTDF > 0){        //set lower limit to 0
                                 counterRTDF--;          //subtract from counter variable
+                                eepromsave = true;
                             }  
                         }
                 last_run = millis();                    //save current time
@@ -70,11 +84,13 @@ void ISR_ENCA(){
                 if(digitalRead(encB) == 1){
                     if(counterRTDC < 180){
                         counterRTDC++;
+                        eepromsave = true;
                     }
                 }
                         if(digitalRead(encB) == 0){
                             if(counterRTDC > 0){
                                 counterRTDC--;
+                                eepromsave = true;
                             }  
                         }
                 last_run = millis();
@@ -87,11 +103,13 @@ void ISR_ENCA(){
                 if(digitalRead(encB) == 1){
                     if(counterF < 350){
                         counterF++;
+                        eepromsave = true;
                     }
                 }
                         if(digitalRead(encB) == 0){
                             if(counterF > 0){
                                 counterF--;
+                                eepromsave = true;
                             }  
                         }
                 last_run = millis();
@@ -104,11 +122,13 @@ void ISR_ENCA(){
             if(digitalRead(encB) == 1){
                 if(counterC < 180){
                     counterC++;
+                    eepromsave = true;
                 }
             }
         if(digitalRead(encB) == 0){
             if(counterC > 0){
                 counterC--;
+                eepromsave = true;
             }  
         }
         last_run = millis();
@@ -123,11 +143,13 @@ void ISR_ENCA(){
             if(digitalRead(encB) == 1){
                 if(counterV < 100){
                     counterV++;
+                    eepromsave = true;
                 }
             }
         if(digitalRead(encB) == 0){
             if(counterV > 0){
                 counterV--;
+                eepromsave = true;
             }  
         }
         last_run = millis();
@@ -141,11 +163,13 @@ void ISR_ENCA(){
             if(digitalRead(encB) == 1){
                 if(counterP < 100){
                     counterP++;
+                    eepromsave = true;
                 }
             }
         if(digitalRead(encB) == 0){
             if(counterP > 0){
                 counterP--;
+                eepromsave = true;
             }  
         }
         last_run = millis();
@@ -184,6 +208,12 @@ void AnalogControl::SetupCore(){
     pinMode(encA, INPUT_PULLUP);
     pinMode(encB, INPUT_PULLUP);
 
+    counterRTDF = EEPROM.read(0);
+    counterRTDC = EEPROM.read(4);
+    counterF = EEPROM.read(8);
+    counterC = EEPROM.read(12);
+    counterV = EEPROM.read(16);
+    counterP = EEPROM.read(20);
     // counterF = EEPROM.read(0) + EEPROM.read(1);
     // counterC = EEPROM.read(4);
     // counterP = EEPROM.read(8);
@@ -320,7 +350,6 @@ void AnalogControl::WriteCharacter(Character chr, uint16_t lowerSegAddr, bool dp
 void AnalogControl::Loop(){
 
 
-
 //Read status of dip switch inputs
 dipOne = digitalRead(dipStatusOne);
 dipTwo = digitalRead(dipStatusTwo);
@@ -329,7 +358,42 @@ dipEight = digitalRead(dipStatusEight);
 encpush = digitalRead(enc_Button);
 
 if(encpush == HIGH && lastEncPush == LOW && millis() - lastButtonTime > 100){
-    editMode = !editMode;        // lock or unlock edit mode
+    bool wasEditing = editMode;
+
+    editMode = !editMode;
+
+        if(wasEditing && !editMode && eepromsave)
+        {
+            switch(tracker)
+            {
+                case 0:
+                    EEPROM.put(0, counterRTDF);
+                    break;
+
+                case 1:
+                    EEPROM.put(4, counterRTDC);
+                    break;
+
+                case 2:
+                    EEPROM.put(8, counterF);
+                    break;
+
+                case 3:
+                    EEPROM.put(12, counterC);
+                    break;
+
+                case 4:
+                    EEPROM.put(16, counterV);
+                    break;
+
+                case 5:
+                    EEPROM.put(20, counterP);
+                    break;
+            }
+
+            dbgSerial.println("EEPROM Saved");
+            eepromsave = false;
+}       // lock or unlock edit mode
     lastButtonTime = millis();
 }
 
@@ -461,6 +525,7 @@ switch (tracker){
                     Wire.write(firstByte);
                     Wire.write(secondByte);
                     Wire.endTransmission();
+                    // EEPROM.write(0, counterRTDF);
                 }
 
                 //Seperate counter(variable) into single digits
@@ -529,6 +594,9 @@ switch (tracker){
                     Wire.write(firstByte);
                     Wire.write(secondByte);
                     Wire.endTransmission();
+                    // EEPROM.write(4, counterRTDC);
+                    // dbgSerial.print("EEPROM RTDF: ");
+                    // dbgSerial.println(EEPROM.read(0));
                 }
 
                 //Seperate counter(variable) into single digits
@@ -578,6 +646,7 @@ switch (tracker){
                     Wire.write(firstByte);
                     Wire.write(secondByte);
                     Wire.endTransmission();
+                    // EEPROM.write(8, counterF);
                 }
 
                 //Seperate counter(variable) into single digits
@@ -636,6 +705,7 @@ switch (tracker){
                         Wire.write(firstByte);
                         Wire.write(secondByte);
                         Wire.endTransmission();
+                        // EEPROM.write(12, counterC);
                     }
 
                     //Seperate counter(variable) into single digits
@@ -685,6 +755,7 @@ switch (tracker){
                             Wire.write(firstByte);
                             Wire.write(secondByte);
                             Wire.endTransmission();
+                            // EEPROM.write(16, counterV);
                         }
 
                         //Seperate counter(variable) into single digits
@@ -737,6 +808,7 @@ switch (tracker){
                                 Wire.write(firstByte);
                                 Wire.write(secondByte);
                                 Wire.endTransmission();
+                                // EEPROM.write(20, counterP);
                             }
 
                             //Seperate counter(variable) into single digits
@@ -797,5 +869,5 @@ switch (tracker){
                                     
                             }   
 
-
+    
 }

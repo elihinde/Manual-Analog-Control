@@ -3,7 +3,6 @@
 #ifndef _DEFINES_H_
 #define _DEFINES_H_
 
-
 // See Manual Analog Control Pinout AVR64DB32 for pinout map
 
 /*---------------DEFINES---------------*/
@@ -49,6 +48,5 @@
 #define E_PERCENT           8   
 #define E_VOLTAGE           12
 #define E_MODE              14
-
 
 #endif
